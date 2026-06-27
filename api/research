@@ -1,0 +1,20 @@
+{
+  "interests": [
+    "TinyML",
+    "Embedded AI",
+    "Distributed Swarm Computing",
+    "Biological Signal Processing",
+    "Prosthetics"
+  ],
+  "lab_equipment": [
+    "Custom FDM 3D Printer",
+    "Electroless Copper Plating Tank",
+    "Digital Oscilloscope",
+    "Logic Analyzer",
+    "Soldering Station"
+  ],
+  "ongoing": [
+    "Low-latency voice assistant agents",
+    "Pruning and quantization of speech-to-text models for STM32"
+  ]
+}

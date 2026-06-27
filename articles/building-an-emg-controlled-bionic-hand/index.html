@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical guide on building a muscle-controlled EMG prosthetic robotic hand using Arduino and Embedded C. Written by Mohamed Ahmed Abdelraouf.">
+  <title>Building an EMG Controlled Bionic Hand — Mohamed AI Laboratory</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+  
+  <style>
+    :root {
+      --bg: #030812;
+      --bg-card: rgba(8, 16, 32, 0.75);
+      --teal: #00E5C7;
+      --teal-dim: rgba(0, 229, 199, 0.1);
+      --purple: #A855F7;
+      --purple-dim: rgba(168, 85, 247, 0.1);
+      --amber: #F59E0B;
+      --text: #E8EDF4;
+      --muted: #5A6A8A;
+      --border: rgba(255, 255, 255, 0.08);
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Space Grotesk', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .hud-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 229, 199, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 199, 0.01) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .back-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--teal);
+      text-decoration: none;
+      border: 1px solid var(--teal);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      background: var(--teal-dim);
+      transition: all 0.25s;
+    }
+    .back-btn:hover {
+      box-shadow: 0 0 15px var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .title-area h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--text) 0%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-family: var(--font-mono);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .article-meta {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--purple);
+      margin-bottom: 2rem;
+    }
+
+    .panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--teal);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.02rem;
+      color: #CAD5E2;
+      line-height: 1.7;
+    }
+
+    ul, ol {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+      color: #CAD5E2;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--purple);
+    }
+
+    pre {
+      background: rgba(3, 8, 18, 0.9);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    pre code {
+      background: transparent;
+      padding: 0;
+      color: var(--text);
+      font-size: 0.85rem;
+    }
+
+    .quote-box {
+      border-left: 3px solid var(--teal);
+      background: rgba(0, 229, 199, 0.02);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Building an EMG Controlled Bionic Hand" />
+  <meta property="og:description" content="Technical guide on electromyography signal processing, envelope tracking, and servo mechanical control." />
+  <meta property="og:url" content="https://moego0.github.io/articles/building-an-emg-controlled-bionic-hand" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Building an EMG Controlled Bionic Hand",
+    "description": "Biomedical hardware tutorial outlining muscle signal amplification, envelope tracking algorithms, and servo robotic fingers control.",
+    "author": {
+      "@type": "Person",
+      "name": "Mohamed Ahmed Abdelraouf"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mohamed AI Laboratory"
+    },
+    "inLanguage": "en",
+    "programmingLanguage": "Embedded C"
+  }
+  </script>
+</head>
+<body>
+  <div class="hud-grid"></div>
+
+  <div class="container">
+    <header>
+      <div class="title-area">
+        <h1>Building an EMG Controlled Bionic Hand</h1>
+        <div class="subtitle">// Bionics and Biomedical Signal Processing</div>
+      </div>
+      <a href="../../" class="back-btn">&lt; Return to Lab</a>
+    </header>
+
+    <main class="panel">
+      <div class="article-meta">Published by Mohamed Ahmed Abdelraouf • June 2026 • 7 min read</div>
+
+      <p>Prosthetics have evolved from inert structures into intelligent interfaces that mirror biological intention. In this article, I discuss the engineering behind an Electromyography (EMG) muscle-controlled mechanical bionic hand, detailing analog amplification, digital filtering, and servo coordination loops.</p>
+
+      <h2>1. The Biosignal Capture Problem</h2>
+      <p>Skeletal muscle contractions generate microvolt-level potential differences (EMG signals) on the surface of the skin. Measuring these signals is complex because they are obscured by 50Hz/60Hz electromagnetic noise and skin impedance. The signal pipeline requires:</p>
+      
+      <ul>
+        <li><strong>Differential Input</strong>: Electrodes placed on target muscles capture potentials, reference electrodes ground the signal.</li>
+        <li><strong>Instrumentation Amplifier</strong>: A high Common-Mode Rejection Ratio (CMRR) amplifier to reject environmental noise and boost microvolts to millivolts.</li>
+        <li><strong>Bandpass Filter</strong>: Restricts passing frequencies strictly to the 20Hz - 500Hz band.</li>
+        <li><strong>Rectification</strong>: A full-wave active rectifier to flip negative cycles positive.</li>
+      </ul>
+
+      <h2>2. Real-Time Envelope Extraction (Atmega/Arduino)</h2>
+      <p>Once raw signals are amplified and rectified, the microcontroller ADC samples the analog wave at 1kHz. We extract a smoothed envelope representing muscle contraction force using a digital low-pass filter (Exponential Moving Average):</p>
+
+      <pre><code>#include &lt;Servo.h&gt;
+
+const int emgPin = A0;
+const int servoCount = 5;
+Servo fingers[servoCount];
+
+float emgRaw = 0;
+float emgEnvelope = 0;
+const float filterAlpha = 0.08; // Cutoff coefficient
+const int threshold = 180;      // Activation threshold
+
+void setup() {
+  pinMode(emgPin, INPUT);
+  fingers[0].attach(3); // Thumb
+  fingers[1].attach(5); // Index
+  fingers[2].attach(6); // Middle
+  fingers[3].attach(9); // Ring
+  fingers[4].attach(10); // Pinky
+}
+</code></pre>
+
+      <h2>3. Moving Average &amp; Actuation Loop</h2>
+      <p>Inside the continuous execution loop, raw analog signals are read, the envelope is updated, and the servo values are adjusted proportionally. When the envelope value crosses the calibrated resting threshold, the fingers close into a grip configuration.</p>
+
+      <pre><code>void loop() {
+  int sensorValue = analogRead(emgPin);
+  
+  // Full-wave rectification (centering and absolute value)
+  float rectified = abs(sensorValue - 512);
+  
+  // Exponential Moving Average filter
+  emgEnvelope = (filterAlpha * rectified) + ((1.0 - filterAlpha) * emgEnvelope);
+  
+  if (emgEnvelope &gt; threshold) {
+    // Map signal force directly to finger servo angles (close hand)
+    int angle = map(emgEnvelope, threshold, 500, 0, 180);
+    angle = constrain(angle, 0, 180);
+    for(int i=0; i&lt;servoCount; i++) {
+      fingers[i].write(angle);
+    }
+  } else {
+    // Hand open state
+    for(int i=0; i&lt;servoCount; i++) {
+      fingers[i].write(0);
+    }
+  }
+  delay(10); // 100Hz loop execution rate
+}
+</code></pre>
+
+      <h2>4. Prototyping and Solid Mechanics</h2>
+      <p>The robotic hand chassis was modelled in SolidWorks and 3D printed in PLA. Individual fingers are tension-driven using nylon threads routing back to metal-geared high-torque servos located in the forearm, mimicking actual human tendon motion layout.</p>
+
+      <h2>5. Clinical Takeaways</h2>
+      <p>Baseline calibration is highly subject to electrode placement drift, sweating, and individual muscle fatigue. Practical systems require dynamic threshold adjustments to normalize resting metrics during operation.</p>
+    </main>
+
+    <footer>
+      <span>System: MOHAMED AI LAB v2040</span>
+      <span>© 2026 Mohamed Ahmed Abdelraouf</span>
+    </footer>
+  </div>
+</body>
+</html>

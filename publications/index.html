@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic publications and research papers of Mohamed Ahmed Abdelraouf, specializing in TinyML edge inference and deep learning.">
+  <title>Mohamed AI Lab — Publications &amp; Research Papers</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  
+  <style>
+    :root {
+      --bg: #030812;
+      --bg-card: rgba(8, 16, 32, 0.75);
+      --teal: #00E5C7;
+      --teal-dim: rgba(0, 229, 199, 0.1);
+      --purple: #A855F7;
+      --purple-dim: rgba(168, 85, 247, 0.1);
+      --text: #E8EDF4;
+      --muted: #5A6A8A;
+      --border: rgba(255, 255, 255, 0.08);
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Space Grotesk', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .hud-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 229, 199, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 199, 0.01) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .back-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--teal);
+      text-decoration: none;
+      border: 1px solid var(--teal);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      background: var(--teal-dim);
+      transition: all 0.25s;
+    }
+    .back-btn:hover {
+      box-shadow: 0 0 15px var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .title-area h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--text) 0%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-family: var(--font-mono);
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    .panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-family: var(--font-mono);
+      color: var(--teal);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .pub-item {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dashed var(--border);
+    }
+    .pub-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .pub-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .pub-authors {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--teal);
+      margin-bottom: 0.25rem;
+    }
+
+    .pub-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .pub-abstract {
+      font-size: 0.92rem;
+      color: #CAD5E2;
+      margin-bottom: 1rem;
+    }
+
+    .pub-link {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--purple);
+      text-decoration: none;
+      border: 1px solid var(--purple);
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      background: var(--purple-dim);
+      transition: all 0.25s;
+    }
+    .pub-link:hover {
+      box-shadow: 0 0 10px var(--purple);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mohamed AI Lab — Publications" />
+  <meta property="og:description" content="Research publications and technical writing on TinyML, edge networks, and robotics by Mohamed Ahmed Abdelraouf." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://moego0.github.io/publications" />
+  <meta property="og:image" content="https://moego0.github.io/assets/profile.jpg" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Publications & Research Papers",
+    "description": "Academic publications and research summaries by Mohamed Ahmed Abdelraouf.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mohamed AI Laboratory"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="hud-grid"></div>
+
+  <div class="container">
+    <header>
+      <div class="title-area">
+        <h1>Publications &amp; Write-ups</h1>
+        <div class="subtitle">// Academic Papers and Technical Literature</div>
+      </div>
+      <a href="../" class="back-btn">&lt; Return to Lab</a>
+    </header>
+
+    <main>
+      <div class="panel">
+        <div class="section-title">Research Contributions</div>
+
+        <article class="pub-item">
+          <h2 class="pub-title">Optimizing KWS CNN Architecture for ESP32 and Microcontroller Units</h2>
+          <div class="pub-authors">M. A. Abdelraouf</div>
+          <div class="pub-meta">Mohamed AI Laboratory Research Journal — Published June 2026</div>
+          <p class="pub-abstract">This paper outlines a structured design process for optimizing Mel-Frequency Cepstral Coefficients (MFCC) feature extraction and 2D Convolutional Neural Networks for voice keyword spotting on low-power devices. Evaluates INT8 post-training quantization on RAM/ROM bounds, achieving 98% detection on target wake-words under 100KB heap constraints.</p>
+          <a href="../articles/how-i-built-a-tinyml-wake-word-detector" class="pub-link">View Case Study &amp; Code ↗</a>
+        </article>
+
+        <article class="pub-item">
+          <h2 class="pub-title">Distributed SWARM Inference: Offloading LLM Workloads to Client-Side Swarms</h2>
+          <div class="pub-authors">M. A. Abdelraouf</div>
+          <div class="pub-meta">Lab Technical Report #24 — Shipped Code Integration</div>
+          <p class="pub-abstract">Investigates a decentralized browser-bridged computing topology. Describes using WebSockets to segment LLM prompt parameters, distributing token processing weights to client swarms consisting of multiple local machines (Swarm Groups) to bypass expensive commercial clouds.</p>
+          <a href="../articles/building-a-local-ai-coding-agent" class="pub-link">View Engineering Specs ↗</a>
+        </article>
+
+        <article class="pub-item">
+          <h2 class="pub-title">EMG Signal Extraction &amp; Amplitude Envelope Tracking for Prosthetic Control</h2>
+          <div class="pub-authors">M. A. Abdelraouf</div>
+          <div class="pub-meta">Exhibited at Pharos University Biomedical Research Day</div>
+          <p class="pub-abstract">Focuses on biological signal acquisition and filtering circuits. Proposes an embedded C envelope extraction algorithm running on Atmega microcontrollers to process differential surface electrode potentials, generating robust muscle thresholds for servo mechanical hands.</p>
+          <a href="../articles/building-an-emg-controlled-bionic-hand" class="pub-link">View Technical Article ↗</a>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <span>System: MOHAMED AI LAB v2040</span>
+      <span>© 2026 Mohamed Ahmed Abdelraouf</span>
+    </footer>
+  </div>
+</body>
+</html>

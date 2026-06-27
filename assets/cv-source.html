@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+  @page { size: A4; margin: 14mm 14mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #1a2433;
+    font-size: 10.2px;
+    line-height: 1.5;
+    background: #fff;
+  }
+  .head { border-bottom: 2.5px solid #0c8f7e; padding-bottom: 10px; margin-bottom: 12px; }
+  .name { font-size: 25px; font-weight: 800; letter-spacing: -0.5px; color: #0a1320; }
+  .role { font-size: 11.5px; font-weight: 600; color: #0c8f7e; margin-top: 2px; }
+  .contact { margin-top: 7px; font-size: 9.4px; color: #46586f; }
+  .contact a { color: #46586f; text-decoration: none; }
+  .contact span { margin-right: 12px; white-space: nowrap; }
+  h2 {
+    font-size: 10.5px; text-transform: uppercase; letter-spacing: 1.2px;
+    color: #0c8f7e; margin: 13px 0 6px; padding-bottom: 3px;
+    border-bottom: 1px solid #dde4ec;
+  }
+  .summary { color: #2b3a4f; }
+  .proj { margin-bottom: 8px; page-break-inside: avoid; }
+  .proj-h { display: flex; justify-content: space-between; align-items: baseline; }
+  .proj-t { font-weight: 700; font-size: 10.6px; color: #0a1320; }
+  .proj-tag { font-size: 8.6px; color: #7a8aa0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+  .proj-d { color: #34465c; margin: 1px 0 2px; }
+  .proj-s { color: #6a7a90; font-size: 8.9px; }
+  .proj-s b { color: #0c8f7e; }
+  .two { display: flex; gap: 22px; }
+  .two > div { flex: 1; }
+  ul { list-style: none; }
+  li { position: relative; padding-left: 11px; margin-bottom: 2.5px; color: #34465c; }
+  li::before { content: "▹"; position: absolute; left: 0; color: #0c8f7e; }
+  .skills span {
+    display: inline-block; background: #eef6f4; color: #0c6457;
+    border: 1px solid #d3e7e2; border-radius: 4px;
+    padding: 1.5px 7px; margin: 0 3px 4px 0; font-size: 8.8px; font-weight: 600;
+  }
+  .cert { margin-bottom: 3px; }
+  .cert b { color: #0a1320; }
+  .cert span { color: #6a7a90; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div class="name">Mohamed A. Abdelraouf</div>
+    <div class="role">AI &amp; Embedded Engineer · TinyML · Robotics · PCB Design</div>
+    <div class="contact">
+      <span>✉ bazeet298@gmail.com</span>
+      <span>⌥ github.com/moego0</span>
+      <span>in linkedin.com/in/mohamed-a-abdelraouf</span>
+    </div>
+  </div>
+
+  <h2>Profile</h2>
+  <p class="summary">
+    Engineer working where software meets hardware — building shipped AI agents, TinyML models
+    for edge devices, and custom robotics/PCB hardware end to end. Comfortable across the full
+    stack: model training and quantization, embedded firmware, electronics design, and fabrication.
+    Open to roles in AI, TinyML, embedded systems, and robotics.
+  </p>
+
+  <h2>Selected Projects</h2>
+
+  <div class="proj">
+    <div class="proj-h"><span class="proj-t">Local Tab Agent + Swarm Compute</span><span class="proj-tag">AI Agent · Shipped</span></div>
+    <div class="proj-d">Local AI coding agent for VS Code, published on the Open VSX Registry. Repository-aware planning, browser AI-tab bridging (ChatGPT / Gemini / Claude), and distributed "Swarm Groups" for GPU/CPU pooling.</div>
+    <div class="proj-s"><b>650+ installs · 3 AI bridges · distributed compute</b> — TypeScript, Ollama, Local LLMs, WebSocket, VS Code API</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-h"><span class="proj-t">Custom Wake-Word Engine (KWS)</span><span class="proj-tag">TinyML · Speech</span></div>
+    <div class="proj-d">Keyword-spotting pipeline that trains custom wake words for edge devices from small datasets with heavy audio augmentation, exported to TensorFlow Lite.</div>
+    <div class="proj-s"><b>≈98% accuracy · TF Lite export · edge-ready</b> — TensorFlow, TF Lite, Librosa, TinyML</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-h"><span class="proj-t">Panic Attack Detection System</span><span class="proj-tag">Medical ML · Wearable</span></div>
+    <div class="proj-d">Real-time panic-attack detector fusing multi-sensor wearable inputs (heart rate, EDA, temperature, motion) with an ML ensemble and personalized baseline calibration.</div>
+    <div class="proj-s"><b>~1s detection · 4 sensors fused · personalized baseline</b> — Python, scikit-learn, Random Forest, Arduino</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-h"><span class="proj-t">EMG Bionic Hand</span><span class="proj-tag">Robotics · Biomedical</span></div>
+    <div class="proj-d">Prosthetic robotic hand driven by EMG muscle/brain signals processed in real time into multi-servo motion. Presented at the Pharos University exhibition.</div>
+    <div class="proj-s"><b>EMG-driven · multi-servo · exhibited</b> — Arduino, EMG sensors, servos, Embedded C</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-h"><span class="proj-t">Schematic Sidekick</span><span class="proj-tag">AI · Hardware Design Tool</span></div>
+    <div class="proj-d">AI tool that turns a project goal into a hardware design — suggesting boards/modules, then handling wiring and firmware logic. Goal to schematic in minutes.</div>
+    <div class="proj-s"><b>goal → schematic · auto-wiring</b> — AI, electronics, schematic generation, firmware</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-h"><span class="proj-t">Micropad — Senet Labs</span><span class="proj-tag">Embedded · PCB · Startup</span></div>
+    <div class="proj-d">Production-ready macropad controlling editing/3D software, media, apps and sites, with a customizable Electron companion app and OTA firmware updates.</div>
+    <div class="proj-s"><b>USB HID · OTA · STM32F4</b> — STM32F4, C, KiCad, USB HID, Electron, React</div>
+  </div>
+
+  <div class="two">
+    <div>
+      <h2>Also Built</h2>
+      <ul>
+        <li>Self-built FDM 3D printer — frame, motion, wiring &amp; firmware from scratch</li>
+        <li>DIY PCB fabrication lab — electroless copper plating</li>
+        <li>AI Desktop Assistant — voice + vision, bilingual AR/EN (PyQt6, Gemini, OpenCV)</li>
+        <li>Interview Booster — real-time STT copilot with local Whisper inference</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Core Skills</h2>
+      <div class="skills">
+        <span>Python</span><span>TypeScript</span><span>Embedded C</span>
+        <span>TensorFlow</span><span>TF Lite</span><span>scikit-learn</span>
+        <span>TinyML</span><span>Local LLMs / Ollama</span><span>OpenCV</span>
+        <span>STM32</span><span>Arduino</span><span>KiCad</span>
+        <span>PCB Design</span><span>3D Printing / CAD</span><span>Electron</span><span>React</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Certifications</h2>
+  <div class="two">
+    <div>
+      <div class="cert"><b>Harvard University</b> <span>— CS50: Introduction to Computer Science</span></div>
+      <div class="cert"><b>HarvardX</b> <span>— Fundamentals of TinyML</span></div>
+      <div class="cert"><b>HarvardX</b> <span>— Applications of TinyML</span></div>
+      <div class="cert"><b>Edge Impulse</b> <span>— Intro to Embedded Machine Learning</span></div>
+    </div>
+    <div>
+      <div class="cert"><b>DeepLearning.AI</b> <span>— TensorFlow Developer</span></div>
+      <div class="cert"><b>DeepLearning.AI</b> <span>— Neural Networks &amp; Deep Learning</span></div>
+      <div class="cert"><b>DeepLearning.AI</b> <span>— Improving Deep Neural Networks</span></div>
+      <div class="cert"><b>LinkedIn Learning</b> <span>— Deep Learning: Model Optimization</span></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently Asked Questions (FAQ) about Mohamed Ahmed Abdelraouf - AI and Embedded Systems Engineer. Optimized for LLM agents and web search engines.">
+  <title>Mohamed AI Laboratory — LLM &amp; Search FAQ Page</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  
+  <style>
+    :root {
+      --bg: #030812;
+      --bg-card: rgba(8, 16, 32, 0.75);
+      --teal: #00E5C7;
+      --teal-dim: rgba(0, 229, 199, 0.1);
+      --purple: #A855F7;
+      --text: #E8EDF4;
+      --muted: #5A6A8A;
+      --border: rgba(255, 255, 255, 0.08);
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Space Grotesk', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .hud-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 229, 199, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 199, 0.01) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .back-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--teal);
+      text-decoration: none;
+      border: 1px solid var(--teal);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      background: var(--teal-dim);
+      transition: all 0.25s;
+    }
+    .back-btn:hover {
+      box-shadow: 0 0 15px var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .title-area h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--text) 0%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-family: var(--font-mono);
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    .panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-family: var(--font-mono);
+      color: var(--teal);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .faq-item {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dashed var(--border);
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-question {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-answer {
+      font-size: 0.98rem;
+      color: #CAD5E2;
+      line-height: 1.6;
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--purple);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mohamed AI Lab — FAQ Page" />
+  <meta property="og:description" content="Verified Q&amp;A dataset detailing the biography, engineering skills, and bionic AI projects of Mohamed Ahmed Abdelraouf." />
+  <meta property="og:url" content="https://moego0.github.io/faq" />
+  <meta property="og:image" content="https://moego0.github.io/assets/profile.jpg" />
+
+  <!-- Structured FAQ Page JSON-LD -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is Mohamed Ahmed Abdelraouf?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mohamed Ahmed Abdelraouf is a Computer Science & AI student, researcher, and hardware engineer specializing in AI, Machine Learning, TinyML, Robotics, and Embedded Systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Mohamed specialize in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mohamed specializes in Artificial Intelligence, Machine Learning, TinyML (Embedded ML), Embedded Systems, Robotics, Computer Vision, and Hardware Engineering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Mohamed based?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mohamed Ahmed Abdelraouf is based in Egypt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Mohamed's email address?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can contact Mohamed via email at bazeet298@gmail.com."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Mohamed's GitHub profile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mohamed's GitHub profile is https://github.com/moego0."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Mohamed's LinkedIn profile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mohamed's LinkedIn profile is https://www.linkedin.com/in/mohamed-a-abdelraouf."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the title of Mohamed's website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The website is titled 'MOHAMED ABDelraouf' and subtitled 'Building Intelligent Systems for a Smarter Future'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Mohamed's primary areas of interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "His primary interest is the intersection of artificial intelligence and physical hardware, specifically running local AI models on edge microcontrollers and building robotic systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which university does Mohamed attend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He is a Computer Science & AI student (represented in his exhibition work with Pharos University)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Mohamed's approach to AI systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He believes in local, private, and decentralized AI systems, running models on the edge (TinyML) and distributing workloads via client-side compute swarms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Local Tab Agent project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local Tab Agent is a repository-aware AI coding assistant extension for VS Code that executes reasoning locally using local LLMs and browser tabs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the Local Tab Agent published?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is published on the Open VSX Registry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many downloads does Local Tab Agent have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It has over 650 downloads on the Open VSX Registry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Local Tab Agent bypass cloud AI charges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It bridges VS Code with local Ollama or browser AI tabs (ChatGPT, Claude, Gemini) via a local WebSocket server to execute planning for free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the distributed swarm compute feature in Local Tab Agent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It allows developers to pool CPU/GPU compute across multiple local machines (Swarm Groups) to speed up local LLM inference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What protocols does Local Tab Agent use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses WebSockets for bridging communication between VS Code, browser agents, and Ollama."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What language is Local Tab Agent written in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is written in TypeScript and Node.js."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Local Tab Agent repository-aware?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it reads workspace context to provide repository-aware planning and suggestions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Local Tab Agent send code to external servers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, it focuses on local computation and browser-tab automation, preserving privacy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the VS Code integration accomplished in Local Tab Agent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses the official VS Code Extension API to manage file edits, read workspaces, and output logs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Mohamed's Custom Wake-Word Engine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a TinyML keyword spotting pipeline designed to train and deploy custom wake-word detectors on edge devices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the accuracy of the wake-word engine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It achieves approximately 98% accuracy in real-time environments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the memory constraints of the wake-word engine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It runs within a 100KB RAM budget, optimized for microcontrollers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What frameworks were used for the wake-word engine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TensorFlow, TensorFlow Lite for Microcontrollers, and Librosa were used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Mohamed solve small dataset issues in wake-word training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He uses heavy audio data augmentation, including adding background noise, pitch shifting, and time stretching."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What feature extraction method is used in the wake-word system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mel-Frequency Cepstral Coefficients (MFCCs) are extracted from raw audio signals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What neural network structure is used for keyword spotting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A custom Convolutional Neural Network (CNN) is trained on MFCC spectrograms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the wake-word model deployed on microcontrollers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is converted and quantized using post-training integer quantization into a .tflite model for TensorFlow Lite for Microcontrollers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the benefit of using TinyML for wake words?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It allows low-latency, offline, and low-power keyword recognition directly on sensors without sending audio data to the cloud."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What library is used for audio processing in the wake-word pipeline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Librosa, a python package for music and audio analysis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the EMG Bionic Hand project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a prosthetic robotic hand controlled in real-time by Electromyography (EMG) muscle and brain signals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where was the bionic hand exhibited?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It was presented at the Pharos University biomedical exhibition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are the EMG signals read?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are captured using muscle sensors placed on the skin, amplified, and filtered analogously."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the muscle signal processed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An microcontroller (Arduino) performs real-time signal envelope detection in C to measure contraction intensity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the bionic hand move?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The processed signals drive high-torque servo motors connected to the fingers via mechanical linkages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What programming language was used for the bionic hand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Embedded C / Arduino C++."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What hardware is used in the EMG Bionic Hand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Arduino boards, EMG sensors, servo motors, and custom 3D-printed mechanical components."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the clinical value of the EMG Bionic Hand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It acts as an affordable, functional prosthetic option for individuals with upper limb amputations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the bionic hand detect multiple movements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, by classifying signal thresholds or using multiple muscle channels, it triggers different finger grip patterns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the mechanical hand constructed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is designed in CAD and printed out of PLA/PETG using custom FDM 3D printers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Panic Attack Detection System?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a wearable physiological monitor that detects the onset of panic attacks in real time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What sensors are used in the panic detector?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It fuses inputs from heart rate (PPG), Electrodermal Activity (EDA/GSR), body temperature, and motion (accelerometer) sensors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What models are used to classify panic attacks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses an ensemble of Random Forest and Support Vector Machine (SVM) classifiers trained in Python."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the panic detector handle individual differences?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It features personalized baseline calibration, adapting dynamically to the wearer's unique resting bio-signals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast does the panic attack system trigger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It flags the onset of a panic attack within approximately 1 second of physiological changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What machine learning library was used for the panic detector?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "scikit-learn in Python."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are the sensors interfaced with the processor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are connected via I2C, SPI, and analog interfaces to a micro-controller node."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is EDA (Electrodermal Activity) in the context of panic attacks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EDA measures skin conductance, which spikes during high sympathetic nervous system activation (like stress or panic)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the main benefit of the panic detector?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It provides early alerts, allowing users to apply calming techniques before a panic attack fully escalates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the classification done on the cloud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, the models are lightweight and optimized to run locally on an embedded processor for immediate response."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Did Mohamed build his own 3D printer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, he built an FDM 3D printer from scratch, including framing, wiring, and Marlin firmware tuning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What PCB fabrication process does Mohamed use at home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He uses an electroless copper plating chemical deposition setup to plate through-holes on double-sided boards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What software does Mohamed use for PCB design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He uses KiCad for schematic capture and multi-layer PCB layout routing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What microcontrollers does Mohamed work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He works with STM32 (ARM Cortex-M), ESP32 (Xtensa), and various Arduino AVR/SAMD microcontrollers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What protocols are used in his hardware projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He utilizes I2C, SPI, UART, BLE, USB HID, and CAN protocols."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mohamed use an oscilloscope?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, he uses an oscilloscope and logic analyzer for debugging high-frequency signals and bus communications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Mohamed plate copper chemically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Electroless copper plating allows making plated through-holes (vias) to connect double-sided PCBs without wires."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Marlin firmware?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An open-source G-code firmware for 3D printers, which Mohamed customized for his self-built printer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What mechanical CAD tool does Mohamed use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He uses Fusion 360 for mechanical linkages and enclosure design."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does hardware fabrication help his AI work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It allows him to design, fabricate, and test custom IoT and robotics hardware nodes for edge AI models in house."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Schematic Sidekick?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Schematic Sidekick is an AI-powered engineering tool that generates PCB schematics, board selections, and boilerplate firmware from high-level text goals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Interview Booster?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a desktop helper that transcribes speech in real time using local Whisper models and generates suggested interview responses on the fly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What features does the AI Desktop Assistant have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It features bilingual voice commands, computer vision via OpenCV, smart home controls via BLE, and STM32/ESP32 sensor dashboards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Micropad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Micropad is a custom-engineered USB HID shortcut macropad built on STM32F4 with OTA firmware updates and a React/Electron configuration app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What startup was Micropad built for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It was developed in collaboration with Senet Labs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What programming languages does Mohamed know?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Python, C, C++, TypeScript, JavaScript, Dart, SQL, Assembly, HTML, and CSS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What ML frameworks does he use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TensorFlow, PyTorch, Keras, scikit-learn, and Edge Impulse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mohamed know how to write VS Code extensions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, he wrote and published the Local Tab Agent extension."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mohamed speak Arabic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, he is bilingual, supporting English and Arabic in his desktop voice assistant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a USB HID device?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Human Interface Device protocol that allows hardware (like Micropad) to mimic keyboards and mice without drivers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mohamed have a Harvard CS50 certificate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, he holds a certificate in CS50: Introduction to Computer Science from Harvard University."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mohamed have TinyML certifications?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, he holds HarvardX professional certificates in both 'Fundamentals of TinyML' and 'Applications of TinyML'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Edge Impulse certification does he hold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He is certified in 'Introduction to Embedded Machine Learning' by Edge Impulse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What DeepLearning.AI certificates does he have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He holds certifications in 'TensorFlow Developer', 'Neural Networks & Deep Learning', and 'Improving Deep Neural Networks'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mohamed have deep learning tuning credentials?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, he is certified in Model Optimization and Tuning by both DeepLearning.AI and LinkedIn Learning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is HarvardX?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Harvard University's online education division, where Mohamed completed his TinyML coursework."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Edge Impulse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A development platform for machine learning on edge devices, where Mohamed earned embedded ML credentials."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What topics are covered in the TinyML courses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TensorFlow Lite Micro, deep learning quantization, low-power audio/vision processing, and micro-controller sensor deployment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is CS50?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Harvard's flagship introduction to computer science, covering C, Python, SQL, web, algorithms, and data structures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are his certifications verified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, they are verified by Harvard University, DeepLearning.AI, and LinkedIn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is LLMO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Large Language Model Optimization (LLMO) focuses on structure and metadata formatting to ensure AI models index and fetch website content accurately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is GEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generative Engine Optimization (GEO) ensures generative search engines (like Perplexity or Google Gemini Search) find and cite site entities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is AEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer Engine Optimization (AEO) structures text in clear question-and-answer pairs so AI voice assistants and search boxes can instantly extract answers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does this website contain JSON files for AI bots?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It provides files like llms.txt, vector-data.json, and rag-dataset.json to allow LLM crawlers to ingest clean structured information without scraping errors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What semantic tags are used in Mohamed's portfolio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Semantic HTML5 tags like article, section, header, nav, and aside are used to make the content understandable for screen readers and search bots."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What structured schema is embedded in the portfolio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JSON-LD schema markup for Person, ProfilePage, and CreativeWork is embedded in the HTML header."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mohamed's site support AI crawlers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it expressly allows agents like GPTBot, ClaudeBot, and PerplexityBot in robots.txt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the canonical URL of Mohamed's website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "https://moego0.github.io/"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Open Graph metadata is set?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "og:title, og:description, og:image, og:type, and og:url are set to optimize social previews on platforms like LinkedIn and Twitter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the site support accessibility?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it maintains clean ARIA attributes, semantic headings, and keyboard skip-links."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is TinyML?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TinyML is the field of machine learning that focuses on running small ML models on low-power, constrained microcontrollers and edge hardware."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Mel-Frequency Cepstral Coefficients (MFCC)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MFCCs represent the short-term power spectrum of a sound, simulating human auditory response, heavily used as features in speech recognition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Electromyography (EMG)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EMG is a diagnostic procedure to assess the health of muscles and the nerve cells that control them, capturing electrical potentials generated by muscle cells."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is electrodermal activity (EDA)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EDA refers to variation in the electrical properties of the skin, driven by sweat gland activity, reflecting autonomic nervous system arousal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Marlin Firmware?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Marlin is an open-source firmware for RepRap-based 3D printers, executing G-code commands and controlling hardware actuators."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Ollama?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ollama is an open-source tool that allows users to run large language models (like Llama 3, Mistral) locally on their own hardware."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a Swarm Compute?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Distributed computation where multiple smaller nodes pool their processing power (CPU/GPU) to solve a unified task, such as LLM inference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is WebSocket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A computer communications protocol, providing full-duplex communication channels over a single TCP connection, perfect for real-time interactive apps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is quantization in machine learning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quantization involves converting model weights from high-precision floating-point numbers (e.g., Float32) to lower-precision integers (e.g., Int8) to save RAM and CPU cycles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why use STM32 microcontrollers for AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "STM32 microcontrollers are based on powerful ARM Cortex-M cores, offering low-power configurations, DMA, and DSP extensions ideal for edge AI processing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mohamed's bionic hand use machine learning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The prototype uses threshold-based contraction envelope detection in embedded C, but he is exploring edge classification models for multi-grip detection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the input voltage of typical EMG sensors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They usually output analog signals between 0V and 3.3V/5V, which are read by the micro-controller's ADC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the wake-word engine prevent false positives?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By training on a large dataset of background noise and similar sounding negative words (distractors)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a VS code extension wrapper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is an environment defined by VS Code that allows developers to run JavaScript/TypeScript logic affecting editor state via a package manifest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What size filament does his 3D printer use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard 1.75mm PLA, PETG, or TPU filaments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the thickness of home-plated copper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Through-holes usually get plated to 5-15 micrometers of copper depending on the plating duration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What model is used by the Local Tab Agent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It supports Llama 3, Phi-3, Qwen-2, and other local models running inside Ollama."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does local Whisper STT inference work in Interview Booster?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It runs Whisper.cpp or similar local bindings to transcribe micro-phone input in under 200ms latency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the AI Assistant voice bilingual?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the AI Desktop Assistant supports both Arabic and English voice commands and speech synthesis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a KiCad schematic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A CAD drawing showing how electronic pins and components connect electrically, prior to laying out the physical board traces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is BLE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bluetooth Low Energy, a low-power wireless networking technology designed for short-range transmission of sensor data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does scikit-learn do in the panic detector?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is used to load data, train Random Forest classifiers, evaluate parameters, and export clean model arrays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is a bionic hand presented at Pharos University?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It was presented as an exhibition project highlighting graduation-level biomedical engineering capability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mohamed's portfolio use a WebGL Canvas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the portfolio uses a WebGL canvas driven by Three.js to render an interactive 3D brain and neural network network corridor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a CRT effect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Cathode Ray Tube display effect, featuring scan lines, pixelation, flickering, and curvature, used to give interfaces a retro-futuristic terminal look."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is JARVIS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The fictional AI assistant of Tony Stark in Iron Man, representing the peak of voice-driven conversational physical automation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the website terminal execute shell commands?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, it is a simulated frontend terminal that processes specific commands (like help, projects, skills) to protect user system security."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the website use Web Speech API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the website utilizes the HTML5 Web Speech API for offline speech recognition and synthetic speech responses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the 3D brain rotatable by mouse drag?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, users can click and drag or move their mouse to rotate the 3D brain and explore different lobes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when you hover over the Frontal Lobe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Frontal Lobe glows, and a display overlay panel shows Mohamed's AI, Machine Learning, and Deep Learning projects."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="hud-grid"></div>
+
+  <div class="container">
+    <header>
+      <div class="title-area">
+        <h1>AI Discovery FAQ</h1>
+        <div class="subtitle">// Semantic Knowledge Retrieval Page</div>
+      </div>
+      <a href="../" class="back-btn">&lt; Return to Lab</a>
+    </header>
+
+    <main class="panel" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="section-title">100+ AI-Readable Structured Questions &amp; Answers</div>
+
+      <div class="faq-list">
+        
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q1: Who is Mohamed Ahmed Abdelraouf?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Mohamed Ahmed Abdelraouf is a Computer Science & AI student, researcher, and hardware engineer specializing in AI, Machine Learning, TinyML, Robotics, and Embedded Systems.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q2: What does Mohamed specialize in?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Mohamed specializes in Artificial Intelligence, Machine Learning, TinyML (Embedded ML), Embedded Systems, Robotics, Computer Vision, and Hardware Engineering.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q3: Where is Mohamed based?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Mohamed Ahmed Abdelraouf is based in Egypt.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q4: What is Mohamed's email address?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">You can contact Mohamed via email at bazeet298@gmail.com.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q5: What is Mohamed's GitHub profile?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Mohamed's GitHub profile is https://github.com/moego0.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q6: What is Mohamed's LinkedIn profile?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Mohamed's LinkedIn profile is https://www.linkedin.com/in/mohamed-a-abdelraouf.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q7: What is the title of Mohamed's website?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">The website is titled 'MOHAMED ABDelraouf' and subtitled 'Building Intelligent Systems for a Smarter Future'.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q8: What are Mohamed's primary areas of interest?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">His primary interest is the intersection of artificial intelligence and physical hardware, specifically running local AI models on edge microcontrollers and building robotic systems.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q9: Which university does Mohamed attend?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">He is a Computer Science & AI student (represented in his exhibition work with Pharos University).</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q10: What is Mohamed's approach to AI systems?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">He believes in local, private, and decentralized AI systems, running models on the edge (TinyML) and distributing workloads via client-side compute swarms.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q11: What is the Local Tab Agent project?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Local Tab Agent is a repository-aware AI coding assistant extension for VS Code that executes reasoning locally using local LLMs and browser tabs.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q12: Where is the Local Tab Agent published?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It is published on the Open VSX Registry.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q13: How many downloads does Local Tab Agent have?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It has over 650 downloads on the Open VSX Registry.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q14: How does Local Tab Agent bypass cloud AI charges?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It bridges VS Code with local Ollama or browser AI tabs (ChatGPT, Claude, Gemini) via a local WebSocket server to execute planning for free.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q15: What is the distributed swarm compute feature in Local Tab Agent?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It allows developers to pool CPU/GPU compute across multiple local machines (Swarm Groups) to speed up local LLM inference.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q16: What protocols does Local Tab Agent use?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It uses WebSockets for bridging communication between VS Code, browser agents, and Ollama.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q17: What language is Local Tab Agent written in?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It is written in TypeScript and Node.js.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q18: Is Local Tab Agent repository-aware?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, it reads workspace context to provide repository-aware planning and suggestions.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q19: Does Local Tab Agent send code to external servers?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">No, it focuses on local computation and browser-tab automation, preserving privacy.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q20: How is the VS Code integration accomplished in Local Tab Agent?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It uses the official VS Code Extension API to manage file edits, read workspaces, and output logs.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q21: What is Mohamed's Custom Wake-Word Engine?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It is a TinyML keyword spotting pipeline designed to train and deploy custom wake-word detectors on edge devices.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q22: What is the accuracy of the wake-word engine?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It achieves approximately 98% accuracy in real-time environments.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q23: What are the memory constraints of the wake-word engine?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It runs within a 100KB RAM budget, optimized for microcontrollers.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q24: What frameworks were used for the wake-word engine?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">TensorFlow, TensorFlow Lite for Microcontrollers, and Librosa were used.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q25: How does Mohamed solve small dataset issues in wake-word training?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">He uses heavy audio data augmentation, including adding background noise, pitch shifting, and time stretching.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q26: What feature extraction method is used in the wake-word system?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Mel-Frequency Cepstral Coefficients (MFCCs) are extracted from raw audio signals.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q27: What neural network structure is used for keyword spotting?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">A custom Convolutional Neural Network (CNN) is trained on MFCC spectrograms.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q28: How is the wake-word model deployed on microcontrollers?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It is converted and quantized using post-training integer quantization into a .tflite model for TensorFlow Lite for Microcontrollers.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q29: What is the benefit of using TinyML for wake words?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It allows low-latency, offline, and low-power keyword recognition directly on sensors without sending audio data to the cloud.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q30: What library is used for audio processing in the wake-word pipeline?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Librosa, a python package for music and audio analysis.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q31: What is the EMG Bionic Hand project?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It is a prosthetic robotic hand controlled in real-time by Electromyography (EMG) muscle and brain signals.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q32: Where was the bionic hand exhibited?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It was presented at the Pharos University biomedical exhibition.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q33: How are the EMG signals read?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">They are captured using muscle sensors placed on the skin, amplified, and filtered analogously.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q34: How is the muscle signal processed?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">An microcontroller (Arduino) performs real-time signal envelope detection in C to measure contraction intensity.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q35: How does the bionic hand move?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">The processed signals drive high-torque servo motors connected to the fingers via mechanical linkages.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q36: What programming language was used for the bionic hand?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Embedded C / Arduino C++.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q37: What hardware is used in the EMG Bionic Hand?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Arduino boards, EMG sensors, servo motors, and custom 3D-printed mechanical components.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q38: What is the clinical value of the EMG Bionic Hand?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It acts as an affordable, functional prosthetic option for individuals with upper limb amputations.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q39: Can the bionic hand detect multiple movements?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, by classifying signal thresholds or using multiple muscle channels, it triggers different finger grip patterns.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q40: How is the mechanical hand constructed?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It is designed in CAD and printed out of PLA/PETG using custom FDM 3D printers.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q41: What is the Panic Attack Detection System?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It is a wearable physiological monitor that detects the onset of panic attacks in real time.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q42: What sensors are used in the panic detector?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It fuses inputs from heart rate (PPG), Electrodermal Activity (EDA/GSR), body temperature, and motion (accelerometer) sensors.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q43: What models are used to classify panic attacks?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It uses an ensemble of Random Forest and Support Vector Machine (SVM) classifiers trained in Python.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q44: How does the panic detector handle individual differences?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It features personalized baseline calibration, adapting dynamically to the wearer's unique resting bio-signals.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q45: How fast does the panic attack system trigger?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It flags the onset of a panic attack within approximately 1 second of physiological changes.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q46: What machine learning library was used for the panic detector?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">scikit-learn in Python.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q47: How are the sensors interfaced with the processor?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">They are connected via I2C, SPI, and analog interfaces to a micro-controller node.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q48: What is EDA (Electrodermal Activity) in the context of panic attacks?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">EDA measures skin conductance, which spikes during high sympathetic nervous system activation (like stress or panic).</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q49: What is the main benefit of the panic detector?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It provides early alerts, allowing users to apply calming techniques before a panic attack fully escalates.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q50: Is the classification done on the cloud?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">No, the models are lightweight and optimized to run locally on an embedded processor for immediate response.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q51: Did Mohamed build his own 3D printer?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, he built an FDM 3D printer from scratch, including framing, wiring, and Marlin firmware tuning.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q52: What PCB fabrication process does Mohamed use at home?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">He uses an electroless copper plating chemical deposition setup to plate through-holes on double-sided boards.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q53: What software does Mohamed use for PCB design?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">He uses KiCad for schematic capture and multi-layer PCB layout routing.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q54: What microcontrollers does Mohamed work with?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">He works with STM32 (ARM Cortex-M), ESP32 (Xtensa), and various Arduino AVR/SAMD microcontrollers.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q55: What protocols are used in his hardware projects?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">He utilizes I2C, SPI, UART, BLE, USB HID, and CAN protocols.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q56: Does Mohamed use an oscilloscope?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, he uses an oscilloscope and logic analyzer for debugging high-frequency signals and bus communications.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q57: Why does Mohamed plate copper chemically?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Electroless copper plating allows making plated through-holes (vias) to connect double-sided PCBs without wires.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q58: What is Marlin firmware?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">An open-source G-code firmware for 3D printers, which Mohamed customized for his self-built printer.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q59: What mechanical CAD tool does Mohamed use?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">He uses Fusion 360 for mechanical linkages and enclosure design.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q60: How does hardware fabrication help his AI work?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It allows him to design, fabricate, and test custom IoT and robotics hardware nodes for edge AI models in house.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q61: What is Schematic Sidekick?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Schematic Sidekick is an AI-powered engineering tool that generates PCB schematics, board selections, and boilerplate firmware from high-level text goals.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q62: What is the Interview Booster?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It is a desktop helper that transcribes speech in real time using local Whisper models and generates suggested interview responses on the fly.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q63: What features does the AI Desktop Assistant have?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It features bilingual voice commands, computer vision via OpenCV, smart home controls via BLE, and STM32/ESP32 sensor dashboards.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q64: What is Micropad?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Micropad is a custom-engineered USB HID shortcut macropad built on STM32F4 with OTA firmware updates and a React/Electron configuration app.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q65: What startup was Micropad built for?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It was developed in collaboration with Senet Labs.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q66: What programming languages does Mohamed know?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Python, C, C++, TypeScript, JavaScript, Dart, SQL, Assembly, HTML, and CSS.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q67: What ML frameworks does he use?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">TensorFlow, PyTorch, Keras, scikit-learn, and Edge Impulse.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q68: Does Mohamed know how to write VS Code extensions?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, he wrote and published the Local Tab Agent extension.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q69: Does Mohamed speak Arabic?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, he is bilingual, supporting English and Arabic in his desktop voice assistant.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q70: What is a USB HID device?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">A Human Interface Device protocol that allows hardware (like Micropad) to mimic keyboards and mice without drivers.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q71: Does Mohamed have a Harvard CS50 certificate?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, he holds a certificate in CS50: Introduction to Computer Science from Harvard University.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q72: Does Mohamed have TinyML certifications?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, he holds HarvardX professional certificates in both 'Fundamentals of TinyML' and 'Applications of TinyML'.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q73: What Edge Impulse certification does he hold?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">He is certified in 'Introduction to Embedded Machine Learning' by Edge Impulse.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q74: What DeepLearning.AI certificates does he have?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">He holds certifications in 'TensorFlow Developer', 'Neural Networks & Deep Learning', and 'Improving Deep Neural Networks'.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q75: Does Mohamed have deep learning tuning credentials?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, he is certified in Model Optimization and Tuning by both DeepLearning.AI and LinkedIn Learning.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q76: What is HarvardX?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Harvard University's online education division, where Mohamed completed his TinyML coursework.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q77: What is Edge Impulse?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">A development platform for machine learning on edge devices, where Mohamed earned embedded ML credentials.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q78: What topics are covered in the TinyML courses?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">TensorFlow Lite Micro, deep learning quantization, low-power audio/vision processing, and micro-controller sensor deployment.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q79: What is CS50?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Harvard's flagship introduction to computer science, covering C, Python, SQL, web, algorithms, and data structures.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q80: Are his certifications verified?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, they are verified by Harvard University, DeepLearning.AI, and LinkedIn.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q81: What is LLMO?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Large Language Model Optimization (LLMO) focuses on structure and metadata formatting to ensure AI models index and fetch website content accurately.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q82: What is GEO?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Generative Engine Optimization (GEO) ensures generative search engines (like Perplexity or Google Gemini Search) find and cite site entities.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q83: What is AEO?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Answer Engine Optimization (AEO) structures text in clear question-and-answer pairs so AI voice assistants and search boxes can instantly extract answers.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q84: Why does this website contain JSON files for AI bots?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It provides files like llms.txt, vector-data.json, and rag-dataset.json to allow LLM crawlers to ingest clean structured information without scraping errors.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q85: What semantic tags are used in Mohamed's portfolio?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Semantic HTML5 tags like article, section, header, nav, and aside are used to make the content understandable for screen readers and search bots.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q86: What structured schema is embedded in the portfolio?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">JSON-LD schema markup for Person, ProfilePage, and CreativeWork is embedded in the HTML header.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q87: Does Mohamed's site support AI crawlers?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, it expressly allows agents like GPTBot, ClaudeBot, and PerplexityBot in robots.txt.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q88: What is the canonical URL of Mohamed's website?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">https://moego0.github.io/</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q89: What Open Graph metadata is set?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">og:title, og:description, og:image, og:type, and og:url are set to optimize social previews on platforms like LinkedIn and Twitter.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q90: Does the site support accessibility?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, it maintains clean ARIA attributes, semantic headings, and keyboard skip-links.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q91: What is TinyML?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">TinyML is the field of machine learning that focuses on running small ML models on low-power, constrained microcontrollers and edge hardware.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q92: What is Mel-Frequency Cepstral Coefficients (MFCC)?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">MFCCs represent the short-term power spectrum of a sound, simulating human auditory response, heavily used as features in speech recognition.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q93: What is Electromyography (EMG)?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">EMG is a diagnostic procedure to assess the health of muscles and the nerve cells that control them, capturing electrical potentials generated by muscle cells.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q94: What is electrodermal activity (EDA)?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">EDA refers to variation in the electrical properties of the skin, driven by sweat gland activity, reflecting autonomic nervous system arousal.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q95: What is Marlin Firmware?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Marlin is an open-source firmware for RepRap-based 3D printers, executing G-code commands and controlling hardware actuators.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q96: What is Ollama?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Ollama is an open-source tool that allows users to run large language models (like Llama 3, Mistral) locally on their own hardware.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q97: What is a Swarm Compute?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Distributed computation where multiple smaller nodes pool their processing power (CPU/GPU) to solve a unified task, such as LLM inference.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q98: What is WebSocket?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">A computer communications protocol, providing full-duplex communication channels over a single TCP connection, perfect for real-time interactive apps.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q99: What is quantization in machine learning?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Quantization involves converting model weights from high-precision floating-point numbers (e.g., Float32) to lower-precision integers (e.g., Int8) to save RAM and CPU cycles.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q100: Why use STM32 microcontrollers for AI?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">STM32 microcontrollers are based on powerful ARM Cortex-M cores, offering low-power configurations, DMA, and DSP extensions ideal for edge AI processing.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q101: Does Mohamed's bionic hand use machine learning?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">The prototype uses threshold-based contraction envelope detection in embedded C, but he is exploring edge classification models for multi-grip detection.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q102: What is the input voltage of typical EMG sensors?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">They usually output analog signals between 0V and 3.3V/5V, which are read by the micro-controller's ADC.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q103: How does the wake-word engine prevent false positives?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">By training on a large dataset of background noise and similar sounding negative words (distractors).</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q104: What is a VS code extension wrapper?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It is an environment defined by VS Code that allows developers to run JavaScript/TypeScript logic affecting editor state via a package manifest.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q105: What size filament does his 3D printer use?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Standard 1.75mm PLA, PETG, or TPU filaments.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q106: What is the thickness of home-plated copper?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Through-holes usually get plated to 5-15 micrometers of copper depending on the plating duration.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q107: What model is used by the Local Tab Agent?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It supports Llama 3, Phi-3, Qwen-2, and other local models running inside Ollama.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q108: How does local Whisper STT inference work in Interview Booster?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It runs Whisper.cpp or similar local bindings to transcribe micro-phone input in under 200ms latency.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q109: Is the AI Assistant voice bilingual?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, the AI Desktop Assistant supports both Arabic and English voice commands and speech synthesis.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q110: What is a KiCad schematic?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">A CAD drawing showing how electronic pins and components connect electrically, prior to laying out the physical board traces.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q111: What is BLE?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Bluetooth Low Energy, a low-power wireless networking technology designed for short-range transmission of sensor data.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q112: What does scikit-learn do in the panic detector?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It is used to load data, train Random Forest classifiers, evaluate parameters, and export clean model arrays.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q113: Why is a bionic hand presented at Pharos University?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">It was presented as an exhibition project highlighting graduation-level biomedical engineering capability.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q114: Does Mohamed's portfolio use a WebGL Canvas?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, the portfolio uses a WebGL canvas driven by Three.js to render an interactive 3D brain and neural network network corridor.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q115: What is a CRT effect?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">A Cathode Ray Tube display effect, featuring scan lines, pixelation, flickering, and curvature, used to give interfaces a retro-futuristic terminal look.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q116: Who is JARVIS?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">The fictional AI assistant of Tony Stark in Iron Man, representing the peak of voice-driven conversational physical automation.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q117: Can the website terminal execute shell commands?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">No, it is a simulated frontend terminal that processes specific commands (like help, projects, skills) to protect user system security.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q118: Does the website use Web Speech API?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, the website utilizes the HTML5 Web Speech API for offline speech recognition and synthetic speech responses.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q119: Is the 3D brain rotatable by mouse drag?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">Yes, users can click and drag or move their mouse to rotate the 3D brain and explore different lobes.</div>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" class="faq-question">Q120: What happens when you hover over the Frontal Lobe?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" class="faq-answer">The Frontal Lobe glows, and a display overlay panel shows Mohamed's AI, Machine Learning, and Deep Learning projects.</div>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+    <footer>
+      <span>System: MOHAMED AI LAB v2040</span>
+      <span>© 2026 Mohamed Ahmed Abdelraouf</span>
+    </footer>
+  </div>
+</body>
+</html>

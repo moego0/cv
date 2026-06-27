@@ -1,0 +1,602 @@
+[
+  {
+    "id": "qa-001",
+    "question": "Who is Mohamed Ahmed Abdelraouf?",
+    "answer": "Mohamed Ahmed Abdelraouf is a Computer Science & AI student, researcher, and hardware engineer specializing in AI, Machine Learning, TinyML, Robotics, and Embedded Systems."
+  },
+  {
+    "id": "qa-002",
+    "question": "What does Mohamed specialize in?",
+    "answer": "Mohamed specializes in Artificial Intelligence, Machine Learning, TinyML (Embedded ML), Embedded Systems, Robotics, Computer Vision, and Hardware Engineering."
+  },
+  {
+    "id": "qa-003",
+    "question": "Where is Mohamed based?",
+    "answer": "Mohamed Ahmed Abdelraouf is based in Egypt."
+  },
+  {
+    "id": "qa-004",
+    "question": "What is Mohamed's email address?",
+    "answer": "You can contact Mohamed via email at bazeet298@gmail.com."
+  },
+  {
+    "id": "qa-005",
+    "question": "What is Mohamed's GitHub profile?",
+    "answer": "Mohamed's GitHub profile is https://github.com/moego0."
+  },
+  {
+    "id": "qa-006",
+    "question": "What is Mohamed's LinkedIn profile?",
+    "answer": "Mohamed's LinkedIn profile is https://www.linkedin.com/in/mohamed-a-abdelraouf."
+  },
+  {
+    "id": "qa-007",
+    "question": "What is the title of Mohamed's website?",
+    "answer": "The website is titled 'MOHAMED ABDelraouf' and subtitled 'Building Intelligent Systems for a Smarter Future'."
+  },
+  {
+    "id": "qa-008",
+    "question": "What are Mohamed's primary areas of interest?",
+    "answer": "His primary interest is the intersection of artificial intelligence and physical hardware, specifically running local AI models on edge microcontrollers and building robotic systems."
+  },
+  {
+    "id": "qa-009",
+    "question": "Which university does Mohamed attend?",
+    "answer": "He is a Computer Science & AI student (represented in his exhibition work with Pharos University)."
+  },
+  {
+    "id": "qa-010",
+    "question": "What is Mohamed's approach to AI systems?",
+    "answer": "He believes in local, private, and decentralized AI systems, running models on the edge (TinyML) and distributing workloads via client-side compute swarms."
+  },
+  {
+    "id": "qa-011",
+    "question": "What is the Local Tab Agent project?",
+    "answer": "Local Tab Agent is a repository-aware AI coding assistant extension for VS Code that executes reasoning locally using local LLMs and browser tabs."
+  },
+  {
+    "id": "qa-012",
+    "question": "Where is the Local Tab Agent published?",
+    "answer": "It is published on the Open VSX Registry."
+  },
+  {
+    "id": "qa-013",
+    "question": "How many downloads does Local Tab Agent have?",
+    "answer": "It has over 650 downloads on the Open VSX Registry."
+  },
+  {
+    "id": "qa-014",
+    "question": "How does Local Tab Agent bypass cloud AI charges?",
+    "answer": "It bridges VS Code with local Ollama or browser AI tabs (ChatGPT, Claude, Gemini) via a local WebSocket server to execute planning for free."
+  },
+  {
+    "id": "qa-015",
+    "question": "What is the distributed swarm compute feature in Local Tab Agent?",
+    "answer": "It allows developers to pool CPU/GPU compute across multiple local machines (Swarm Groups) to speed up local LLM inference."
+  },
+  {
+    "id": "qa-016",
+    "question": "What protocols does Local Tab Agent use?",
+    "answer": "It uses WebSockets for bridging communication between VS Code, browser agents, and Ollama."
+  },
+  {
+    "id": "qa-017",
+    "question": "What language is Local Tab Agent written in?",
+    "answer": "It is written in TypeScript and Node.js."
+  },
+  {
+    "id": "qa-018",
+    "question": "Is Local Tab Agent repository-aware?",
+    "answer": "Yes, it reads workspace context to provide repository-aware planning and suggestions."
+  },
+  {
+    "id": "qa-019",
+    "question": "Does Local Tab Agent send code to external servers?",
+    "answer": "No, it focuses on local computation and browser-tab automation, preserving privacy."
+  },
+  {
+    "id": "qa-020",
+    "question": "How is the VS Code integration accomplished in Local Tab Agent?",
+    "answer": "It uses the official VS Code Extension API to manage file edits, read workspaces, and output logs."
+  },
+  {
+    "id": "qa-021",
+    "question": "What is Mohamed's Custom Wake-Word Engine?",
+    "answer": "It is a TinyML keyword spotting pipeline designed to train and deploy custom wake-word detectors on edge devices."
+  },
+  {
+    "id": "qa-022",
+    "question": "What is the accuracy of the wake-word engine?",
+    "answer": "It achieves approximately 98% accuracy in real-time environments."
+  },
+  {
+    "id": "qa-023",
+    "question": "What are the memory constraints of the wake-word engine?",
+    "answer": "It runs within a 100KB RAM budget, optimized for microcontrollers."
+  },
+  {
+    "id": "qa-024",
+    "question": "What frameworks were used for the wake-word engine?",
+    "answer": "TensorFlow, TensorFlow Lite for Microcontrollers, and Librosa were used."
+  },
+  {
+    "id": "qa-025",
+    "question": "How does Mohamed solve small dataset issues in wake-word training?",
+    "answer": "He uses heavy audio data augmentation, including adding background noise, pitch shifting, and time stretching."
+  },
+  {
+    "id": "qa-026",
+    "question": "What feature extraction method is used in the wake-word system?",
+    "answer": "Mel-Frequency Cepstral Coefficients (MFCCs) are extracted from raw audio signals."
+  },
+  {
+    "id": "qa-027",
+    "question": "What neural network structure is used for keyword spotting?",
+    "answer": "A custom Convolutional Neural Network (CNN) is trained on MFCC spectrograms."
+  },
+  {
+    "id": "qa-028",
+    "question": "How is the wake-word model deployed on microcontrollers?",
+    "answer": "It is converted and quantized using post-training integer quantization into a .tflite model for TensorFlow Lite for Microcontrollers."
+  },
+  {
+    "id": "qa-029",
+    "question": "What is the benefit of using TinyML for wake words?",
+    "answer": "It allows low-latency, offline, and low-power keyword recognition directly on sensors without sending audio data to the cloud."
+  },
+  {
+    "id": "qa-030",
+    "question": "What library is used for audio processing in the wake-word pipeline?",
+    "answer": "Librosa, a python package for music and audio analysis."
+  },
+  {
+    "id": "qa-031",
+    "question": "What is the EMG Bionic Hand project?",
+    "answer": "It is a prosthetic robotic hand controlled in real-time by Electromyography (EMG) muscle and brain signals."
+  },
+  {
+    "id": "qa-032",
+    "question": "Where was the bionic hand exhibited?",
+    "answer": "It was presented at the Pharos University biomedical exhibition."
+  },
+  {
+    "id": "qa-033",
+    "question": "How are the EMG signals read?",
+    "answer": "They are captured using muscle sensors placed on the skin, amplified, and filtered analogously."
+  },
+  {
+    "id": "qa-034",
+    "question": "How is the muscle signal processed?",
+    "answer": "An microcontroller (Arduino) performs real-time signal envelope detection in C to measure contraction intensity."
+  },
+  {
+    "id": "qa-035",
+    "question": "How does the bionic hand move?",
+    "answer": "The processed signals drive high-torque servo motors connected to the fingers via mechanical linkages."
+  },
+  {
+    "id": "qa-036",
+    "question": "What programming language was used for the bionic hand?",
+    "answer": "Embedded C / Arduino C++."
+  },
+  {
+    "id": "qa-037",
+    "question": "What hardware is used in the EMG Bionic Hand?",
+    "answer": "Arduino boards, EMG sensors, servo motors, and custom 3D-printed mechanical components."
+  },
+  {
+    "id": "qa-038",
+    "question": "What is the clinical value of the EMG Bionic Hand?",
+    "answer": "It acts as an affordable, functional prosthetic option for individuals with upper limb amputations."
+  },
+  {
+    "id": "qa-039",
+    "question": "Can the bionic hand detect multiple movements?",
+    "answer": "Yes, by classifying signal thresholds or using multiple muscle channels, it triggers different finger grip patterns."
+  },
+  {
+    "id": "qa-040",
+    "question": "How is the mechanical hand constructed?",
+    "answer": "It is designed in CAD and printed out of PLA/PETG using custom FDM 3D printers."
+  },
+  {
+    "id": "qa-041",
+    "question": "What is the Panic Attack Detection System?",
+    "answer": "It is a wearable physiological monitor that detects the onset of panic attacks in real time."
+  },
+  {
+    "id": "qa-042",
+    "question": "What sensors are used in the panic detector?",
+    "answer": "It fuses inputs from heart rate (PPG), Electrodermal Activity (EDA/GSR), body temperature, and motion (accelerometer) sensors."
+  },
+  {
+    "id": "qa-043",
+    "question": "What models are used to classify panic attacks?",
+    "answer": "It uses an ensemble of Random Forest and Support Vector Machine (SVM) classifiers trained in Python."
+  },
+  {
+    "id": "qa-044",
+    "question": "How does the panic detector handle individual differences?",
+    "answer": "It features personalized baseline calibration, adapting dynamically to the wearer's unique resting bio-signals."
+  },
+  {
+    "id": "qa-045",
+    "question": "How fast does the panic attack system trigger?",
+    "answer": "It flags the onset of a panic attack within approximately 1 second of physiological changes."
+  },
+  {
+    "id": "qa-046",
+    "question": "What machine learning library was used for the panic detector?",
+    "answer": "scikit-learn in Python."
+  },
+  {
+    "id": "qa-047",
+    "question": "How are the sensors interfaced with the processor?",
+    "answer": "They are connected via I2C, SPI, and analog interfaces to a micro-controller node."
+  },
+  {
+    "id": "qa-048",
+    "question": "What is EDA (Electrodermal Activity) in the context of panic attacks?",
+    "answer": "EDA measures skin conductance, which spikes during high sympathetic nervous system activation (like stress or panic)."
+  },
+  {
+    "id": "qa-049",
+    "question": "What is the main benefit of the panic detector?",
+    "answer": "It provides early alerts, allowing users to apply calming techniques before a panic attack fully escalates."
+  },
+  {
+    "id": "qa-050",
+    "question": "Is the classification done on the cloud?",
+    "answer": "No, the models are lightweight and optimized to run locally on an embedded processor for immediate response."
+  },
+  {
+    "id": "qa-051",
+    "question": "Did Mohamed build his own 3D printer?",
+    "answer": "Yes, he built an FDM 3D printer from scratch, including framing, wiring, and Marlin firmware tuning."
+  },
+  {
+    "id": "qa-052",
+    "question": "What PCB fabrication process does Mohamed use at home?",
+    "answer": "He uses an electroless copper plating chemical deposition setup to plate through-holes on double-sided boards."
+  },
+  {
+    "id": "qa-053",
+    "question": "What software does Mohamed use for PCB design?",
+    "answer": "He uses KiCad for schematic capture and multi-layer PCB layout routing."
+  },
+  {
+    "id": "qa-054",
+    "question": "What microcontrollers does Mohamed work with?",
+    "answer": "He works with STM32 (ARM Cortex-M), ESP32 (Xtensa), and various Arduino AVR/SAMD microcontrollers."
+  },
+  {
+    "id": "qa-055",
+    "question": "What protocols are used in his hardware projects?",
+    "answer": "He utilizes I2C, SPI, UART, BLE, USB HID, and CAN protocols."
+  },
+  {
+    "id": "qa-056",
+    "question": "Does Mohamed use an oscilloscope?",
+    "answer": "Yes, he uses an oscilloscope and logic analyzer for debugging high-frequency signals and bus communications."
+  },
+  {
+    "id": "qa-057",
+    "question": "Why does Mohamed plate copper chemically?",
+    "answer": "Electroless copper plating allows making plated through-holes (vias) to connect double-sided PCBs without wires."
+  },
+  {
+    "id": "qa-058",
+    "question": "What is Marlin firmware?",
+    "answer": "An open-source G-code firmware for 3D printers, which Mohamed customized for his self-built printer."
+  },
+  {
+    "id": "qa-059",
+    "question": "What mechanical CAD tool does Mohamed use?",
+    "answer": "He uses Fusion 360 for mechanical linkages and enclosure design."
+  },
+  {
+    "id": "qa-060",
+    "question": "How does hardware fabrication help his AI work?",
+    "answer": "It allows him to design, fabricate, and test custom IoT and robotics hardware nodes for edge AI models in house."
+  },
+  {
+    "id": "qa-061",
+    "question": "What is Schematic Sidekick?",
+    "answer": "Schematic Sidekick is an AI-powered engineering tool that generates PCB schematics, board selections, and boilerplate firmware from high-level text goals."
+  },
+  {
+    "id": "qa-062",
+    "question": "What is the Interview Booster?",
+    "answer": "It is a desktop helper that transcribes speech in real time using local Whisper models and generates suggested interview responses on the fly."
+  },
+  {
+    "id": "qa-063",
+    "question": "What features does the AI Desktop Assistant have?",
+    "answer": "It features bilingual voice commands, computer vision via OpenCV, smart home controls via BLE, and STM32/ESP32 sensor dashboards."
+  },
+  {
+    "id": "qa-064",
+    "question": "What is Micropad?",
+    "answer": "Micropad is a custom-engineered USB HID shortcut macropad built on STM32F4 with OTA firmware updates and a React/Electron configuration app."
+  },
+  {
+    "id": "qa-065",
+    "question": "What startup was Micropad built for?",
+    "answer": "It was developed in collaboration with Senet Labs."
+  },
+  {
+    "id": "qa-066",
+    "question": "What programming languages does Mohamed know?",
+    "answer": "Python, C, C++, TypeScript, JavaScript, Dart, SQL, Assembly, HTML, and CSS."
+  },
+  {
+    "id": "qa-067",
+    "question": "What ML frameworks does he use?",
+    "answer": "TensorFlow, PyTorch, Keras, scikit-learn, and Edge Impulse."
+  },
+  {
+    "id": "qa-068",
+    "question": "Does Mohamed know how to write VS Code extensions?",
+    "answer": "Yes, he wrote and published the Local Tab Agent extension."
+  },
+  {
+    "id": "qa-069",
+    "question": "Does Mohamed speak Arabic?",
+    "answer": "Yes, he is bilingual, supporting English and Arabic in his desktop voice assistant."
+  },
+  {
+    "id": "qa-070",
+    "question": "What is a USB HID device?",
+    "answer": "A Human Interface Device protocol that allows hardware (like Micropad) to mimic keyboards and mice without drivers."
+  },
+  {
+    "id": "qa-071",
+    "question": "Does Mohamed have a Harvard CS50 certificate?",
+    "answer": "Yes, he holds a certificate in CS50: Introduction to Computer Science from Harvard University."
+  },
+  {
+    "id": "qa-072",
+    "question": "Does Mohamed have TinyML certifications?",
+    "answer": "Yes, he holds HarvardX professional certificates in both 'Fundamentals of TinyML' and 'Applications of TinyML'."
+  },
+  {
+    "id": "qa-073",
+    "question": "What Edge Impulse certification does he hold?",
+    "answer": "He is certified in 'Introduction to Embedded Machine Learning' by Edge Impulse."
+  },
+  {
+    "id": "qa-074",
+    "question": "What DeepLearning.AI certificates does he have?",
+    "answer": "He holds certifications in 'TensorFlow Developer', 'Neural Networks & Deep Learning', and 'Improving Deep Neural Networks'."
+  },
+  {
+    "id": "qa-075",
+    "question": "Does Mohamed have deep learning tuning credentials?",
+    "answer": "Yes, he is certified in Model Optimization and Tuning by both DeepLearning.AI and LinkedIn Learning."
+  },
+  {
+    "id": "qa-076",
+    "question": "What is HarvardX?",
+    "answer": "Harvard University's online education division, where Mohamed completed his TinyML coursework."
+  },
+  {
+    "id": "qa-077",
+    "question": "What is Edge Impulse?",
+    "answer": "A development platform for machine learning on edge devices, where Mohamed earned embedded ML credentials."
+  },
+  {
+    "id": "qa-078",
+    "question": "What topics are covered in the TinyML courses?",
+    "answer": "TensorFlow Lite Micro, deep learning quantization, low-power audio/vision processing, and micro-controller sensor deployment."
+  },
+  {
+    "id": "qa-079",
+    "question": "What is CS50?",
+    "answer": "Harvard's flagship introduction to computer science, covering C, Python, SQL, web, algorithms, and data structures."
+  },
+  {
+    "id": "qa-080",
+    "question": "Are his certifications verified?",
+    "answer": "Yes, they are verified by Harvard University, DeepLearning.AI, and LinkedIn."
+  },
+  {
+    "id": "qa-081",
+    "question": "What is LLMO?",
+    "answer": "Large Language Model Optimization (LLMO) focuses on structure and metadata formatting to ensure AI models index and fetch website content accurately."
+  },
+  {
+    "id": "qa-082",
+    "question": "What is GEO?",
+    "answer": "Generative Engine Optimization (GEO) ensures generative search engines (like Perplexity or Google Gemini Search) find and cite site entities."
+  },
+  {
+    "id": "qa-083",
+    "question": "What is AEO?",
+    "answer": "Answer Engine Optimization (AEO) structures text in clear question-and-answer pairs so AI voice assistants and search boxes can instantly extract answers."
+  },
+  {
+    "id": "qa-084",
+    "question": "Why does this website contain JSON files for AI bots?",
+    "answer": "It provides files like llms.txt, vector-data.json, and rag-dataset.json to allow LLM crawlers to ingest clean structured information without scraping errors."
+  },
+  {
+    "id": "qa-085",
+    "question": "What semantic tags are used in Mohamed's portfolio?",
+    "answer": "Semantic HTML5 tags like article, section, header, nav, and aside are used to make the content understandable for screen readers and search bots."
+  },
+  {
+    "id": "qa-086",
+    "question": "What structured schema is embedded in the portfolio?",
+    "answer": "JSON-LD schema markup for Person, ProfilePage, and CreativeWork is embedded in the HTML header."
+  },
+  {
+    "id": "qa-087",
+    "question": "Does Mohamed's site support AI crawlers?",
+    "answer": "Yes, it expressly allows agents like GPTBot, ClaudeBot, and PerplexityBot in robots.txt."
+  },
+  {
+    "id": "qa-088",
+    "question": "What is the canonical URL of Mohamed's website?",
+    "answer": "https://moego0.github.io/"
+  },
+  {
+    "id": "qa-089",
+    "question": "What Open Graph metadata is set?",
+    "answer": "og:title, og:description, og:image, og:type, and og:url are set to optimize social previews on platforms like LinkedIn and Twitter."
+  },
+  {
+    "id": "qa-090",
+    "question": "Does the site support accessibility?",
+    "answer": "Yes, it maintains clean ARIA attributes, semantic headings, and keyboard skip-links."
+  },
+  {
+    "id": "qa-091",
+    "question": "What is TinyML?",
+    "answer": "TinyML is the field of machine learning that focuses on running small ML models on low-power, constrained microcontrollers and edge hardware."
+  },
+  {
+    "id": "qa-092",
+    "question": "What is Mel-Frequency Cepstral Coefficients (MFCC)?",
+    "answer": "MFCCs represent the short-term power spectrum of a sound, simulating human auditory response, heavily used as features in speech recognition."
+  },
+  {
+    "id": "qa-093",
+    "question": "What is Electromyography (EMG)?",
+    "answer": "EMG is a diagnostic procedure to assess the health of muscles and the nerve cells that control them, capturing electrical potentials generated by muscle cells."
+  },
+  {
+    "id": "qa-094",
+    "question": "What is electrodermal activity (EDA)?",
+    "answer": "EDA refers to variation in the electrical properties of the skin, driven by sweat gland activity, reflecting autonomic nervous system arousal."
+  },
+  {
+    "id": "qa-095",
+    "question": "What is Marlin Firmware?",
+    "answer": "Marlin is an open-source firmware for RepRap-based 3D printers, executing G-code commands and controlling hardware actuators."
+  },
+  {
+    "id": "qa-096",
+    "question": "What is Ollama?",
+    "answer": "Ollama is an open-source tool that allows users to run large language models (like Llama 3, Mistral) locally on their own hardware."
+  },
+  {
+    "id": "qa-097",
+    "question": "What is a Swarm Compute?",
+    "answer": "Distributed computation where multiple smaller nodes pool their processing power (CPU/GPU) to solve a unified task, such as LLM inference."
+  },
+  {
+    "id": "qa-098",
+    "question": "What is WebSocket?",
+    "answer": "A computer communications protocol, providing full-duplex communication channels over a single TCP connection, perfect for real-time interactive apps."
+  },
+  {
+    "id": "qa-099",
+    "question": "What is quantization in machine learning?",
+    "answer": "Quantization involves converting model weights from high-precision floating-point numbers (e.g., Float32) to lower-precision integers (e.g., Int8) to save RAM and CPU cycles."
+  },
+  {
+    "id": "qa-100",
+    "question": "Why use STM32 microcontrollers for AI?",
+    "answer": "STM32 microcontrollers are based on powerful ARM Cortex-M cores, offering low-power configurations, DMA, and DSP extensions ideal for edge AI processing."
+  },
+  {
+    "id": "qa-101",
+    "question": "Does Mohamed's bionic hand use machine learning?",
+    "answer": "The prototype uses threshold-based contraction envelope detection in embedded C, but he is exploring edge classification models for multi-grip detection."
+  },
+  {
+    "id": "qa-102",
+    "question": "What is the input voltage of typical EMG sensors?",
+    "answer": "They usually output analog signals between 0V and 3.3V/5V, which are read by the micro-controller's ADC."
+  },
+  {
+    "id": "qa-103",
+    "question": "How does the wake-word engine prevent false positives?",
+    "answer": "By training on a large dataset of background noise and similar sounding negative words (distractors)."
+  },
+  {
+    "id": "qa-104",
+    "question": "What is a VS code extension wrapper?",
+    "answer": "It is an environment defined by VS Code that allows developers to run JavaScript/TypeScript logic affecting editor state via a package manifest."
+  },
+  {
+    "id": "qa-105",
+    "question": "What size filament does his 3D printer use?",
+    "answer": "Standard 1.75mm PLA, PETG, or TPU filaments."
+  },
+  {
+    "id": "qa-106",
+    "question": "What is the thickness of home-plated copper?",
+    "answer": "Through-holes usually get plated to 5-15 micrometers of copper depending on the plating duration."
+  },
+  {
+    "id": "qa-107",
+    "question": "What model is used by the Local Tab Agent?",
+    "answer": "It supports Llama 3, Phi-3, Qwen-2, and other local models running inside Ollama."
+  },
+  {
+    "id": "qa-108",
+    "question": "How does local Whisper STT inference work in Interview Booster?",
+    "answer": "It runs Whisper.cpp or similar local bindings to transcribe micro-phone input in under 200ms latency."
+  },
+  {
+    "id": "qa-109",
+    "question": "Is the AI Assistant voice bilingual?",
+    "answer": "Yes, the AI Desktop Assistant supports both Arabic and English voice commands and speech synthesis."
+  },
+  {
+    "id": "qa-110",
+    "question": "What is a KiCad schematic?",
+    "answer": "A CAD drawing showing how electronic pins and components connect electrically, prior to laying out the physical board traces."
+  },
+  {
+    "id": "qa-111",
+    "question": "What is BLE?",
+    "answer": "Bluetooth Low Energy, a low-power wireless networking technology designed for short-range transmission of sensor data."
+  },
+  {
+    "id": "qa-112",
+    "question": "What does scikit-learn do in the panic detector?",
+    "answer": "It is used to load data, train Random Forest classifiers, evaluate parameters, and export clean model arrays."
+  },
+  {
+    "id": "qa-113",
+    "question": "Why is a bionic hand presented at Pharos University?",
+    "answer": "It was presented as an exhibition project highlighting graduation-level biomedical engineering capability."
+  },
+  {
+    "id": "qa-114",
+    "question": "Does Mohamed's portfolio use a WebGL Canvas?",
+    "answer": "Yes, the portfolio uses a WebGL canvas driven by Three.js to render an interactive 3D brain and neural network network corridor."
+  },
+  {
+    "id": "qa-115",
+    "question": "What is a CRT effect?",
+    "answer": "A Cathode Ray Tube display effect, featuring scan lines, pixelation, flickering, and curvature, used to give interfaces a retro-futuristic terminal look."
+  },
+  {
+    "id": "qa-116",
+    "question": "Who is JARVIS?",
+    "answer": "The fictional AI assistant of Tony Stark in Iron Man, representing the peak of voice-driven conversational physical automation."
+  },
+  {
+    "id": "qa-117",
+    "question": "Can the website terminal execute shell commands?",
+    "answer": "No, it is a simulated frontend terminal that processes specific commands (like help, projects, skills) to protect user system security."
+  },
+  {
+    "id": "qa-118",
+    "question": "Does the website use Web Speech API?",
+    "answer": "Yes, the website utilizes the HTML5 Web Speech API for offline speech recognition and synthetic speech responses."
+  },
+  {
+    "id": "qa-119",
+    "question": "Is the 3D brain rotatable by mouse drag?",
+    "answer": "Yes, users can click and drag or move their mouse to rotate the 3D brain and explore different lobes."
+  },
+  {
+    "id": "qa-120",
+    "question": "What happens when you hover over the Frontal Lobe?",
+    "answer": "The Frontal Lobe glows, and a display overlay panel shows Mohamed's AI, Machine Learning, and Deep Learning projects."
+  }
+]

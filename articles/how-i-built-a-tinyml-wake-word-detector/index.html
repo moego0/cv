@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical guide on how to build a TinyML Wake Word Detector running on STM32 under 100KB RAM. Written by Mohamed Ahmed Abdelraouf.">
+  <title>How I Built a TinyML Wake Word Detector — Mohamed AI Laboratory</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+  
+  <style>
+    :root {
+      --bg: #030812;
+      --bg-card: rgba(8, 16, 32, 0.75);
+      --teal: #00E5C7;
+      --teal-dim: rgba(0, 229, 199, 0.1);
+      --purple: #A855F7;
+      --purple-dim: rgba(168, 85, 247, 0.1);
+      --text: #E8EDF4;
+      --muted: #5A6A8A;
+      --border: rgba(255, 255, 255, 0.08);
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Space Grotesk', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .hud-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 229, 199, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 199, 0.01) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .back-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--teal);
+      text-decoration: none;
+      border: 1px solid var(--teal);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      background: var(--teal-dim);
+      transition: all 0.25s;
+    }
+    .back-btn:hover {
+      box-shadow: 0 0 15px var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .title-area h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--text) 0%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-family: var(--font-mono);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .article-meta {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--purple);
+      margin-bottom: 2rem;
+    }
+
+    .panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--teal);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.02rem;
+      color: #CAD5E2;
+      line-height: 1.7;
+    }
+
+    ul, ol {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+      color: #CAD5E2;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--purple);
+    }
+
+    pre {
+      background: rgba(3, 8, 18, 0.9);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    pre code {
+      background: transparent;
+      padding: 0;
+      color: var(--text);
+      font-size: 0.85rem;
+    }
+
+    .quote-box {
+      border-left: 3px solid var(--teal);
+      background: rgba(0, 229, 199, 0.02);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="How I Built a TinyML Wake Word Detector" />
+  <meta property="og:description" content="A comprehensive tutorial on Mel-Frequency Cepstral Coefficients, CNN structures, and INT8 quantization." />
+  <meta property="og:url" content="https://moego0.github.io/articles/how-i-built-a-tinyml-wake-word-detector" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "How I Built a TinyML Wake Word Detector",
+    "description": "Step-by-step engineering guide to training a custom wake word CNN model and quantizing it to deploy under 100KB RAM on STM32 microcontrollers.",
+    "author": {
+      "@type": "Person",
+      "name": "Mohamed Ahmed Abdelraouf"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mohamed AI Laboratory"
+    },
+    "inLanguage": "en",
+    "programmingLanguage": "Python, C++"
+  }
+  </script>
+</head>
+<body>
+  <div class="hud-grid"></div>
+
+  <div class="container">
+    <header>
+      <div class="title-area">
+        <h1>How I Built a TinyML Wake Word Detector</h1>
+        <div class="subtitle">// Speech Keyword Spotting on the Edge</div>
+      </div>
+      <a href="../../" class="back-btn">&lt; Return to Lab</a>
+    </header>
+
+    <main class="panel">
+      <div class="article-meta">Published by Mohamed Ahmed Abdelraouf • June 2026 • 8 min read</div>
+
+      <p>Speech processing has traditionally been the domain of power-hungry cloud servers. However, deploying wake-word detection directly on-device (at the extreme edge) is crucial for privacy, latency, and power conservation. This guide explains how I built and deployed a custom keyword spotting system running under <strong>100KB RAM</strong> constraints.</p>
+
+      <h2>1. The Audio Signal Pipeline</h2>
+      <p>Raw audio streams cannot be directly inputted into a lightweight neural network due to high dimensionality. Instead, we extract Mel-Frequency Cepstral Coefficients (MFCCs). The audio is captured in a 1-second sliding buffer (typically sampled at 16kHz, mono, 16-bit PCM).</p>
+      
+      <div class="quote-box">
+        <strong>Mathematical Extraction Process:</strong><br>
+        1. Frame the signal into 20ms chunks with a 10ms stride.<br>
+        2. Apply a Hanning window to prevent spectral leakage.<br>
+        3. Compute the Discrete Fourier Transform (DFT) to map time to frequency.<br>
+        4. Pass the power spectrum through a triangular Mel-filterbank to mimic human ear perception.<br>
+        5. Apply Discrete Cosine Transform (DCT) to get cepstral coefficients.
+      </div>
+
+      <h2>2. Model Architecture</h2>
+      <p>We train a 2D Convolutional Neural Network (CNN) in Python using TensorFlow and Keras. The input dimension is <code>[49, 10, 1]</code> (representing 49 frames of 10 MFCC coefficients each).</p>
+
+      <pre><code>import tensorflow as tf
+from tensorflow.keras import layers, models
+
+def build_kws_model(input_shape=(49, 10, 1), num_classes=4):
+    model = models.Sequential([
+        layers.Input(shape=input_shape),
+        layers.Conv2D(32, (3, 3), activation='relu', padding='same'),
+        layers.MaxPooling2D((2, 2)),
+        layers.Dropout(0.2),
+        layers.Conv2D(64, (3, 3), activation='relu', padding='same'),
+        layers.MaxPooling2D((2, 2)),
+        layers.Flatten(),
+        layers.Dense(32, activation='relu'),
+        layers.Dropout(0.3),
+        layers.Dense(num_classes, activation='softmax')
+    ])
+    return model
+</code></pre>
+
+      <h2>3. Post-Training Quantization (INT8)</h2>
+      <p>Standard microcontrollers do not have hardware Floating Point Units (FPUs) that efficiently process 32-bit floats. We convert the trained float32 model weights and activation outputs to 8-bit integers (INT8) using representative datasets for calibration:</p>
+
+      <pre><code>converter = tf.lite.TFLiteConverter.from_keras_model(model)
+converter.optimizations = [tf.lite.Optimize.DEFAULT]
+converter.representative_dataset = representative_data_gen
+converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
+converter.inference_input_type = tf.int8
+converter.inference_output_type = tf.int8
+tflite_quant_model = converter.convert()
+</code></pre>
+      <p>This post-training quantization compressed our model size from <strong>340KB</strong> down to a mere <strong>78KB</strong>, matching the internal cache layout of STM32 microcontrollers.</p>
+
+      <h2>4. Edge Deployment using TFLite Micro</h2>
+      <p>Once converted, the model is exported as a static C header byte array and compiled with C++ code utilizing TensorFlow Lite for Microcontrollers. The raw ADC buffer loads audio values, feeds them into the MFCC operator, calls <code>interpreter->Invoke()</code>, and triggers pin controls depending on threshold outputs.</p>
+
+      <h2>5. Key Takeaways</h2>
+      <ul>
+        <li>Audio data augmentation (adding kitchen noise, street hums, and pitch fluctuations) is necessary to avoid overfitting on small datasets.</li>
+        <li>Representational dataset calibration must reflect actual environmental soundscapes to maintain high target accuracy in the quantized model.</li>
+      </ul>
+    </main>
+
+    <footer>
+      <span>System: MOHAMED AI LAB v2040</span>
+      <span>© 2026 Mohamed Ahmed Abdelraouf</span>
+    </footer>
+  </div>
+</body>
+</html>

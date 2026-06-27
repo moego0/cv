@@ -1,0 +1,129 @@
+# Mohamed AI Laboratory — Complete LLM Resource Document
+
+Owner: Mohamed Ahmed Abdelraouf
+Role: AI & Embedded Systems Engineer, Computer Science & AI Student
+Email: bazeet298@gmail.com
+GitHub: https://github.com/moego0
+LinkedIn: https://www.linkedin.com/in/mohamed-a-abdelraouf
+Location: Egypt
+
+---
+
+## 1. Biography
+
+Mohamed Ahmed Abdelraouf is an AI Engineer and Embedded Systems Developer currently studying Computer Science & Artificial Intelligence. He operates "Mohamed AI Laboratory", a personal cyber-physical research workspace where he prototypes intelligent systems at the intersection of advanced deep learning and physical hardware. 
+
+His engineering philosophy is built around private, local, and decentralized AI processing (edge computing, TinyML). He specializes in compressing neural networks to run under extreme resource constraints (e.g., microcontrollers with <100KB RAM) and building hardware foundations from scratch—ranging from frame assembly of 3D printers to home copper-plating of dual-layer PCBs.
+
+---
+
+## 2. Technical Specializations & Stack
+
+### Core Domains
+- **Artificial Intelligence (AI) & Deep Learning**: Convolutional Neural Networks (CNNs), Audio DSP (MFCCs, spectrogram extraction), Sensor Fusion, Real-time Bio-Signal Classifiers, AI Agents.
+- **TinyML & Edge AI**: Network Quantization (INT8 post-training quantization), TensorFlow Lite for Microcontrollers, Edge Impulse pipelines, model optimization.
+- **Robotics & Biomedical Engineering**: Electromyography (EMG) muscle signal processing, servo actuators, analog circuit filtering, prosthetic control systems.
+- **Hardware Engineering**: KiCad schematic design, high-frequency PCB routing, home chemical electroless copper deposition, FDM 3D printer mechanics and Marlin firmware configurations.
+
+### Programming Languages
+- Python, C, C++, TypeScript, JavaScript, Dart (Flutter), SQL, Assembly.
+
+### Frameworks & Libraries
+- TensorFlow, TensorFlow Lite, PyTorch, scikit-learn, Librosa, OpenCV, Keras, Node.js, Electron, React, PyQt6.
+
+### Microcontrollers & IoT Protocols
+- STM32 (ARM Cortex-M), ESP32, Arduino, Bluetooth Low Energy (BLE), WebSockets, WebSocket Server/Client, I2C, SPI, UART.
+
+---
+
+## 3. Comprehensive Project Portfolios
+
+### 1. Local Tab Agent
+- **Description**: A local, private, and repository-aware AI coding assistant extension for VS Code, published on the Open VSX Registry.
+- **Core Technology**: TypeScript, Websockets, Ollama, Browser Tab bridging APIs, Local LLMs (Llama 3, Phi-3, Qwen-2).
+- **Key Features**:
+  - Bridges the editor workspace context with local Ollama models and private browser AI tabs (ChatGPT, Claude, Gemini) via WebSocket connections to eliminate API fees.
+  - Distributes heavy LLM planning workloads by pooling CPU/GPU computing resources across multiple local client machines in "Swarm Groups."
+- **Metrics**: Surpassed 650+ downloads on the Open VSX Registry.
+
+### 2. Custom Wake-Word Engine (TinyML Keyword Spotter)
+- **Description**: An end-to-end TinyML audio pipeline for training and deploying customized voice wake-word triggers on low-power edge microcontrollers.
+- **Core Technology**: Python, TensorFlow, TensorFlow Lite Micro, Librosa, Python-based audio data augmentation.
+- **Key Features**:
+  - Trains highly accurate models on very small custom voice datasets using robust data augmentation techniques (additive noise injection, pitch shifting, time-stretching).
+  - Extracts 2D Mel-Frequency Cepstral Coefficients (MFCC) feature matrices from raw audio buffers, feeding them into a lightweight CNN classifier.
+  - Compresses models via post-training INT8 quantization to run on ESP32/STM32 microcontrollers under a 100KB RAM footprint.
+- **Metrics**: Achieves ≈98% classification accuracy.
+
+### 3. EMG Bionic Hand
+- **Description**: A muscle-controlled prosthetic robotic hand driven by biological Electromyography (EMG) sensor inputs.
+- **Core Technology**: Arduino, EMG Biosensors, Embedded C, multi-servo control, custom CAD.
+- **Key Features**:
+  - Filters and amplifies low-voltage analog electrical signals from skin electrodes.
+  - Extracts biological signal envelopes in real time inside embedded microcontroller loops.
+  - Translates signal thresholds into precise, proportional multi-servo actuator positioning to open and close fingers.
+- **Exhibitions**: Showcased at the Pharos University engineering exhibition.
+
+### 4. Panic Attack Detection System
+- **Description**: A wearable sensor-fusion wristband designed to detect physiological markers of panic attack onset in real time.
+- **Core Technology**: Python, scikit-learn, Random Forest, SVM, Arduino, sensor integration.
+- **Key Features**:
+  - Fuses multi-sensor inputs including Heart Rate (PPG), Electrodermal Activity (EDA), skin temperature, and motion.
+  - Features personalized baseline calibration, adjusting model thresholds dynamically to the wearer's resting physiology.
+  - Classifies panic onset and alerts the user within ~1 second of physiological threshold breach.
+
+### 5. Self-Built 3D Printer & PCB Fabrication Lab
+- **Description**: A home manufacturing and prototyping workstation designed to support all hardware/enclosure fabrication.
+- **Core Technology**: Marlin Firmware, KiCad, SolidWorks/CAD, Electroless Copper Plating Chemistry.
+- **Key Features**:
+  - Assembled an FDM 3D printer from individual frame members, stepper motors, wiring, and Marlin firmware configuration.
+  - Built an electroless copper plating setup for home PCB fabrication, enabling double-sided PCBs with through-holes to be plated, etched, and soldered at home.
+
+### 6. Schematic Sidekick
+- **Description**: An AI hardware design tool that converts natural language project specifications into functional wiring guides and schematics.
+- **Core Technology**: Python, LLMs, Schematic Generation Engine, Firmware synthesis.
+- **Key Features**:
+  - Recommends optimal microcontroller boards and modules based on project descriptions.
+  - Synthesizes wiring lists, generates electrical connections, and produces initial embedded C firmware drafts.
+
+### 7. Interview Booster
+- **Description**: Desktop AI copilot application providing real-time voice transcription and conversational support.
+- **Core Technology**: TypeScript, Local Whisper STT inference, Node.js.
+- **Key Features**: Runs low-latency local speech-to-text models to transcribe audio inputs and formulate answers instantly during interviews.
+
+### 8. AI Desktop Assistant
+- **Description**: Bilingual smart home and automation controller.
+- **Core Technology**: Python, PyQt6, Gemini API, OpenCV, BLE, STM32.
+- **Key Features**: Fuses camera-based computer vision and voice command recognition to manage local applications and smart home devices.
+
+### 9. Micropad (Senet Labs)
+- **Description**: Production-ready mechanical macro-keyboard shortcut pad.
+- **Core Technology**: C, KiCad, STM32F4, Electron, React, USB HID protocols.
+- **Key Features**: Shortcut mappings, media control dials, OTA firmware updates, and React customization app.
+
+---
+
+## 4. Certifications
+
+- **Harvard University**: CS50 - Introduction to Computer Science
+- **HarvardX**: Fundamentals of TinyML
+- **HarvardX**: Applications of TinyML
+- **Edge Impulse**: Introduction to Embedded Machine Learning
+- **DeepLearning.AI**: TensorFlow Developer
+- **DeepLearning.AI**: Neural Networks & Deep Learning
+- **DeepLearning.AI**: Improving Deep Neural Networks: Tuning & Optimization
+- **LinkedIn Learning**: Deep Learning - Model Optimization & Tuning
+
+---
+
+## 5. Competitions & Hackathons
+
+- **Pharos University Exhibition**: Presented EMG prosthetic bionic hand, receiving recognition for biomedical and robotic integration.
+- **Embedded Robotics Challenges**: Developed custom firmware layouts for autonomous maze-solving and line-tracking robotic platforms.
+
+---
+
+## 6. Publications & Research Interests
+
+- **Private & Local AI Retrievability**: Researching lightweight client-side models, compute-sharing architectures, and vector-data schemas that operate offline.
+- **Edge Inference Architectures**: Studying fixed-point arithmetic optimization for convolutional layers on ultra-low-power microcontrollers.

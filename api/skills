@@ -1,0 +1,35 @@
+{
+  "languages": [
+    "Python",
+    "C",
+    "C++",
+    "TypeScript",
+    "JavaScript",
+    "Dart",
+    "SQL"
+  ],
+  "ai_ml": [
+    "TensorFlow",
+    "PyTorch",
+    "scikit-learn",
+    "Edge Impulse",
+    "TensorFlow Lite",
+    "OpenCV"
+  ],
+  "embedded_hardware": [
+    "KiCad (PCB Design)",
+    "STM32",
+    "ESP32",
+    "Arduino",
+    "BLE",
+    "I2C/SPI/UART",
+    "EMG Sensors"
+  ],
+  "developer_tools": [
+    "Git",
+    "Docker",
+    "Node.js",
+    "Electron",
+    "VS Code Extension API"
+  ]
+}

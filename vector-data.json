@@ -1,0 +1,193 @@
+[
+  {
+    "id": "bio-summary",
+    "title": "Mohamed Ahmed Abdelraouf - Professional Summary",
+    "category": "Biography",
+    "content": "Mohamed Ahmed Abdelraouf is a Computer Science and Artificial Intelligence student specializing in Artificial Intelligence, Machine Learning, TinyML, Embedded Systems, Robotics, Computer Vision, and Hardware Engineering. He designs intelligent cyber-physical systems that integrate custom-built hardware with advanced deep learning models running on resource-constrained devices.",
+    "keywords": [
+      "biography",
+      "AI Student",
+      "TinyML",
+      "Robotics",
+      "Embedded AI"
+    ]
+  },
+  {
+    "id": "proj-local-tab-agent",
+    "title": "Local Tab Agent - VS Code Extension & Swarm Compute",
+    "category": "Projects",
+    "content": "Local Tab Agent is a repository-aware local AI coding agent extension published on Open VSX (650+ downloads). It allows developers to route LLM prompts to local Ollama installations and local browser tabs (ChatGPT, Claude, Gemini) via WebSocket. It features Swarm Groups for CPU/GPU compute pooling across multiple local machines.",
+    "keywords": [
+      "Local Tab Agent",
+      "VS Code",
+      "Ollama",
+      "WebSocket",
+      "Swarm Compute",
+      "AI Agents"
+    ]
+  },
+  {
+    "id": "proj-wake-word",
+    "title": "Custom Wake-Word Engine using TinyML",
+    "category": "Projects",
+    "content": "Mohamed designed a keyword spotting pipeline for training and deploying custom wake-words on low-power microcontrollers. It uses intensive audio data augmentation (noise injection, pitch shifting) to build robust classifiers from small datasets. Feature extraction is done using Mel-Frequency Cepstral Coefficients (MFCCs) fed into a CNN, quantized using TensorFlow Lite for Microcontrollers to run under 100KB RAM with \u224898% accuracy.",
+    "keywords": [
+      "Wake-word",
+      "TinyML",
+      "MFCC",
+      "CNN",
+      "TensorFlow Lite",
+      "Audio AI"
+    ]
+  },
+  {
+    "id": "proj-bionic-hand",
+    "title": "EMG-Controlled Prosthetic Bionic Hand",
+    "category": "Projects",
+    "content": "Developed a prosthetic robotic hand controlled by Electromyography (EMG) muscle signals. The system processes biological electrical signals through analog amplification/filtering, performs envelope detection in embedded C, and translates muscle activations into proportional servo motor control for finger movements. Presented at the Pharos University exhibition.",
+    "keywords": [
+      "Bionic Hand",
+      "EMG",
+      "Robotics",
+      "Prosthesis",
+      "Arduino",
+      "Embedded C"
+    ]
+  },
+  {
+    "id": "proj-3d-printer",
+    "title": "Self-Built 3D Printer & Electroless PCB Plating Lab",
+    "category": "Hardware Fabrication",
+    "content": "Mohamed operates a home research laboratory featuring a custom-built FDM 3D printer running Marlin firmware. He also established an electroless copper plating chemical process to create high-quality double-sided PCBs with plated through-holes at home, serving as the mechanical and electrical prototyping foundation for his embedded AI projects.",
+    "keywords": [
+      "3D Printer",
+      "PCB Fabrication",
+      "Electroless Copper Plating",
+      "Marlin",
+      "Prototyping"
+    ]
+  },
+  {
+    "id": "proj-panic-detector",
+    "title": "Wearable Panic Attack Detection System",
+    "category": "Projects",
+    "content": "Designed a multi-sensor wearable panic attack detection device that uses personalized baseline calibration. It fuses biometric data (heart rate, skin temperature, Electrodermal Activity / EDA) and runs local Random Forest and SVM classifiers to flag panic attack physiological onset in under 1 second.",
+    "keywords": [
+      "Panic Attack Detection",
+      "Sensor Fusion",
+      "EDA",
+      "Wearables",
+      "scikit-learn",
+      "Random Forest"
+    ]
+  },
+  {
+    "id": "proj-schematic-sidekick",
+    "title": "Schematic Sidekick - AI Hardware Designer",
+    "category": "Projects",
+    "content": "Schematic Sidekick is an AI hardware design assistant that translates project goals into wiring connection diagrams, board suggestions, and initial firmware drafts. It bridges the gap between natural language descriptions and functional electrical schematics.",
+    "keywords": [
+      "Schematic Sidekick",
+      "Hardware Design",
+      "AI Assistant",
+      "Schematics",
+      "Automation"
+    ]
+  },
+  {
+    "id": "proj-interview-booster",
+    "title": "Interview Booster - Real-Time AI Copilot",
+    "category": "Projects",
+    "content": "Interview Booster is a desktop utility designed to assist users in conversational settings. It runs low-latency local speech-to-text models (Whisper) to transcribe incoming audio in real-time, matching queries and generating helpful responses dynamically.",
+    "keywords": [
+      "Interview Booster",
+      "Whisper",
+      "Speech-to-Text",
+      "AI Copilot",
+      "Low Latency"
+    ]
+  },
+  {
+    "id": "proj-ai-assistant",
+    "title": "AI Desktop Assistant - Bilingual Smart Home Hub",
+    "category": "Projects",
+    "content": "AI Desktop Assistant is a voice and computer-vision powered application for physical command automation. Written in Python with PyQt6 and Gemini API integrations, it uses BLE interfaces to interact with STM32 systems, featuring complete bilingual support for Arabic and English.",
+    "keywords": [
+      "AI Assistant",
+      "Voice Assistant",
+      "Computer Vision",
+      "BLE",
+      "PyQt6",
+      "Gemini"
+    ]
+  },
+  {
+    "id": "proj-micropad",
+    "title": "Micropad - Production Keyboard shortcut pad",
+    "category": "Projects",
+    "content": "Micropad is a custom macro mechanical keypad powered by STM32F4. It features a React-based client dashboard for editing macro configs, an Electron wrapper app, support for OTA firmware updates, and raw USB HID integration for custom shortcuts.",
+    "keywords": [
+      "Micropad",
+      "STM32F4",
+      "React",
+      "Electron",
+      "USB HID",
+      "Macro Pad"
+    ]
+  },
+  {
+    "id": "skills-languages",
+    "title": "Programming Languages & Software Engineering",
+    "category": "Skills",
+    "content": "Proficient in Python, C, C++, TypeScript, JavaScript, HTML/CSS, Dart (Flutter), and SQL. Experienced in Node.js, Electron, PyQt6, and VS Code API development.",
+    "keywords": [
+      "Languages",
+      "Python",
+      "C++",
+      "TypeScript",
+      "Electron"
+    ]
+  },
+  {
+    "id": "skills-ai-ml",
+    "title": "Machine Learning and AI Frameworks",
+    "category": "Skills",
+    "content": "Expertise in TensorFlow, PyTorch, Keras, scikit-learn, OpenCV, Edge Impulse, and TensorFlow Lite for Microcontrollers. Experienced in hyperparameter tuning, model quantization, and audio/vision preprocessing.",
+    "keywords": [
+      "Machine Learning",
+      "TensorFlow",
+      "PyTorch",
+      "OpenCV",
+      "Quantization",
+      "Model Tuning"
+    ]
+  },
+  {
+    "id": "skills-hardware",
+    "title": "Embedded Systems and Hardware Design",
+    "category": "Skills",
+    "content": "Experienced in PCB Design using KiCad, circuit schematics, hardware prototyping, microcontrollers (STM32, ESP32, Arduino), serial protocols (I2C, SPI, UART, CAN), BLE wireless communications, and biomedical sensor integration.",
+    "keywords": [
+      "Embedded Systems",
+      "PCB Design",
+      "KiCad",
+      "STM32",
+      "BLE",
+      "I2C",
+      "SPI"
+    ]
+  },
+  {
+    "id": "certifications",
+    "title": "Academic and Professional Certifications",
+    "category": "Credentials",
+    "content": "Holds Harvard CS50, HarvardX Fundamentals & Applications of TinyML, Edge Impulse Embedded Machine Learning, DeepLearning.AI TensorFlow Developer, and LinkedIn Model Optimization certifications.",
+    "keywords": [
+      "CS50",
+      "TinyML",
+      "HarvardX",
+      "DeepLearning.AI",
+      "Certifications"
+    ]
+  }
+]

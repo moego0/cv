@@ -1,0 +1,126 @@
+[
+  {
+    "id": "local-tab-agent",
+    "title": "Local Tab Agent",
+    "description": "Local repository-aware VS Code AI coding assistant utilizing Ollama and WebSockets to route queries to browser tabs.",
+    "tech": [
+      "TypeScript",
+      "Ollama",
+      "WebSocket",
+      "Node.js",
+      "VS Code Extension API",
+      "Distributed Compute"
+    ],
+    "downloads": "650+",
+    "url": "https://open-vsx.org/extension/moego0/local-tab-agent"
+  },
+  {
+    "id": "3d-printer-pcb",
+    "title": "Self-Built 3D Printer & PCB Lab",
+    "description": "Custom assembled FDM 3D printer running Marlin firmware, and a home PCB-plating chemical process with electroless copper through-hole deposition.",
+    "tech": [
+      "CAD",
+      "Marlin Firmware",
+      "KiCad",
+      "Electroless Copper Plating",
+      "3D Printing"
+    ],
+    "url": "mailto:bazeet298@gmail.com"
+  },
+  {
+    "id": "schematic-sidekick",
+    "title": "Schematic Sidekick",
+    "description": "An AI assistant that takes natural language hardware goals and automatically designs schematic wiring connections and initial firmware drafts.",
+    "tech": [
+      "AI",
+      "Electronics",
+      "Schematic Generation",
+      "Firmware"
+    ],
+    "url": "https://github.com/moego0"
+  },
+  {
+    "id": "panic-attack-detector",
+    "title": "Panic Attack Detection System",
+    "description": "Wearable sensor fusion system using personalized baseline calibration to classify panic attack physiological onset in under 1 second.",
+    "tech": [
+      "Python",
+      "scikit-learn",
+      "Random Forest",
+      "SVM",
+      "Arduino",
+      "Sensor Fusion"
+    ],
+    "url": "https://github.com/moego0/panic-attack-detector"
+  },
+  {
+    "id": "wake-word-engine",
+    "title": "Custom Wake-Word Engine",
+    "description": "TinyML keyword-spotting pipeline with audio augmentation, exported to TensorFlow Lite and deployed on microcontrollers under 100KB RAM.",
+    "tech": [
+      "TensorFlow",
+      "TF Lite",
+      "Librosa",
+      "TinyML",
+      "Python",
+      "Audio AI"
+    ],
+    "accuracy": "≈98%",
+    "url": "https://github.com/moego0"
+  },
+  {
+    "id": "emg-bionic-hand",
+    "title": "EMG Bionic Hand",
+    "description": "Prosthetic bionic hand controlled by muscle EMG signals, using real-time signal envelope detection in C to drive servomotors.",
+    "tech": [
+      "Arduino",
+      "EMG Sensors",
+      "Servos",
+      "Embedded C",
+      "CAD"
+    ],
+    "exhibited": "Pharos University",
+    "url": "https://github.com/moego0"
+  },
+  {
+    "id": "interview-booster",
+    "title": "Interview Booster",
+    "description": "A live AI copilot desktop app that transcribes audio input in real time and provides instant query answers utilizing local Whisper STT.",
+    "tech": [
+      "TypeScript",
+      "Whisper",
+      "Real-time STT",
+      "LLM",
+      "Node.js"
+    ],
+    "url": "https://github.com/moego0"
+  },
+  {
+    "id": "ai-assistant",
+    "title": "AI Desktop Assistant",
+    "description": "A multifunctional smart home and workspace assistant integrating bilingual speech recognition, computer vision, and BLE controllers.",
+    "tech": [
+      "Python",
+      "PyQt6",
+      "Gemini",
+      "OpenCV",
+      "BLE",
+      "STM32"
+    ],
+    "url": "https://github.com/moego0"
+  },
+  {
+    "id": "micropad",
+    "title": "Micropad - senet labs",
+    "description": " Mechanical shortcut macro keyboard shortcut pad utilizing STM32F4, supporting custom React mapping dashboard and OTA firmware updates.",
+    "tech": [
+      "C",
+      "KiCad",
+      "STM32F4",
+      "React",
+      "Electron",
+      "USB HID"
+    ],
+    "url": "https://github.com/moego0"
+  }
+]

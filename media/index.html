@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Media features, project video demonstrations, and photos of Mohamed Ahmed Abdelraouf's lab work.">
+  <title>Mohamed AI Lab — Media &amp; Videos</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  
+  <style>
+    :root {
+      --bg: #030812;
+      --bg-card: rgba(8, 16, 32, 0.75);
+      --teal: #00E5C7;
+      --teal-dim: rgba(0, 229, 199, 0.1);
+      --purple: #A855F7;
+      --purple-dim: rgba(168, 85, 247, 0.1);
+      --text: #E8EDF4;
+      --muted: #5A6A8A;
+      --border: rgba(255, 255, 255, 0.08);
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Space Grotesk', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .hud-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 229, 199, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 199, 0.01) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .back-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--teal);
+      text-decoration: none;
+      border: 1px solid var(--teal);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      background: var(--teal-dim);
+      transition: all 0.25s;
+    }
+    .back-btn:hover {
+      box-shadow: 0 0 15px var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .title-area h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--text) 0%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-family: var(--font-mono);
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    .panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-family: var(--font-mono);
+      color: var(--teal);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .media-card {
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.2);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+    .media-card h3 {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+    .media-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .media-link {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--purple);
+      text-decoration: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mohamed AI Lab — Media" />
+  <meta property="og:description" content="Watch video demonstrations and review press features of Mohamed Ahmed Abdelraouf." />
+  <meta property="og:url" content="https://moego0.github.io/media" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Media Features & Video Demonstrations",
+    "description": "Video demonstrations, media articles, and exhibitions of Mohamed Ahmed Abdelraouf.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mohamed AI Laboratory"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="hud-grid"></div>
+
+  <div class="container">
+    <header>
+      <div class="title-area">
+        <h1>Media &amp; Demonstrations</h1>
+        <div class="subtitle">// Video Logs and Gallery Files</div>
+      </div>
+      <a href="../" class="back-btn">&lt; Return to Lab</a>
+    </header>
+
+    <main>
+      <div class="panel">
+        <div class="section-title">Video Archives</div>
+
+        <div class="media-grid">
+          <article class="media-card">
+            <h3>Local Tab Agent VS Code Demo</h3>
+            <p>Video walk-through demonstrating local Websocket setups routing query parameters between VS Code extensions and local browser AI tabs.</p>
+            <a href="https://github.com/moego0" class="media-link">Watch on GitHub ↗</a>
+          </article>
+
+          <article class="media-card">
+            <h3>TinyML Voice Wake Word Demo</h3>
+            <p>Video logs showing microphone capture signals on an ESP32 edge microcontroller trigger an LED light using trained CNN keyword spotting models.</p>
+            <a href="https://github.com/moego0" class="media-link">Watch on GitHub ↗</a>
+          </article>
+
+          <article class="media-card">
+            <h3>EMG Hand Servo Actuation Demo</h3>
+            <p>Mechanical prosthesis response showcase displaying hand finger flexion triggers following user forearm contraction envelopes.</p>
+            <a href="https://github.com/moego0" class="media-link">Watch on GitHub ↗</a>
+          </article>
+
+          <article class="media-card">
+            <h3>AI Desktop Assistant Demo</h3>
+            <p>Bilingual voice activated controller utilizing camera streams and BLESTM32 connection frames to control workspace parameters.</p>
+            <a href="https://github.com/moego0" class="media-link">Watch on GitHub ↗</a>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span>System: MOHAMED AI LAB v2040</span>
+      <span>© 2026 Mohamed Ahmed Abdelraouf</span>
+    </footer>
+  </div>
+</body>
+</html>

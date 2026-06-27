@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical guide on creating a voice-activated bilingually-supported AI assistant with Python and Gemini API. Written by Mohamed Ahmed Abdelraouf.">
+  <title>Creating an AI Assistant Using Python and LLMs — Mohamed AI Laboratory</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+  
+  <style>
+    :root {
+      --bg: #030812;
+      --bg-card: rgba(8, 16, 32, 0.75);
+      --teal: #00E5C7;
+      --teal-dim: rgba(0, 229, 199, 0.1);
+      --purple: #A855F7;
+      --purple-dim: rgba(168, 85, 247, 0.1);
+      --text: #E8EDF4;
+      --muted: #5A6A8A;
+      --border: rgba(255, 255, 255, 0.08);
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Space Grotesk', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .hud-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 229, 199, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 199, 0.01) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .back-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--teal);
+      text-decoration: none;
+      border: 1px solid var(--teal);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      background: var(--teal-dim);
+      transition: all 0.25s;
+    }
+    .back-btn:hover {
+      box-shadow: 0 0 15px var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .title-area h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--text) 0%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-family: var(--font-mono);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .article-meta {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--purple);
+      margin-bottom: 2rem;
+    }
+
+    .panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--teal);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.02rem;
+      color: #CAD5E2;
+      line-height: 1.7;
+    }
+
+    ul, ol {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+      color: #CAD5E2;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--purple);
+    }
+
+    pre {
+      background: rgba(3, 8, 18, 0.9);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    pre code {
+      background: transparent;
+      padding: 0;
+      color: var(--text);
+      font-size: 0.85rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Creating an AI Assistant Using Python and LLMs" />
+  <meta property="og:description" content="Technical guide outlining voice assistants, computer vision pipelines, and smart BLE home integrations." />
+  <meta property="og:url" content="https://moego0.github.io/articles/creating-an-ai-assistant-using-python-and-llms" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Creating an AI Assistant Using Python and LLMs",
+    "description": "Integration guide detailing real-time STT, PyQt6 interface logic, and BLE microcontrollers connection frames.",
+    "author": {
+      "@type": "Person",
+      "name": "Mohamed Ahmed Abdelraouf"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mohamed AI Laboratory"
+    },
+    "inLanguage": "en",
+    "programmingLanguage": "Python"
+  }
+  </script>
+</head>
+<body>
+  <div class="hud-grid"></div>
+
+  <div class="container">
+    <header>
+      <div class="title-area">
+        <h1>Creating an AI Assistant Using Python &amp; LLMs</h1>
+        <div class="subtitle">// Voice Commands and Hardware Bridging</div>
+      </div>
+      <a href="../../" class="back-btn">&lt; Return to Lab</a>
+    </header>
+
+    <main class="panel">
+      <div class="article-meta">Published by Mohamed Ahmed Abdelraouf • June 2026 • 6 min read</div>
+
+      <p>Voice-driven smart assistants have evolved from rigid command matching into natural, context-aware conversational partners. In this article, I cover the software and hardware architecture of my personal AI assistant, highlighting real-time audio transcription, LLM orchestration, and BLE hardware control loops.</p>
+
+      <h2>1. Pipeline Architecture</h2>
+      <p>The assistant operates locally in Python, routing requests through a multi-threaded PyQt6 GUI. The audio processing pipeline flows as follows:</p>
+      <ol>
+        <li><strong>Voice Activity Detection (VAD)</strong>: Continuous audio capture analyzes ambient decibel levels to detect when a user begins speaking.</li>
+        <li><strong>Speech-to-Text (STT)</strong>: Offline STT engine transcribes raw vocal waveforms into text strings.</li>
+        <li><strong>LLM Inference</strong>: The transcribed prompt is forwarded to the LLM (Gemini API with fallback local Llama 3 models) along with local system context.</li>
+        <li><strong>Action Dispatcher</strong>: The LLM response is parsed for structural commands (e.g. JSON strings), routing actions to BLE drivers or operating system APIs.</li>
+      </ol>
+
+      <h2>2. Core Python Implementation</h2>
+      <p>We use Python and the Gemini SDK. The assistant features tool-calling so it can interact with the physical world via BLE calls:</p>
+
+      <pre><code>import google.generativeai as genai
+import json
+
+genai.configure(api_key="YOUR_GEMINI_API_KEY")
+
+# Define structural functions the LLM can call
+def control_smart_home_light(state: str):
+    """Turns the local desk light on or off. State must be 'ON' or 'OFF'."""
+    print(f"Sending BLE command to desk lights: {state}")
+    # Raw BLE client calls route here
+    return f"Lights set to {state}"
+
+model = genai.GenerativeModel(
+    model_name="gemini-1.5-flash",
+    tools=[control_smart_home_light]
+)
+
+chat = model.start_chat(enable_automatic_function_calling=True)
+response = chat.send_message("Please turn on the desk lights for me.")
+print(response.text)
+</code></pre>
+
+      <h2>3. The Hardware Bridge (Bluetooth Low Energy)</h2>
+      <p>Desk systems and appliances are fitted with STM32 microcontrollers configured as BLE peripherals. When a tool-call is generated, Python utilizes the <code>bleak</code> library to establish connection frames, writing values to target characteristics:</p>
+
+      <pre><code>import asyncio
+from bleak import BleakClient
+
+DEVICE_MAC = "XX:XX:XX:XX:XX:XX"
+CHARACTERISTIC_UUID = "00002a56-0000-1000-8000-00805f9b34fb"
+
+async def send_ble_command(command: str):
+    async with BleakClient(DEVICE_MAC) as client:
+        payload = command.encode('utf-8')
+        await client.write_gatt_char(CHARACTERISTIC_UUID, payload)
+        print("BLE Write Successful")
+</code></pre>
+
+      <h2>4. Bilingual Processing</h2>
+      <p>The LLM system prompt enforces bilingual operations. Pre-processing scripts parse whether user queries are in English or Arabic, dynamically adjusting speech synthesis parameters (TTS) to provide natural spoken responses in either language.</p>
+
+      <h2>5. Actionable Outcomes</h2>
+      <p>By shifting parsing from hardcoded regular expressions to semantic tool-calling in LLMs, the voice assistant handles fuzzy commands (e.g., "I can't see anything, help" resolves to calling <code>control_smart_home_light("ON")</code>) with high stability.</p>
+    </main>
+
+    <footer>
+      <span>System: MOHAMED AI LAB v2040</span>
+      <span>© 2026 Mohamed Ahmed Abdelraouf</span>
+    </footer>
+  </div>
+</body>
+</html>

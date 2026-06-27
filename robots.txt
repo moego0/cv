@@ -1,0 +1,36 @@
+# Robots.txt for Mohamed AI Laboratory
+# Optimized for standard Search Engines (SEO) and Generative AI Agents (GEO/LLMO/AEO)
+
+User-agent: *
+Allow: /
+
+# Explicit Support for AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap Index Link
+Sitemap: https://moego0.github.io/sitemap.xml

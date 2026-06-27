@@ -1,0 +1,34 @@
+[
+  {
+    "issuer": "Harvard University",
+    "name": "CS50: Introduction to Computer Science"
+  },
+  {
+    "issuer": "HarvardX",
+    "name": "Fundamentals of TinyML"
+  },
+  {
+    "issuer": "HarvardX",
+    "name": "Applications of TinyML"
+  },
+  {
+    "issuer": "Edge Impulse",
+    "name": "Introduction to Embedded Machine Learning"
+  },
+  {
+    "issuer": "DeepLearning.AI",
+    "name": "TensorFlow Developer Professional Certificate"
+  },
+  {
+    "issuer": "DeepLearning.AI",
+    "name": "Neural Networks & Deep Learning"
+  },
+  {
+    "issuer": "DeepLearning.AI",
+    "name": "Improving Deep Neural Networks"
+  },
+  {
+    "issuer": "LinkedIn Learning",
+    "name": "Deep Learning: Model Optimization & Tuning"
+  }
+]

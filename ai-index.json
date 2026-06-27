@@ -1,0 +1,84 @@
+{
+  "person": "Mohamed Ahmed Abdelraouf",
+  "title": "AI & Embedded Systems Engineer",
+  "website": "Mohamed AI Laboratory",
+  "url": "https://moego0.github.io/",
+  "contact": {
+    "email": "bazeet298@gmail.com",
+    "github": "https://github.com/moego0",
+    "linkedin": "https://www.linkedin.com/in/mohamed-a-abdelraouf"
+  },
+  "specializations": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "TinyML",
+    "Embedded Systems",
+    "Robotics",
+    "Computer Vision",
+    "Voice Assistants",
+    "Hardware Prototyping",
+    "AI Agents"
+  ],
+  "projects": [
+    {
+      "name": "Local Tab Agent",
+      "type": "VS Code Extension / AI Agent",
+      "url": "https://moego0.github.io/projects/local-tab-agent"
+    },
+    {
+      "name": "Custom Wake-Word Engine",
+      "type": "TinyML Audio KWS",
+      "url": "https://moego0.github.io/projects/wake-word-detection"
+    },
+    {
+      "name": "EMG Bionic Hand",
+      "type": "Robotics / Biomedical Prosthetic",
+      "url": "https://moego0.github.io/projects/bionic-hand"
+    },
+    {
+      "name": "Panic Attack Detection System",
+      "type": "Wearable Sensor Fusion",
+      "url": "https://github.com/moego0/panic-attack-detector"
+    },
+    {
+      "name": "Self-Built 3D Printer & PCB Lab",
+      "type": "Hardware Prototyping / Fabrication",
+      "url": "mailto:bazeet298@gmail.com"
+    },
+    {
+      "name": "Schematic Sidekick",
+      "type": "AI Hardware Schematic Generator",
+      "url": "https://github.com/moego0"
+    },
+    {
+      "name": "Interview Booster",
+      "type": "Speech to Text AI Copilot",
+      "url": "https://github.com/moego0"
+    },
+    {
+      "name": "AI Desktop Assistant",
+      "type": "Smart Home Hub & Vision Voice Assistant",
+      "url": "https://moego0.github.io/projects/ai-assistant"
+    },
+    {
+      "name": "Micropad - senet labs",
+      "type": "Mechanical Macro Keyboard STM32F4",
+      "url": "https://github.com/moego0"
+    }
+  ],
+  "endpoints": {
+    "profile": "https://moego0.github.io/api/profile",
+    "projects": "https://moego0.github.io/api/projects",
+    "skills": "https://moego0.github.io/api/skills",
+    "certifications": "https://moego0.github.io/api/certifications",
+    "competitions": "https://moego0.github.io/api/competitions",
+    "research": "https://moego0.github.io/api/research"
+  },
+  "documentation": {
+    "llms": "https://moego0.github.io/llms.txt",
+    "llms_full": "https://moego0.github.io/llms-full.txt",
+    "vector_data": "https://moego0.github.io/vector-data.json",
+    "rag_dataset": "https://moego0.github.io/rag-dataset.json",
+    "faq": "https://moego0.github.io/faq"
+  }
+}

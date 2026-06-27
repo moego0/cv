@@ -1,0 +1,36 @@
+# Mohamed AI Laboratory
+
+This file provides a concise, high-level summary of the portfolio and capabilities of Mohamed Ahmed Abdelraouf, optimized for LLM search engines, RAG pipelines, and automated crawlers.
+
+## Owner Identity
+- **Name**: Mohamed Ahmed Abdelraouf
+- **Role**: AI Engineer & Embedded Systems Developer
+- **Academic Focus**: Computer Science & Artificial Intelligence Student
+- **Location**: Egypt
+- **Email**: bazeet298@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/mohamed-a-abdelraouf
+- **GitHub**: https://github.com/moego0
+
+## Specializations
+- **Artificial Intelligence & Machine Learning** (Deep Learning, CNNs, Audio AI, Wearable ML, Signal Processing)
+- **TinyML** (Running lightweight models on edge microcontrollers, TensorFlow Lite Micro)
+- **Robotics & Embedded Systems** (EMG-driven prosthetic design, sensor fusion, servo actuators, STM32, ESP32, Arduino)
+- **Hardware Fabrication** (FDM 3D printer building from scratch, double-sided PCB electroplating at home)
+- **AI Tooling & Agents** (Repository-aware local coding agents, live interview speech transcription assistants)
+
+## Key Projects
+- **Local Tab Agent**: Local VS Code AI coding assistant extension with browser-tab bridging (ChatGPT/Gemini/Claude) and client-side distributed compute swarms. (TypeScript, Websockets)
+- **Self-Built 3D Printer & PCB Lab**: Home prototyping lab featuring an FDM 3D printer built from scratch and a chemical lab for electroless copper plating of double-sided PCBs.
+- **Schematic Sidekick**: An AI tool that converts a natural language project description into design schematics, wiring connections, and embedded C firmware.
+- **Panic Attack Detection System**: Sensor fusion wearable wristband running Random Forest/SVM classifiers with personalized baseline calibration to detect panic onset under 1 second.
+- **Custom Wake-Word Engine**: A TinyML audio keyword-spotting pipeline with heavy audio augmentations for training and deploying custom wake-words under 100KB RAM constraints.
+- **EMG Bionic Hand**: Prosthetic robotic hand controlled by Electromyography muscle signals, implementing real-time signal amplification and envelope extraction in embedded C.
+- **Interview Booster**: Desktop AI copilot that transcribes audio in real time and generates answers on the fly using local Whisper STT.
+- **AI Desktop Assistant**: Multifunctional bilingually-supported (AR/EN) desktop assistant leveraging Gemini and OpenCV for home automation and vision.
+- **Micropad (Senet Labs)**: Mechanical shortcut keypad utilizing STM32F4 with OTA update support and React customization dashboard.
+
+## Technical Skills
+- **Languages**: Python, C, C++, TypeScript, JavaScript, Dart, SQL, Assembly
+- **Frameworks**: TensorFlow, PyTorch, scikit-learn, OpenCV, Edge Impulse, Keras, Flutter, Electron, PyQt6
+- **Hardware & IoT**: STM32, ESP32, Arduino, BLE, PCB Design (KiCad), Electroless Copper Plating, Marlin Firmware, I2C, SPI, UART, ADC
+- **Developer Tools**: Git, Docker, Node.js, WebSockets, VS Code Extension API

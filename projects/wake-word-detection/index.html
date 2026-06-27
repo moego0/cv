@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detailed case study of TinyML Wake Word Detection - designed and built by Mohamed Ahmed Abdelraouf.">
+  <title>Mohamed AI Lab — TinyML Wake Word Detection</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+  
+  <style>
+    :root {
+      --bg: #030812;
+      --bg-card: rgba(8, 16, 32, 0.75);
+      --teal: #00E5C7;
+      --teal-dim: rgba(0, 229, 199, 0.1);
+      --purple: #A855F7;
+      --purple-dim: rgba(168, 85, 247, 0.1);
+      --amber: #F59E0B;
+      --amber-dim: rgba(245, 158, 11, 0.1);
+      --text: #E8EDF4;
+      --muted: #5A6A8A;
+      --border: rgba(255, 255, 255, 0.08);
+      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+      --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      overflow-x: hidden;
+    }
+
+    /* Cyberpunk HUD lines */
+    .hud-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 229, 199, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 199, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hud-scan {
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.15) 2px,
+        rgba(0, 0, 0, 0.15) 4px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .back-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--teal);
+      text-decoration: none;
+      border: 1px solid var(--teal);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      background: var(--teal-dim);
+      transition: all 0.25s;
+    }
+    .back-btn:hover {
+      box-shadow: 0 0 15px var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .title-area h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 0.4rem;
+      background: linear-gradient(135deg, var(--text) 0%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      font-family: var(--font-mono);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-mono);
+      color: var(--teal);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .chip {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+    }
+    .chip.highlight {
+      border-color: var(--amber);
+      color: var(--amber);
+      background: var(--amber-dim);
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      color: #CAD5E2;
+    }
+
+    /* Diagrams */
+    .diagram-container {
+      background: rgba(3, 8, 18, 0.5);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .grid-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .detail-box {
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    .detail-box h3 {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--purple);
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .detail-box p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--teal); text-decoration: none; }
+  </style>
+  
+  <!-- Structured JSON-LD Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchProject",
+    "name": "TinyML Wake Word Detection",
+    "headline": "Micro-Controller Sound Spotting Pipeline",
+    "description": "An end-to-end TinyML audio pipeline that trains custom keyword recognition models using heavy audio data augmentation and deploys them on microcontrollers under extreme RAM limitations.",
+    "creator": {
+      "@type": "Person",
+      "name": "Mohamed Ahmed Abdelraouf",
+      "jobTitle": "AI Engineer"
+    },
+    "programmingLanguage": ["TensorFlow", "TensorFlow Lite", "Librosa", "Python", "TinyML", "Arduino"],
+    "codeRepository": "https://github.com/moego0"
+  }
+  </script>
+</head>
+<body>
+  <div class="hud-grid"></div>
+  <div class="hud-scan"></div>
+
+  <div class="container">
+    <header>
+      <div class="title-area">
+        <h1>TinyML Wake Word Detection</h1>
+        <div class="subtitle">// Micro-Controller Sound Spotting Pipeline</div>
+      </div>
+      <a href="../../" class="back-btn">&lt; Return to Lab</a>
+    </header>
+
+    <main>
+      <article class="project-card">
+        <div class="section-title">Case Study Details</div>
+        
+        <div class="chips">
+          <span class="chip highlight">Runs on microcontrollers under 100KB RAM</span>
+          <span class="chip">TensorFlow</span><span class="chip">TensorFlow Lite</span><span class="chip">Librosa</span><span class="chip">Python</span><span class="chip">TinyML</span><span class="chip">Arduino</span>
+        </div>
+
+        <section class="article-body">
+          <p>An end-to-end TinyML audio pipeline that trains custom keyword recognition models using heavy audio data augmentation and deploys them on microcontrollers under extreme RAM limitations.</p>
+          
+          <div class="section-title">System Architecture</div>
+          <p>Raw audio input -> Mel-Frequency Cepstral Coefficients (MFCC) feature extraction -> 2D CNN classification -> Post-training INT8 quantization -> TFLite Micro micro-controller execution.</p>
+          
+          <div class="diagram-container">
+            
+        <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:600px; margin:2rem auto; display:block;">
+          <!-- Blocks -->
+          <rect x="10" y="70" width="130" height="70" rx="6" fill="#081020" stroke="#00E5C7" stroke-width="2"/>
+          <text x="75" y="110" fill="#E8EDF4" font-family="monospace" font-size="12" text-anchor="middle">1s Audio Buffer</text>
+          
+          <rect x="170" y="70" width="130" height="70" rx="6" fill="#081020" stroke="#00E5C7" stroke-width="2"/>
+          <text x="235" y="105" fill="#E8EDF4" font-family="monospace" font-size="12" text-anchor="middle">MFCC Extraction</text>
+          <text x="235" y="125" fill="#00E5C7" font-family="monospace" font-size="9" text-anchor="middle">(Spectrogram)</text>
+          
+          <rect x="330" y="70" width="130" height="70" rx="6" fill="#081020" stroke="#00E5C7" stroke-width="2"/>
+          <text x="395" y="105" fill="#E8EDF4" font-family="monospace" font-size="12" text-anchor="middle">2D CNN Classifier</text>
+          <text x="395" y="125" fill="#00E5C7" font-family="monospace" font-size="9" text-anchor="middle">(Float32 Model)</text>
+          
+          <rect x="490" y="70" width="130" height="70" rx="6" fill="#081020" stroke="#A855F7" stroke-width="2"/>
+          <text x="555" y="105" fill="#E8EDF4" font-family="monospace" font-size="12" text-anchor="middle">INT8 Quantization</text>
+          <text x="555" y="125" fill="#A855F7" font-family="monospace" font-size="9" text-anchor="middle">(TF Lite Micro)</text>
+          
+          <rect x="650" y="70" width="140" height="70" rx="6" fill="#081020" stroke="#F59E0B" stroke-width="2"/>
+          <text x="720" y="110" fill="#E8EDF4" font-family="monospace" font-size="12" text-anchor="middle">MCU Deployment</text>
+          
+          <!-- Arrows -->
+          <path d="M140 105 H170" stroke="#00E5C7" stroke-width="2"/>
+          <path d="M300 105 H330" stroke="#00E5C7" stroke-width="2"/>
+          <path d="M460 105 H490" stroke="#A855F7" stroke-width="2"/>
+          <path d="M620 105 H650" stroke="#F59E0B" stroke-width="2"/>
+        </svg>
+        
+          </div>
+
+          <div class="grid-details">
+            <div class="detail-box">
+              <h3>Technical Challenges</h3>
+              <p>Dealing with noisy environments and limited sample recordings for custom commands. Resolved by writing a custom pipeline to synthesize noise variables and pitch deviations.</p>
+            </div>
+            
+            <div class="detail-box">
+              <h3>Results &amp; Impact</h3>
+              <p>Achieved 98% accuracy on custom voice targets under test conditions. Successfully compressed models to fit under 80KB storage size, ensuring they fit easily in STM32F4/ESP32 internal flash memory.</p>
+            </div>
+            
+            <div class="detail-box">
+              <h3>Lessons Learned</h3>
+              <p>Gained a deep understanding of mathematical signal analysis (Fourier transforms) and fixed-point neural networks.</p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <span>System: MOHAMED AI LAB v2040</span>
+      <span>Source code: <a href="https://github.com/moego0" target="_blank" rel="noopener">GitHub Repository</a></span>
+    </footer>
+  </div>
+</body>
+</html>

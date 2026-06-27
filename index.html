@@ -1,16 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mohamed A. Abdelraouf — AI & Embedded Engineer. Dive into the neural network to explore projects in TinyML, robotics, AI agents, and hardware." />
+  <meta name="description"
+    content="Mohamed A. Abdelraouf — AI & Embedded Engineer. Dive into the neural network to explore projects in TinyML, robotics, AI agents, and hardware." />
   <meta name="author" content="Mohamed A. Abdelraouf" />
   <title>Mohamed A. Abdelraouf — Enter the Network</title>
 
+  <!-- Canonical + theme (update og:url/canonical if you use a custom domain) -->
+  <link rel="canonical" href="https://moego0.github.io/" />
+  <meta name="theme-color" content="#030812" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/profile.jpg" />
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Mohamed A. Abdelraouf — Enter the Network" />
-  <meta property="og:description" content="Scroll into a neural network to discover AI, TinyML, robotics & embedded projects." />
+  <meta property="og:title" content="Mohamed AI Laboratory — Enter the Network" />
+  <meta property="og:description"
+    content="Mohamed Ahmed Abdelraouf - Computer Science & AI Student, AI Engineer, TinyML Specialist, Embedded AI Developer, and Robotics Engineer. Explore the 3D neural network portfolio." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://moego0.github.io/" />
+  <meta property="og:image" content="https://moego0.github.io/assets/profile.jpg" />
+  <meta property="og:image:alt" content="Mohamed Ahmed Abdelraouf — AI & Embedded Systems Engineer" />
+  <meta property="og:site_name" content="Mohamed AI Laboratory" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mohamed AI Laboratory — Enter the Network" />
+  <meta name="twitter:description"
+    content="Explore projects in TinyML, robotics, local AI agents, and custom embedded systems." />
+  <meta name="twitter:image" content="https://moego0.github.io/assets/profile.jpg" />
+
+  <!-- Structured Data Graph (SEO, LLMO, AEO, GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://moego0.github.io/#person",
+        "name": "Mohamed Ahmed Abdelraouf",
+        "alternateName": "Mohamed Abdelraouf",
+        "jobTitle": "AI & Embedded Systems Engineer",
+        "url": "https://moego0.github.io/",
+        "image": "https://moego0.github.io/assets/profile.jpg",
+        "email": "bazeet298@gmail.com",
+        "sameAs": [
+          "https://github.com/moego0",
+          "https://www.linkedin.com/in/mohamed-a-abdelraouf"
+        ],
+        "knowsAbout": [
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Deep Learning",
+          "TinyML",
+          "Computer Vision",
+          "Embedded Systems",
+          "Robotics",
+          "AI Agents",
+          "Voice Assistants",
+          "Research",
+          "PCB Design",
+          "3D Printing"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Pharos University"
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://moego0.github.io/#profilepage",
+        "url": "https://moego0.github.io/",
+        "name": "Mohamed AI Laboratory Portfolio",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://moego0.github.io/#website",
+          "url": "https://moego0.github.io/",
+          "name": "Mohamed AI Laboratory"
+        },
+        "about": {
+          "@id": "https://moego0.github.io/#person"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://moego0.github.io/#organization",
+        "name": "Mohamed AI Laboratory",
+        "url": "https://moego0.github.io/",
+        "logo": "https://moego0.github.io/assets/profile.jpg",
+        "founder": {
+          "@id": "https://moego0.github.io/#person"
+        }
+      },
+      {
+        "@type": "ResearchProject",
+        "name": "TinyML Wake Word Detection System",
+        "description": "An end-to-end TinyML audio pipeline that trains custom keyword recognition models using heavy audio data augmentation and deploys them on microcontrollers under extreme RAM limitations.",
+        "creator": {
+          "@id": "https://moego0.github.io/#person"
+        }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Local Tab Agent",
+        "description": "A repository-aware local AI coding agent for VS Code bridging the editor context with local LLMs and browser tabs.",
+        "codeRepository": "https://github.com/moego0",
+        "programmingLanguage": "TypeScript"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Self-Built 3D Printer & Electroless PCB Plating Lab",
+        "description": "Custom built FDM 3D printer and home chemical processing lab for electroplating double-sided PCBs."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://moego0.github.io/#faqpage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does Mohamed Ahmed Abdelraouf specialize in?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mohamed specializes in Artificial Intelligence, Machine Learning, TinyML, Embedded Systems, Robotics, Computer Vision, and Software Development."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What projects has Mohamed built?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mohamed has built projects including Local Tab Agent (a VS Code AI extension), Schematic Sidekick (hardware design tool), Custom Wake Word Engine, EMG Bionic Hand, and a wearable Panic Attack Detection system."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://moego0.github.io/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Lab Home",
+            "item": "https://moego0.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FAQ",
+            "item": "https://moego0.github.io/faq"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- 3D Engine (Local Offline Files) -->
   <script src="js/three.min.js"></script>
@@ -19,34 +167,58 @@
   <script src="js/gsap.min.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Fonts (self-hosted, variable woff2 — no external requests) -->
+  <link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
 
   <style>
+    @font-face {
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 300 700;
+      font-display: swap;
+      src: url('assets/fonts/space-grotesk.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 300 500;
+      font-display: swap;
+      src: url('assets/fonts/jetbrains-mono.woff2') format('woff2');
+    }
+
     /* ══════════════════════════════════════════════════════════
        DESIGN TOKENS
     ══════════════════════════════════════════════════════════ */
     :root {
-      --bg:          #030812;
-      --bg-card:     rgba(8, 16, 32, 0.72);
-      --teal:        #00E5C7;
-      --teal-dim:    rgba(0,229,199,0.12);
-      --amber:       #F59E0B;
-      --amber-dim:   rgba(245,158,11,0.12);
-      --purple:      #A855F7;
-      --purple-dim:  rgba(168,85,247,0.12);
-      --text:        #E8EDF4;
-      --muted:       #5A6A8A;
-      --border:      rgba(255,255,255,0.07);
-      --font:        'Space Grotesk', sans-serif;
-      --mono:        'JetBrains Mono', monospace;
+      --bg: #030812;
+      --bg-card: rgba(8, 16, 32, 0.72);
+      --teal: #00E5C7;
+      --teal-dim: rgba(0, 229, 199, 0.12);
+      --amber: #F59E0B;
+      --amber-dim: rgba(245, 158, 11, 0.12);
+      --purple: #A855F7;
+      --purple-dim: rgba(168, 85, 247, 0.12);
+      --text: #E8EDF4;
+      --muted: #5A6A8A;
+      --border: rgba(255, 255, 255, 0.07);
+      --font: 'Space Grotesk', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
     }
 
     /* ── Reset ─────────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: auto; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
 
     body {
       background: var(--bg);
@@ -58,14 +230,69 @@
       cursor: crosshair;
     }
 
-    ::selection { background: var(--teal); color: var(--bg); }
-    a { color: inherit; text-decoration: none; }
+    /* Clickable things get a normal pointer — crosshair stays for the
+       canvas/exploration background only. */
+    a,
+    button,
+    [role="button"],
+    label,
+    .hero-btn,
+    .core-link,
+    input,
+    textarea,
+    select {
+      cursor: pointer;
+    }
+
+    ::selection {
+      background: var(--teal);
+      color: var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ── Keyboard focus ────────────────────────────────────── */
+    a:focus-visible,
+    button:focus-visible,
+    [role="button"]:focus-visible,
+    .hero-btn:focus-visible,
+    .core-link:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ── Skip link ─────────────────────────────────────────── */
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 12px;
+      z-index: 1000;
+      padding: 0.7rem 1.1rem;
+      background: var(--teal);
+      color: var(--bg);
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      border-radius: 6px;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
 
     /* ── Canvas ────────────────────────────────────────────── */
     #neural-canvas {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       z-index: 0;
     }
 
@@ -73,7 +300,7 @@
     .vignette {
       position: fixed;
       inset: 0;
-      background: radial-gradient(ellipse at center, transparent 35%, rgba(3,8,18,0.75) 100%);
+      background: radial-gradient(ellipse at center, transparent 35%, rgba(3, 8, 18, 0.75) 100%);
       pointer-events: none;
       z-index: 1;
     }
@@ -82,13 +309,11 @@
     .scanlines {
       position: fixed;
       inset: 0;
-      background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(0,0,0,0.03) 2px,
-        rgba(0,0,0,0.03) 4px
-      );
+      background: repeating-linear-gradient(0deg,
+          transparent,
+          transparent 2px,
+          rgba(0, 0, 0, 0.03) 2px,
+          rgba(0, 0, 0, 0.03) 4px);
       pointer-events: none;
       z-index: 2;
     }
@@ -110,7 +335,8 @@
 
     /* Photo placeholder */
     .hero-photo {
-      width: 150px; height: 150px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       position: relative;
       margin-bottom: 2rem;
@@ -120,24 +346,36 @@
       position: absolute;
       inset: -5px;
       border-radius: 50%;
-      border: 2px solid rgba(0,229,199,0.5);
-      box-shadow: 0 0 25px rgba(0,229,199,0.15), inset 0 0 25px rgba(0,229,199,0.08);
+      border: 2px solid rgba(0, 229, 199, 0.5);
+      box-shadow: 0 0 25px rgba(0, 229, 199, 0.15), inset 0 0 25px rgba(0, 229, 199, 0.08);
       animation: ringPulse 3s ease-in-out infinite;
     }
+
     .photo-ring-outer {
       position: absolute;
       inset: -14px;
       border-radius: 50%;
-      border: 1px solid rgba(0,229,199,0.12);
+      border: 1px solid rgba(0, 229, 199, 0.12);
       animation: ringPulse 3s ease-in-out infinite 1.5s;
     }
+
     @keyframes ringPulse {
-      0%, 100% { transform: scale(1); opacity: 0.4; }
-      50%      { transform: scale(1.06); opacity: 1; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.4;
+      }
+
+      50% {
+        transform: scale(1.06);
+        opacity: 1;
+      }
     }
 
     .photo-inner {
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       background: linear-gradient(135deg, #0a1628, #1a2d50);
       display: flex;
@@ -150,11 +388,12 @@
       position: relative;
       overflow: hidden;
     }
+
     .photo-inner::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, transparent 40%, rgba(0,229,199,0.08) 100%);
+      background: linear-gradient(135deg, transparent 40%, rgba(0, 229, 199, 0.08) 100%);
       border-radius: 50%;
     }
 
@@ -164,7 +403,7 @@
       letter-spacing: -0.03em;
       line-height: 1;
       margin-bottom: 0.6rem;
-      background: linear-gradient(135deg, var(--text) 0%, rgba(0,229,199,0.8) 100%);
+      background: linear-gradient(135deg, var(--text) 0%, rgba(0, 229, 199, 0.8) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -196,13 +435,14 @@
       transition: all 0.3s ease;
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
     }
+
     .hero-btn:hover {
       border-color: var(--teal);
       color: var(--teal);
       background: var(--teal-dim);
-      box-shadow: 0 0 25px rgba(0,229,199,0.12);
+      box-shadow: 0 0 25px rgba(0, 229, 199, 0.12);
       transform: translateY(-2px);
     }
 
@@ -215,6 +455,7 @@
       align-items: center;
       gap: 0.6rem;
     }
+
     .scroll-text {
       font-family: var(--mono);
       font-size: 0.65rem;
@@ -222,25 +463,45 @@
       text-transform: uppercase;
       color: var(--muted);
     }
+
     .scroll-chevrons {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 3px;
     }
+
     .scroll-chevron {
-      width: 10px; height: 10px;
+      width: 10px;
+      height: 10px;
       border-right: 1.5px solid var(--teal);
       border-bottom: 1.5px solid var(--teal);
       transform: rotate(45deg);
       opacity: 0.8;
       animation: chevPulse 2s ease-in-out infinite;
     }
-    .scroll-chevron:nth-child(2) { animation-delay: 0.15s; opacity: 0.5; }
-    .scroll-chevron:nth-child(3) { animation-delay: 0.3s;  opacity: 0.25; }
+
+    .scroll-chevron:nth-child(2) {
+      animation-delay: 0.15s;
+      opacity: 0.5;
+    }
+
+    .scroll-chevron:nth-child(3) {
+      animation-delay: 0.3s;
+      opacity: 0.25;
+    }
+
     @keyframes chevPulse {
-      0%, 100% { transform: rotate(45deg) translate(0, 0); }
-      50%      { transform: rotate(45deg) translate(3px, 3px); opacity: 1; }
+
+      0%,
+      100% {
+        transform: rotate(45deg) translate(0, 0);
+      }
+
+      50% {
+        transform: rotate(45deg) translate(3px, 3px);
+        opacity: 1;
+      }
     }
 
     /* ══════════════════════════════════════════════════════════
@@ -248,13 +509,14 @@
     ══════════════════════════════════════════════════════════ */
     .layer-label {
       position: fixed;
-      top: 50%; left: 50%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       font-family: var(--mono);
       font-size: clamp(0.9rem, 2vw, 1.2rem);
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(0,229,199,0.25);
+      color: rgba(0, 229, 199, 0.25);
       z-index: 3;
       pointer-events: none;
       white-space: nowrap;
@@ -278,6 +540,7 @@
       opacity: 0;
       visibility: hidden;
     }
+
     .depth-label-top {
       font-family: var(--mono);
       font-size: 0.55rem;
@@ -288,14 +551,16 @@
       text-orientation: mixed;
       transform: rotate(180deg);
     }
+
     .depth-track {
       width: 2px;
       height: 160px;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.06);
       border-radius: 1px;
       position: relative;
       overflow: hidden;
     }
+
     .depth-fill {
       position: absolute;
       top: 0;
@@ -303,9 +568,10 @@
       height: 0%;
       background: linear-gradient(to bottom, var(--teal), var(--purple));
       border-radius: 1px;
-      box-shadow: 0 0 8px rgba(0,229,199,0.5);
+      box-shadow: 0 0 8px rgba(0, 229, 199, 0.5);
       transition: height 0.15s ease-out;
     }
+
     .depth-value {
       font-family: var(--mono);
       font-size: 0.6rem;
@@ -329,8 +595,14 @@
       visibility: hidden;
       pointer-events: none;
     }
-    .neural-card-wrapper.pos-left   { left: 4%; }
-    .neural-card-wrapper.pos-right  { right: 4%; }
+
+    .neural-card-wrapper.pos-left {
+      left: 4%;
+    }
+
+    .neural-card-wrapper.pos-right {
+      right: 4%;
+    }
 
     .neural-card {
       width: 100%;
@@ -341,21 +613,25 @@
       border: 1px solid var(--border);
       border-radius: 18px;
       box-shadow:
-        0 8px 40px rgba(0,0,0,0.4),
-        0 0 80px rgba(0,229,199,0.03);
+        0 8px 40px rgba(0, 0, 0, 0.4),
+        0 0 80px rgba(0, 229, 199, 0.03);
       transform-style: preserve-3d;
       transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
       pointer-events: auto;
     }
+
     .neural-card::before {
       content: '';
       position: absolute;
-      top: -1px; left: 20%; right: 20%;
+      top: -1px;
+      left: 20%;
+      right: 20%;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--teal), transparent);
       opacity: 0.4;
       border-radius: 1px;
     }
+
     .neural-card.amber-glow::before {
       background: linear-gradient(90deg, transparent, var(--amber), transparent);
     }
@@ -371,15 +647,29 @@
       align-items: center;
       gap: 0.5rem;
     }
+
     .nc-dot {
-      width: 7px; height: 7px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       display: inline-block;
       flex-shrink: 0;
     }
-    .nc-dot.teal   { background: var(--teal);   box-shadow: 0 0 10px var(--teal); }
-    .nc-dot.amber  { background: var(--amber);  box-shadow: 0 0 10px var(--amber); }
-    .nc-dot.purple { background: var(--purple); box-shadow: 0 0 10px var(--purple); }
+
+    .nc-dot.teal {
+      background: var(--teal);
+      box-shadow: 0 0 10px var(--teal);
+    }
+
+    .nc-dot.amber {
+      background: var(--amber);
+      box-shadow: 0 0 10px var(--amber);
+    }
+
+    .nc-dot.purple {
+      background: var(--purple);
+      box-shadow: 0 0 10px var(--purple);
+    }
 
     .nc-title {
       font-family: var(--font);
@@ -390,6 +680,7 @@
       margin-bottom: 0.7rem;
       color: var(--text);
     }
+
     .nc-badge {
       font-family: var(--mono);
       font-size: 0.62rem;
@@ -409,14 +700,44 @@
       line-height: 1.7;
       margin-bottom: 0.9rem;
     }
-    .nc-desc strong { color: var(--text); font-weight: 500; }
+
+    .nc-desc strong {
+      color: var(--text);
+      font-weight: 500;
+    }
 
     .nc-tech {
       font-family: var(--mono);
       font-size: 0.72rem;
-      color: rgba(90,106,138,0.8);
+      color: rgba(90, 106, 138, 0.8);
       margin-bottom: 1rem;
       line-height: 1.55;
+    }
+
+    /* Highlight chips — scannable project facts */
+    .nc-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .nc-metric {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.02em;
+      color: var(--teal);
+      padding: 0.22rem 0.55rem;
+      border: 1px solid var(--teal-dim);
+      background: var(--teal-dim);
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .neural-card.amber-glow .nc-metric {
+      color: var(--amber);
+      border-color: var(--amber-dim);
+      background: var(--amber-dim);
     }
 
     .nc-media {
@@ -428,6 +749,7 @@
       background: #050a14;
       aspect-ratio: 16 / 9;
     }
+
     .nc-media img {
       width: 100%;
       height: 100%;
@@ -435,6 +757,7 @@
       display: block;
       transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     }
+
     .neural-card:hover .nc-media img {
       transform: scale(1.04);
     }
@@ -444,7 +767,7 @@
       font-size: 0.72rem;
       line-height: 1.4;
       color: var(--teal);
-      background: rgba(3,8,18,0.6);
+      background: rgba(3, 8, 18, 0.6);
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 0.8rem 1rem;
@@ -453,7 +776,12 @@
       white-space: pre;
     }
 
-    .nc-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .nc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
     .nc-link {
       font-family: var(--mono);
       font-size: 0.7rem;
@@ -463,10 +791,11 @@
       color: var(--muted);
       transition: all 0.25s;
     }
+
     .nc-link:hover {
       border-color: var(--teal);
       color: var(--teal);
-      box-shadow: 0 0 12px rgba(0,229,199,0.1);
+      box-shadow: 0 0 12px rgba(0, 229, 199, 0.1);
     }
 
     /* ══════════════════════════════════════════════════════════
@@ -474,7 +803,8 @@
     ══════════════════════════════════════════════════════════ */
     .cert-panel {
       position: fixed;
-      top: 50%; left: 50%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       z-index: 10;
       width: 680px;
@@ -483,16 +813,19 @@
       background: var(--bg-card);
       backdrop-filter: blur(24px) saturate(1.4);
       -webkit-backdrop-filter: blur(24px) saturate(1.4);
-      border: 1px solid rgba(168,85,247,0.15);
+      border: 1px solid rgba(168, 85, 247, 0.15);
       border-radius: 18px;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.4), 0 0 60px rgba(168,85,247,0.04);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 0 60px rgba(168, 85, 247, 0.04);
       opacity: 0;
       visibility: hidden;
     }
+
     .cert-panel::before {
       content: '';
       position: absolute;
-      top: -1px; left: 20%; right: 20%;
+      top: -1px;
+      left: 20%;
+      right: 20%;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--purple), transparent);
       opacity: 0.4;
@@ -512,17 +845,20 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 0.8rem;
     }
+
     .cert-item {
-      background: rgba(3,8,18,0.6);
+      background: rgba(3, 8, 18, 0.6);
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 0.9rem 1rem;
       transition: border-color 0.25s, transform 0.25s;
     }
+
     .cert-item:hover {
-      border-color: rgba(168,85,247,0.3);
+      border-color: rgba(168, 85, 247, 0.3);
       transform: translateY(-2px);
     }
+
     .cert-issuer {
       font-family: var(--mono);
       font-size: 0.62rem;
@@ -532,6 +868,7 @@
       margin-bottom: 0.25rem;
       display: block;
     }
+
     .cert-name {
       font-size: 0.84rem;
       font-weight: 500;
@@ -545,7 +882,8 @@
     ══════════════════════════════════════════════════════════ */
     #contact-core {
       position: fixed;
-      top: 50%; left: 50%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       z-index: 10;
       text-align: center;
@@ -554,6 +892,7 @@
       opacity: 0;
       visibility: hidden;
     }
+
     .core-label {
       font-family: var(--mono);
       font-size: 0.68rem;
@@ -563,6 +902,7 @@
       margin-bottom: 1.2rem;
       opacity: 0.7;
     }
+
     .core-title {
       font-size: clamp(2.2rem, 6vw, 4rem);
       font-weight: 700;
@@ -570,19 +910,25 @@
       line-height: 1.05;
       margin-bottom: 1.2rem;
     }
-    .core-title .accent { color: var(--teal); }
+
+    .core-title .accent {
+      color: var(--teal);
+    }
+
     .core-sub {
       font-size: 0.95rem;
       color: var(--muted);
       line-height: 1.75;
       margin-bottom: 2rem;
     }
+
     .core-links {
       display: flex;
       justify-content: center;
       gap: 0.8rem;
       flex-wrap: wrap;
     }
+
     .core-link {
       font-family: var(--mono);
       font-size: 0.82rem;
@@ -592,11 +938,12 @@
       border-radius: 8px;
       transition: all 0.3s;
     }
+
     .core-link:hover {
       border-color: var(--teal);
       color: var(--teal);
       background: var(--teal-dim);
-      box-shadow: 0 0 25px rgba(0,229,199,0.12);
+      box-shadow: 0 0 25px rgba(0, 229, 199, 0.12);
     }
 
     .v2-footer {
@@ -632,24 +979,49 @@
         right: auto !important;
         transform: translate(-50%, -50%) !important;
       }
-      .cert-grid { grid-template-columns: 1fr; }
+
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 768px) {
-      .depth-bar { display: none; }
-      .scanlines { display: none; }
-      .hero-photo { width: 120px; height: 120px; }
-      .photo-inner { font-size: 2.2rem; }
+      .depth-bar {
+        display: none;
+      }
+
+      .scanlines {
+        display: none;
+      }
+
+      .hero-photo {
+        width: 120px;
+        height: 120px;
+      }
+
+      .photo-inner {
+        font-size: 2.2rem;
+      }
     }
 
     @media (max-width: 420px) {
-      .hero-buttons { flex-direction: column; align-items: center; }
-      .hero-btn { width: 100%; text-align: center; }
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-btn {
+        width: 100%;
+        text-align: center;
+      }
     }
 
     /* ── Reduced motion ───────────────────────────────────── */
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
+
+      *,
+      *::before,
+      *::after {
         animation-duration: 0.001ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.001ms !important;
@@ -658,15 +1030,26 @@
 
     /* ── Print ────────────────────────────────────────────── */
     @media print {
-      .neural-card-wrapper, .cert-panel, #contact-core, #hero {
+
+      .neural-card-wrapper,
+      .cert-panel,
+      #contact-core,
+      #hero {
         position: static !important;
         opacity: 1 !important;
         visibility: visible !important;
         transform: none !important;
       }
-      #neural-canvas, .vignette, .scanlines,
-      .depth-bar, .scroll-cue, .layer-label,
-      #scroll-spacer { display: none !important; }
+
+      #neural-canvas,
+      .vignette,
+      .scanlines,
+      .depth-bar,
+      .scroll-cue,
+      .layer-label,
+      #scroll-spacer {
+        display: none !important;
+      }
     }
 
     /* ── No-JS fallback ───────────────────────────────────── */
@@ -682,10 +1065,24 @@
 
   <noscript>
     <style>
-      #neural-canvas, .vignette, .scanlines, .depth-bar,
-      .scroll-cue, .layer-label, #scroll-spacer { display: none !important; }
-      #hero { position: relative !important; }
-      .neural-card-wrapper, .cert-panel, #contact-core, .v2-footer {
+      #neural-canvas,
+      .vignette,
+      .scanlines,
+      .depth-bar,
+      .scroll-cue,
+      .layer-label,
+      #scroll-spacer {
+        display: none !important;
+      }
+
+      #hero {
+        position: relative !important;
+      }
+
+      .neural-card-wrapper,
+      .cert-panel,
+      #contact-core,
+      .v2-footer {
         position: relative !important;
         opacity: 1 !important;
         visibility: visible !important;
@@ -694,11 +1091,17 @@
         left: auto !important;
         right: auto !important;
       }
-      .nojs-fallback { display: block !important; }
+
+      .nojs-fallback {
+        display: block !important;
+      }
     </style>
   </noscript>
 </head>
+
 <body>
+
+  <a class="skip-link" href="#hero">Skip to content</a>
 
   <!-- ── 3D Canvas ────────────────────────────────────────── -->
   <canvas id="neural-canvas" aria-hidden="true"></canvas>
@@ -724,10 +1127,11 @@
       <div class="photo-ring-outer"></div>
       <div class="photo-ring"></div>
       <div class="photo-inner">
-        <img id="hero-img" src="assets/profile.jpg" alt="Mohamed A. Abdelraouf" 
-             onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" 
-             style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: none;" />
+        <img id="hero-img" src="assets/profile.jpg" alt="Mohamed A. Abdelraouf" width="896" height="1195"
+          loading="eager" fetchpriority="high" decoding="async"
+          onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: none;" />
         <span style="display: flex; width: 100%; height: 100%; align-items: center; justify-content: center;">MA</span>
       </div>
     </div>
@@ -738,7 +1142,8 @@
     <div class="hero-buttons">
       <a href="mailto:bazeet298@gmail.com" class="hero-btn" id="btn-email">✉ bazeet298@gmail.com</a>
       <a href="https://github.com/moego0" target="_blank" rel="noopener" class="hero-btn" id="btn-github">⌥ GitHub</a>
-      <a href="https://www.linkedin.com/in/mohamed-a-abdelraouf" target="_blank" rel="noopener" class="hero-btn" id="btn-linkedin">in LinkedIn</a>
+      <a href="https://www.linkedin.com/in/mohamed-a-abdelraouf" target="_blank" rel="noopener" class="hero-btn"
+        id="btn-linkedin">in LinkedIn</a>
     </div>
 
     <div class="scroll-cue" id="scroll-cue">
@@ -758,14 +1163,305 @@
   <div class="layer-label" id="label-knowledge">knowledge crystallizes …</div>
 
   <!-- ══════════════════════════════════════════════════════════
-       PROJECT CARDS CONTAINER (DYNAMICALLY GENERATED)
+       PROJECTS SECTION (STATIC & SEMANTIC)
   ══════════════════════════════════════════════════════════ -->
-  <div id="project-cards-container"></div>
+  <main id="main-content">
+    <section id="projects" aria-label="Selected Projects">
+      <div id="project-cards-container">
+        
+        <article class="neural-card-wrapper pos-left" id="card-1-wrapper">
+          <div class="neural-card" id="card-1">
+            <div class="nc-media">
+              <img src="assets/local-tab-agent-vsx.png" alt="Local Tab Agent VS Code Extension" loading="lazy" decoding="async" />
+            </div>
+            <div class="nc-tag"><span class="nc-dot teal"></span> AI Agent · VS Code Extension · Shipped</div>
+            <h3 class="nc-title">Local Tab Agent <span class="nc-badge">650+ downloads</span></h3>
+            <p class="nc-desc">A local AI coding agent for VS Code, <strong>published on the Open VSX Registry</strong>. Repository-aware planning, browser AI tab bridging (ChatGPT / Gemini / Claude), and distributed compute Swarm Groups, for GPU/CPU pooling.</p>
+            <div class="nc-metrics">
+              <span class="nc-metric">650+ installs</span>
+              <span class="nc-metric">3 AI bridges</span>
+              <span class="nc-metric">GPU/CPU pooling</span>
+            </div>
+            <div class="nc-tech">TypeScript · Ollama · Local LLMs · WebSocket · Distributed Compute · VS Code API</div>
+            <div class="nc-links">
+              <a class="nc-link" href="https://open-vsx.org/extension/moego0/local-tab-agent" target="_blank" rel="noopener">Open VSX ↗</a>
+              <a class="nc-link" href="https://github.com/moego0" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <div style="position: absolute; bottom: 8px; right: 15px; font-family: var(--mono); font-size: 0.6rem; color: rgba(255,255,255,0.12);" aria-hidden="true">
+              CARD-1 // NODE Z: -100m
+            </div>
+          </div>
+        </article>
 
-  <!-- ══════════════════════════════════════════════════════════
-       CERTIFICATIONS CONTAINER (DYNAMICALLY GENERATED)
-  ══════════════════════════════════════════════════════════ -->
-  <div id="certifications-container"></div>
+        <article class="neural-card-wrapper pos-right" id="card-2-wrapper">
+          <div class="neural-card amber-glow" id="card-2">
+            <div class="nc-media">
+              <img src="assets/printer-build.jpg" alt="Self-Built 3D Printer and PCB Lab" loading="lazy" decoding="async" />
+            </div>
+            <div class="nc-tag"><span class="nc-dot amber"></span> Hardware · Fabrication</div>
+            <h3 class="nc-title">Self-Built 3D Printer & PCB Lab</h3>
+            <p class="nc-desc">Built my own <strong>FDM 3D printer from scratch</strong> — frame, motion system, wiring, firmware — and a home PCB-fabrication setup using electroless copper plating. The workshop behind everything else.</p>
+            <div class="nc-metrics">
+              <span class="nc-metric">Scratch-built</span>
+              <span class="nc-metric">Electroless Cu</span>
+              <span class="nc-metric">Custom firmware</span>
+            </div>
+            <div class="nc-tech">3D Printing · CAD · PCB Design · Electroless Cu · Firmware</div>
+            <div class="nc-links">
+              <a class="nc-link" href="mailto:bazeet298@gmail.com">Ask me about it ↗</a>
+            </div>
+            <div style="position: absolute; bottom: 8px; right: 15px; font-family: var(--mono); font-size: 0.6rem; color: rgba(255,255,255,0.12);" aria-hidden="true">
+              CARD-2 // NODE Z: -240m
+            </div>
+          </div>
+        </article>
+
+        <article class="neural-card-wrapper pos-left" id="card-3-wrapper">
+          <div class="neural-card" id="card-3">
+            <div class="nc-media">
+              <img src="assets/sidekick.jpg" alt="Schematic Sidekick AI design tool" loading="lazy" decoding="async" />
+            </div>
+            <div class="nc-tag"><span class="nc-dot teal"></span> AI · Hardware Design Tool</div>
+            <h3 class="nc-title">Schematic Sidekick</h3>
+            <p class="nc-desc">An AI tool that takes a project goal and builds you <strong>design, wire, and build hardware</strong> — suggesting boards and modules, then handling the wiring and firmware logic. Goal to schematic in minutes, not hours.</p>
+            <div class="nc-metrics">
+              <span class="nc-metric">Goal → schematic</span>
+              <span class="nc-metric">Auto-wiring</span>
+              <span class="nc-metric">Firmware logic</span>
+            </div>
+            <div class="nc-tech">AI · Electronics · Schematic Generation · Firmware</div>
+            <div class="nc-links">
+              <a class="nc-link" href="https://github.com/moego0" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <div style="position: absolute; bottom: 8px; right: 15px; font-family: var(--mono); font-size: 0.6rem; color: rgba(255,255,255,0.12);" aria-hidden="true">
+              CARD-3 // NODE Z: -380m
+            </div>
+          </div>
+        </article>
+
+        <article class="neural-card-wrapper pos-right" id="card-4-wrapper">
+          <div class="neural-card amber-glow" id="card-4">
+            <div class="nc-media">
+              <img src="assets/panic-detector-metrics.png" alt="Panic Attack Detection wearable sensor interface" loading="lazy" decoding="async" />
+            </div>
+            <div class="nc-tag"><span class="nc-dot amber"></span> Medical ML · Wearable</div>
+            <h3 class="nc-title">Panic Attack Detection System</h3>
+            <p class="nc-desc">A <strong>real-time panic-attack detector</strong> using multi-sensor wearable inputs (heart rate, EDA, temperature, motion). Trained an ensemble of ML models with <strong>personalized baseline calibration</strong> — flags an attack within ~1 second.</p>
+            <div class="nc-metrics">
+              <span class="nc-metric">~1s detection</span>
+              <span class="nc-metric">4 sensors fused</span>
+              <span class="nc-metric">Personalized baseline</span>
+            </div>
+            <div class="nc-tech">Python · scikit-learn · Random Forest · Arduino · Sensor Fusion</div>
+            <div class="nc-links">
+              <a class="nc-link" href="https://github.com/moego0/panic-attack-detector" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <div style="position: absolute; bottom: 8px; right: 15px; font-family: var(--mono); font-size: 0.6rem; color: rgba(255,255,255,0.12);" aria-hidden="true">
+              CARD-4 // NODE Z: -520m
+            </div>
+          </div>
+        </article>
+
+        <article class="neural-card-wrapper pos-left" id="card-5-wrapper">
+          <div class="neural-card amber-glow" id="card-5">
+            <div class="nc-media">
+              <img src="assets/kws.png" alt="Custom Keyword Spotter training parameters" loading="lazy" decoding="async" />
+            </div>
+            <div class="nc-tag"><span class="nc-dot amber"></span> TinyML · Speech</div>
+            <h3 class="nc-title">Custom Wake-Word Engine</h3>
+            <p class="nc-desc">A keyword-spotting pipeline that trains <strong>custom wake words</strong> for edge devices — heavy audio augmentation, built for devices like alexa with a small dataset, exported to TensorFlow Lite. ≈ 98% accuracy.</p>
+            <div class="nc-metrics">
+              <span class="nc-metric">≈98% accuracy</span>
+              <span class="nc-metric">TF Lite export</span>
+              <span class="nc-metric">Edge-ready</span>
+            </div>
+            <div class="nc-tech">TensorFlow · TF Lite · Librosa · TinyML</div>
+            <div class="nc-links">
+              <a class="nc-link" href="https://github.com/moego0" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <div style="position: absolute; bottom: 8px; right: 15px; font-family: var(--mono); font-size: 0.6rem; color: rgba(255,255,255,0.12);" aria-hidden="true">
+              CARD-5 // NODE Z: -660m
+            </div>
+          </div>
+        </article>
+
+        <article class="neural-card-wrapper pos-right" id="card-6-wrapper">
+          <div class="neural-card amber-glow" id="card-6">
+            <div class="nc-media">
+              <img src="assets/bionmichyand.png" alt="EMG-driven prosthetic robotic bionic hand" loading="lazy" decoding="async" />
+            </div>
+            <div class="nc-tag"><span class="nc-dot amber"></span> Robotics · Biomedical</div>
+            <h3 class="nc-title">EMG Bionic Hand</h3>
+            <p class="nc-desc">A prosthetic robotic hand driven by <strong>EMG muscle and brain signals</strong> — real-time signal processing into multi-servo motion. Presented at the Pharos University exhibition.</p>
+            <div class="nc-metrics">
+              <span class="nc-metric">EMG-driven</span>
+              <span class="nc-metric">Multi-servo</span>
+              <span class="nc-metric">Exhibited @ PUA</span>
+            </div>
+            <div class="nc-tech">Arduino · EMG Sensors · Servos · Embedded C</div>
+            <div class="nc-links">
+              <a class="nc-link" href="https://github.com/moego0" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <div style="position: absolute; bottom: 8px; right: 15px; font-family: var(--mono); font-size: 0.6rem; color: rgba(255,255,255,0.12);" aria-hidden="true">
+              CARD-6 // NODE Z: -800m
+            </div>
+          </div>
+        </article>
+
+        <article class="neural-card-wrapper pos-left" id="card-7-wrapper">
+          <div class="neural-card" id="card-7">
+            <div class="nc-media">
+              <img src="assets/interview-booster.png" alt="Interview Booster voice transcription app" loading="lazy" decoding="async" />
+            </div>
+            <div class="nc-tag"><span class="nc-dot teal"></span> AI Copilot · Desktop</div>
+            <h3 class="nc-title">Interview Booster <span class="nc-badge">AI Agent</span></h3>
+            <p class="nc-desc">A live AI copilot that <strong>transcribes speech in real time, detects questions, and generates answers on the fly </strong>— with local Whisper inference for low latency.</p>
+            <div class="nc-metrics">
+              <span class="nc-metric">Real-time STT</span>
+              <span class="nc-metric">Local Whisper</span>
+              <span class="nc-metric">Low latency</span>
+            </div>
+            <div class="nc-tech">TypeScript · Whisper · Real-time STT · LLM</div>
+            <div class="nc-links">
+              <a class="nc-link" href="https://github.com/moego0" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <div style="position: absolute; bottom: 8px; right: 15px; font-family: var(--mono); font-size: 0.6rem; color: rgba(255,255,255,0.12);" aria-hidden="true">
+              CARD-7 // NODE Z: -940m
+            </div>
+          </div>
+        </article>
+
+        <article class="neural-card-wrapper pos-right" id="card-8-wrapper">
+          <div class="neural-card" id="card-8">
+            <div class="nc-media">
+              <img src="assets/SIassistant.png" alt="Voice activated AI Desktop Assistant device" loading="lazy" decoding="async" />
+            </div>
+            <div class="nc-tag"><span class="nc-dot teal"></span> Desktop · Smart Home</div>
+            <h3 class="nc-title">AI Desktop Assistant <span class="nc-badge">AI Agent</span></h3>
+            <p class="nc-desc">A multifunctional desktop assistant — voice interaction, camera-based vision, and <strong>controls smart home devices, open desktop apps, and write notes </strong>, with bilingual Arabic / English support.</p>
+            <div class="nc-metrics">
+              <span class="nc-metric">Voice + vision</span>
+              <span class="nc-metric">AR / EN bilingual</span>
+              <span class="nc-metric">Smart-home</span>
+            </div>
+            <div class="nc-tech">Python · PyQt6 · Gemini · OpenCV · BLE · STM32</div>
+            <div class="nc-links">
+              <a class="nc-link" href="https://github.com/moego0" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <div style="position: absolute; bottom: 8px; right: 15px; font-family: var(--mono); font-size: 0.6rem; color: rgba(255,255,255,0.12);" aria-hidden="true">
+              CARD-8 // NODE Z: -1080m
+            </div>
+          </div>
+        </article>
+
+        <article class="neural-card-wrapper pos-left" id="card-9-wrapper">
+          <div class="neural-card amber-glow" id="card-9">
+            <div class="nc-media">
+              <img src="assets/micropad.png" alt="Micropad custom mechanical shortcut keypad" loading="lazy" decoding="async" />
+            </div>
+            <div class="nc-tag"><span class="nc-dot amber"></span> Embedded · PCB design · production ready</div>
+            <h3 class="nc-title">Micropad - senet labs <span class="nc-badge">Start-up</span></h3>
+            <p class="nc-desc">Micropad for shortcuts <strong> controls editing software, 3d modelling apps, open websites and apps, control media </strong>, with powerful electron app for customization.</p>
+            <div class="nc-metrics">
+              <span class="nc-metric">USB HID</span>
+              <span class="nc-metric">OTA updates</span>
+              <span class="nc-metric">STM32F4</span>
+            </div>
+            <div class="nc-tech">OTA · STM32F4 · C · kicad · USB HID · Electron · React</div>
+            <div class="nc-links">
+              <a class="nc-link" href="https://github.com/moego0" target="_blank" rel="noopener">senetlabs.com ↗</a>
+            </div>
+            <div style="position: absolute; bottom: 8px; right: 15px; font-family: var(--mono); font-size: 0.6rem; color: rgba(255,255,255,0.12);" aria-hidden="true">
+              CARD-9 // NODE Z: -1220m
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         CERTIFICATIONS SECTION (STATIC & SEMANTIC)
+    ══════════════════════════════════════════════════════════ -->
+    <section id="certifications" aria-label="Certifications and Continuing Education">
+      <div id="certifications-container">
+        <div class="cert-panel" id="cert-section">
+          <div class="cert-panel-title">// certifications — always learning</div>
+          <div class="cert-grid">
+            <div class="cert-item">
+              <span class="cert-issuer">Harvard University</span>
+              <span class="cert-name">CS50: Introduction to Computer Science</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-issuer">HarvardX</span>
+              <span class="cert-name">Fundamentals of TinyML</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-issuer">HarvardX</span>
+              <span class="cert-name">Applications of TinyML</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-issuer">Edge Impulse</span>
+              <span class="cert-name">Introduction to Embedded Machine Learning</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-issuer">DeepLearning.AI</span>
+              <span class="cert-name">TensorFlow Developer</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-issuer">DeepLearning.AI</span>
+              <span class="cert-name">Neural Networks &amp; Deep Learning</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-issuer">DeepLearning.AI</span>
+              <span class="cert-name">Improving Deep Neural Networks: Tuning &amp; Optimization</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-issuer">LinkedIn Learning</span>
+              <span class="cert-name">Deep Learning: Model Optimization &amp; Tuning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Semantic representation of Knowledge Graph for AI indexing -->
+    <section id="knowledge-graph" aria-label="Mohamed Ahmed Abdelraouf Knowledge Graph" style="display:none;" aria-hidden="true">
+      <div itemprop="about" itemscope itemtype="https://schema.org/Person">
+        <span itemprop="name">Mohamed Ahmed Abdelraouf</span>
+        <div itemprop="knowsAbout" itemscope itemtype="https://schema.org/Thing">
+          <span itemprop="name">Artificial Intelligence</span>
+        </div>
+        <div itemprop="knowsAbout" itemscope itemtype="https://schema.org/Thing">
+          <span itemprop="name">Machine Learning</span>
+        </div>
+        <div itemprop="knowsAbout" itemscope itemtype="https://schema.org/Thing">
+          <span itemprop="name">Deep Learning</span>
+        </div>
+        <div itemprop="knowsAbout" itemscope itemtype="https://schema.org/Thing">
+          <span itemprop="name">TinyML</span>
+        </div>
+        <div itemprop="knowsAbout" itemscope itemtype="https://schema.org/Thing">
+          <span itemprop="name">Computer Vision</span>
+        </div>
+        <div itemprop="knowsAbout" itemscope itemtype="https://schema.org/Thing">
+          <span itemprop="name">Embedded Systems</span>
+        </div>
+        <div itemprop="knowsAbout" itemscope itemtype="https://schema.org/Thing">
+          <span itemprop="name">Robotics</span>
+        </div>
+        <div itemprop="knowsAbout" itemscope itemtype="https://schema.org/Thing">
+          <span itemprop="name">AI Agents</span>
+        </div>
+        <div itemprop="knowsAbout" itemscope itemtype="https://schema.org/Thing">
+          <span itemprop="name">Voice Assistants</span>
+        </div>
+        <div itemprop="knowsAbout" itemscope itemtype="https://schema.org/Thing">
+          <span itemprop="name">Research</span>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ══════════════════════════════════════════════════════════
        CONTACT — CORE
@@ -780,7 +1476,8 @@
     <div class="core-links">
       <a class="core-link" href="mailto:bazeet298@gmail.com">✉ bazeet298@gmail.com</a>
       <a class="core-link" href="https://github.com/moego0" target="_blank" rel="noopener">⌥ GitHub</a>
-      <a class="core-link" href="https://www.linkedin.com/in/mohamed-a-abdelraouf" target="_blank" rel="noopener">in LinkedIn</a>
+      <a class="core-link" href="https://www.linkedin.com/in/mohamed-a-abdelraouf" target="_blank" rel="noopener">in
+        LinkedIn</a>
     </div>
   </div>
 
@@ -794,1044 +1491,1048 @@
        JAVASCRIPT
   ══════════════════════════════════════════════════════════ -->
   <script>
-  (function () {
-    'use strict';
+    (function () {
+      'use strict';
 
-    const REDUCED  = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const IS_TOUCH = window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
-    const IS_MOB   = window.innerWidth < 769;
+      const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const IS_TOUCH = window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
+      const IS_MOB = window.innerWidth < 769;
 
-    /* ══════════════════════════════════════════════════════════
-       PORTFOLIO CONFIGURATION DATA
-       (Add, edit, or remove projects and certifications here)
-    ══════════════════════════════════════════════════════════ */
-    const PORTFOLIO_DATA = {
-      projects: [
-        {
-          id: "card-1",
-          side: "left",
-          depthStart: 19,
-          depthEnd: 27,
-          anchorZ: -100,
-          dotColor: "teal",
-          badge: "650+ downloads",
-          tag: "AI Agent · VS Code Extension · Shipped",
-          title: "Local Tab Agent",
-          desc: "A local AI coding agent for VS Code, <strong>published on the Open VSX Registry</strong>. Repository-aware planning, browser AI tab bridging (ChatGPT / Gemini / Claude), and distributed compute Swarm Groups, For GPU/CPU pooling.",
-          tech: "TypeScript · Ollama · Local LLMs · WebSocket · Distributed Compute · VS Code API",
-          image: "assets/local-tab-agent-vsx.png",
-          links: [
-            { text: "Open VSX ↗", url: "https://open-vsx.org/extension/moego0/local-tab-agent" },
-            { text: "GitHub ↗", url: "https://github.com/moego0" }
-          ]
-        },
-        {
-          id: "card-2",
-          side: "right",
-          depthStart: 28,
-          depthEnd: 36,
-          anchorZ: -240,
-          dotColor: "amber",
-          badge: "",
-          tag: "Hardware · Fabrication",
-          title: "Self-Built 3D Printer & PCB Lab",
-          desc: "Built my own <strong>FDM 3D printer from scratch</strong> — frame, motion system, wiring, firmware — and a home PCB-fabrication setup using electroless copper plating. The workshop behind everything else.",
-          tech: "3D Printing · CAD · PCB Design · Electroless Cu · Firmware",
-          image: "assets/printer-build.jpg",
-          links: [
-            { text: "Ask me about it ↗", url: "mailto:bazeet298@gmail.com" }
-          ]
-        },
-        {
-          id: "card-3",
-          side: "left",
-          depthStart: 37,
-          depthEnd: 44,
-          anchorZ: -380,
-          dotColor: "teal",
-          badge: "",
-          tag: "AI · Hardware Design Tool",
-          title: "Schematic Sidekick",
-          desc: "An AI tool that takes a project goal and builds you <strong>design, wire, and build hardware</strong> — suggesting boards and modules, then handling the wiring and firmware logic. Goal to schematic in minutes, not hours.",
-          tech: "AI · Electronics · Schematic Generation · Firmware",
-          image: "assets/sidekick.jpg",
-          links: [
-            { text: "GitHub ↗", url: "https://github.com/moego0" }
-          ]
-        },
-        {
-          id: "card-4",
-          side: "right",
-          depthStart: 45,
-          depthEnd: 52,
-          anchorZ: -520,
-          dotColor: "amber",
-          badge: "",
-          tag: "Medical ML · Wearable",
-          title: "Panic Attack Detection System",
-          desc: "A <strong>real-time panic-attack detector</strong> using multi-sensor wearable inputs (heart rate, EDA, temperature, motion). Trained an ensemble of ML models with <strong>personalized baseline calibration</strong> — flags an attack within ~1 second.",
-          tech: "Python · scikit-learn · Random Forest · Arduino · Sensor Fusion",
-          image: "assets/panic-detector-metrics.png",
-          links: [
-            { text: "GitHub ↗", url: "https://github.com/moego0/panic-attack-detector" }
-          ]
-        },
-        {
-          id: "card-5",
-          side: "left",
-          depthStart: 53,
-          depthEnd: 59,
-          anchorZ: -660,
-          dotColor: "amber",
-          badge: "",
-          tag: "TinyML · Speech",
-          title: "Custom Wake-Word Engine",
-          desc: "A keyword-spotting pipeline that trains <strong>custom wake words</strong> for edge devices — heavy audio augmentation, built for devices like alexa with a small dataset, exported to TensorFlow Lite. ≈ 98% accuracy.",
-          tech: "TensorFlow · TF Lite · Librosa · TinyML",
-          image: "assets/kws.png",
-          ascii: true,
-          links: [
-            { text: "GitHub ↗", url: "https://github.com/moego0" }
-          ]
-        },
-        {
-          id: "card-6",
-          side: "right",
-          depthStart: 60,
-          depthEnd: 66,
-          anchorZ: -800,
-          dotColor: "amber",
-          badge: "",
-          tag: "Robotics · Biomedical",
-          title: "EMG Bionic Hand",
-          desc: "A prosthetic robotic hand driven by <strong>EMG muscle and brain signals</strong> — real-time signal processing into multi-servo motion. Presented at the Pharos University exhibition.",
-          tech: "Arduino · EMG Sensors · Servos · Embedded C",
-          image: "assets/bionmichyand.png",
-          links: [
-            { text: "GitHub ↗", url: "https://github.com/moego0" }
-          ]
-        },
-        {
-          id: "card-7",
-          side: "left",
-          depthStart: 67,
-          depthEnd: 72,
-          anchorZ: -940,
-          dotColor: "teal",
-          badge: "AI Agent",
-          tag: "AI Copilot · Desktop",
-          title: "Interview Booster",
-          desc: "A live AI copilot that <strong>transcribes speech in real time, detects questions, and generates answers on the fly </strong>— with local Whisper inference for low latency.",
-          tech: "TypeScript · Whisper · Real-time STT · LLM",
-          image: "assets/interview-booster.png",
-          links: [
-            { text: "GitHub ↗", url: "https://github.com/moego0" }
-          ]
-        },
-        {
-          id: "card-8",
-          side: "right",
-          depthStart: 72,
-          depthEnd: 77,
-          anchorZ: -1080,
-          dotColor: "teal",
-          badge: "AI Agent",
-          tag: "Desktop · Smart Home",
-          title: "AI Desktop Assistant",
-          desc: "A multifunctional desktop assistant — voice interaction, camera-based vision, and <strong>controls smart home devices, open desktop apps, and write notes </strong>, with bilingual Arabic / English support.",
-          tech: "Python · PyQt6 · Gemini · OpenCV · BLE · STM32",
-          image: "assets/SIassistant.png",
-          links: [
-            { text: "GitHub ↗", url: "https://github.com/moego0" }
-          ]
-        },
-        {
-          id: "card-9",
-          side: "left",
-          depthStart: 77,
-          depthEnd: 82,
-          anchorZ: -1220,
-          dotColor: "amber",
-          badge: "Start-up",
-          tag: "Embedded · PCB design · production ready",
-          title: "Micropad - senet labs",
-          desc: "Micropad for shortcuts <strong> controls editing software, 3d modelling apps, open websites and apps, control media </strong>, with powerfull electron app for customization.",
-          tech: "OTA · STM32F4 · C · kicad · USB HID · Electron · React",
-          image: "assets/micropad.png",
-          links: [
-            { text: "senetlabs.com ↗", url: "https://github.com/moego0" }
-          ]
-        }
-      ],
-      certifications: [
-        { issuer: "Harvard University", name: "CS50: Introduction to Computer Science" },
-        { issuer: "HarvardX", name: "Fundamentals of TinyML" },
-        { issuer: "HarvardX", name: "Applications of TinyML" },
-        { issuer: "Edge Impulse", name: "Introduction to Embedded Machine Learning" },
-        { issuer: "DeepLearning.AI", name: "TensorFlow Developer" },
-        { issuer: "DeepLearning.AI", name: "Neural Networks & Deep Learning" },
-        { issuer: "DeepLearning.AI", name: "Improving Deep Neural Networks: Tuning & Optimization" },
-        { issuer: "LinkedIn Learning", name: "Deep Learning: Model Optimization & Tuning" }
-      ]
-    };
-
-    function renderDynamicPortfolio() {
-      var cardsContainer = document.getElementById('project-cards-container');
-      if (cardsContainer) {
-        var cardsHTML = '';
-        PORTFOLIO_DATA.projects.forEach(function(proj) {
-          var glowClass = proj.dotColor === 'amber' ? ' amber-glow' : '';
-          var mediaHTML = '';
-          if (proj.image) {
-            mediaHTML = '<div class="nc-media"><img src="' + proj.image + '" alt="' + proj.title + '" loading="lazy" /></div>';
-          } else if (proj.ascii) {
-            mediaHTML = '<pre class="ascii-box">audio → augment → train\n  → quantize → .tflite\n  → run on the edge\n  ≈ 98% accuracy</pre>';
+      /* ══════════════════════════════════════════════════════════
+         PORTFOLIO CONFIGURATION DATA
+         (Add, edit, or remove projects and certifications here)
+      ══════════════════════════════════════════════════════════ */
+      const PORTFOLIO_DATA = {
+        projects: [
+          {
+            id: "card-1",
+            side: "left",
+            depthStart: 19,
+            depthEnd: 27,
+            anchorZ: -100,
+            dotColor: "teal",
+            badge: "650+ downloads",
+            tag: "AI Agent · VS Code Extension · Shipped",
+            title: "Local Tab Agent",
+            desc: "A local AI coding agent for VS Code, <strong>published on the Open VSX Registry</strong>. Repository-aware planning, browser AI tab bridging (ChatGPT / Gemini / Claude), and distributed compute Swarm Groups, For GPU/CPU pooling.",
+            tech: "TypeScript · Ollama · Local LLMs · WebSocket · Distributed Compute · VS Code API",
+            image: "assets/local-tab-agent-vsx.png",
+            links: [
+              { text: "Open VSX ↗", url: "https://open-vsx.org/extension/moego0/local-tab-agent" },
+              { text: "GitHub ↗", url: "https://github.com/moego0" }
+            ]
+          },
+          {
+            id: "card-2",
+            side: "right",
+            depthStart: 28,
+            depthEnd: 36,
+            anchorZ: -240,
+            dotColor: "amber",
+            badge: "",
+            tag: "Hardware · Fabrication",
+            title: "Self-Built 3D Printer & PCB Lab",
+            desc: "Built my own <strong>FDM 3D printer from scratch</strong> — frame, motion system, wiring, firmware — and a home PCB-fabrication setup using electroless copper plating. The workshop behind everything else.",
+            tech: "3D Printing · CAD · PCB Design · Electroless Cu · Firmware",
+            image: "assets/printer-build.jpg",
+            links: [
+              { text: "Ask me about it ↗", url: "mailto:bazeet298@gmail.com" }
+            ]
+          },
+          {
+            id: "card-3",
+            side: "left",
+            depthStart: 37,
+            depthEnd: 44,
+            anchorZ: -380,
+            dotColor: "teal",
+            badge: "",
+            tag: "AI · Hardware Design Tool",
+            title: "Schematic Sidekick",
+            desc: "An AI tool that takes a project goal and builds you <strong>design, wire, and build hardware</strong> — suggesting boards and modules, then handling the wiring and firmware logic. Goal to schematic in minutes, not hours.",
+            tech: "AI · Electronics · Schematic Generation · Firmware",
+            image: "assets/sidekick.jpg",
+            links: [
+              { text: "GitHub ↗", url: "https://github.com/moego0" }
+            ]
+          },
+          {
+            id: "card-4",
+            side: "right",
+            depthStart: 45,
+            depthEnd: 52,
+            anchorZ: -520,
+            dotColor: "amber",
+            badge: "",
+            tag: "Medical ML · Wearable",
+            title: "Panic Attack Detection System",
+            desc: "A <strong>real-time panic-attack detector</strong> using multi-sensor wearable inputs (heart rate, EDA, temperature, motion). Trained an ensemble of ML models with <strong>personalized baseline calibration</strong> — flags an attack within ~1 second.",
+            tech: "Python · scikit-learn · Random Forest · Arduino · Sensor Fusion",
+            image: "assets/panic-detector-metrics.png",
+            links: [
+              { text: "GitHub ↗", url: "https://github.com/moego0/panic-attack-detector" }
+            ]
+          },
+          {
+            id: "card-5",
+            side: "left",
+            depthStart: 53,
+            depthEnd: 59,
+            anchorZ: -660,
+            dotColor: "amber",
+            badge: "",
+            tag: "TinyML · Speech",
+            title: "Custom Wake-Word Engine",
+            desc: "A keyword-spotting pipeline that trains <strong>custom wake words</strong> for edge devices — heavy audio augmentation, built for devices like alexa with a small dataset, exported to TensorFlow Lite. ≈ 98% accuracy.",
+            tech: "TensorFlow · TF Lite · Librosa · TinyML",
+            image: "assets/kws.png",
+            ascii: true,
+            links: [
+              { text: "GitHub ↗", url: "https://github.com/moego0" }
+            ]
+          },
+          {
+            id: "card-6",
+            side: "right",
+            depthStart: 60,
+            depthEnd: 66,
+            anchorZ: -800,
+            dotColor: "amber",
+            badge: "",
+            tag: "Robotics · Biomedical",
+            title: "EMG Bionic Hand",
+            desc: "A prosthetic robotic hand driven by <strong>EMG muscle and brain signals</strong> — real-time signal processing into multi-servo motion. Presented at the Pharos University exhibition.",
+            tech: "Arduino · EMG Sensors · Servos · Embedded C",
+            image: "assets/bionmichyand.png",
+            links: [
+              { text: "GitHub ↗", url: "https://github.com/moego0" }
+            ]
+          },
+          {
+            id: "card-7",
+            side: "left",
+            depthStart: 67,
+            depthEnd: 72,
+            anchorZ: -940,
+            dotColor: "teal",
+            badge: "AI Agent",
+            tag: "AI Copilot · Desktop",
+            title: "Interview Booster",
+            desc: "A live AI copilot that <strong>transcribes speech in real time, detects questions, and generates answers on the fly </strong>— with local Whisper inference for low latency.",
+            tech: "TypeScript · Whisper · Real-time STT · LLM",
+            image: "assets/interview-booster.png",
+            links: [
+              { text: "GitHub ↗", url: "https://github.com/moego0" }
+            ]
+          },
+          {
+            id: "card-8",
+            side: "right",
+            depthStart: 72,
+            depthEnd: 77,
+            anchorZ: -1080,
+            dotColor: "teal",
+            badge: "AI Agent",
+            tag: "Desktop · Smart Home",
+            title: "AI Desktop Assistant",
+            desc: "A multifunctional desktop assistant — voice interaction, camera-based vision, and <strong>controls smart home devices, open desktop apps, and write notes </strong>, with bilingual Arabic / English support.",
+            tech: "Python · PyQt6 · Gemini · OpenCV · BLE · STM32",
+            image: "assets/SIassistant.png",
+            links: [
+              { text: "GitHub ↗", url: "https://github.com/moego0" }
+            ]
+          },
+          {
+            id: "card-9",
+            side: "left",
+            depthStart: 77,
+            depthEnd: 82,
+            anchorZ: -1220,
+            dotColor: "amber",
+            badge: "Start-up",
+            tag: "Embedded · PCB design · production ready",
+            title: "Micropad - senet labs",
+            desc: "Micropad for shortcuts <strong> controls editing software, 3d modelling apps, open websites and apps, control media </strong>, with powerfull electron app for customization.",
+            tech: "OTA · STM32F4 · C · kicad · USB HID · Electron · React",
+            image: "assets/micropad.png",
+            links: [
+              { text: "senetlabs.com ↗", url: "https://github.com/moego0" }
+            ]
           }
-          
-          var badgeHTML = proj.badge ? ' <span class="nc-badge">' + proj.badge + '</span>' : '';
-          var linksHTML = '';
-          proj.links.forEach(function(link) {
-            linksHTML += '<a class="nc-link" href="' + link.url + '" target="_blank" rel="noopener">' + link.text + '</a>';
-          });
-          
-          cardsHTML += 
-            '<div class="neural-card-wrapper pos-' + proj.side + '" id="' + proj.id + '-wrapper">' +
-              '<div class="neural-card' + glowClass + '" id="' + proj.id + '">' +
-                mediaHTML +
-                '<div class="nc-tag"><span class="nc-dot ' + proj.dotColor + '"></span> ' + proj.tag + '</div>' +
-                '<h3 class="nc-title">' + proj.title + badgeHTML + '</h3>' +
-                '<p class="nc-desc">' + proj.desc + '</p>' +
-                '<div class="nc-tech">' + proj.tech + '</div>' +
-                '<div class="nc-links">' + linksHTML + '</div>' +
-                '<div style="position: absolute; bottom: 8px; right: 15px; font-family: var(--mono); font-size: 0.6rem; color: rgba(255,255,255,0.12);" aria-hidden="true">' +
-                  proj.id.toUpperCase() + ' // NODE Z: ' + proj.anchorZ + 'm' +
-                '</div>' +
-              '</div>' +
-            '</div>';
-        });
-        cardsContainer.innerHTML = cardsHTML;
-      }
-      
-      var certsContainer = document.getElementById('certifications-container');
-      if (certsContainer) {
-        var certsHTML = 
-          '<div class="cert-panel" id="cert-section">' +
-            '<div class="cert-panel-title">// certifications — always learning</div>' +
-            '<div class="cert-grid">';
-        PORTFOLIO_DATA.certifications.forEach(function(cert) {
-          certsHTML += 
-            '<div class="cert-item">' +
-              '<span class="cert-issuer">' + cert.issuer + '</span>' +
-              '<span class="cert-name">' + cert.name + '</span>' +
-            '</div>';
-        });
-        certsHTML += '</div></div>';
-        certsContainer.innerHTML = certsHTML;
-      }
-    }
-    
-    renderDynamicPortfolio();
+        ],
+        certifications: [
+          { issuer: "Harvard University", name: "CS50: Introduction to Computer Science" },
+          { issuer: "HarvardX", name: "Fundamentals of TinyML" },
+          { issuer: "HarvardX", name: "Applications of TinyML" },
+          { issuer: "Edge Impulse", name: "Introduction to Embedded Machine Learning" },
+          { issuer: "DeepLearning.AI", name: "TensorFlow Developer" },
+          { issuer: "DeepLearning.AI", name: "Neural Networks & Deep Learning" },
+          { issuer: "DeepLearning.AI", name: "Improving Deep Neural Networks: Tuning & Optimization" },
+          { issuer: "LinkedIn Learning", name: "Deep Learning: Model Optimization & Tuning" }
+        ]
+      };
 
-    /* ─────────────────────────────────────────────────────────
-       1.  THREE.JS — NEURAL NETWORK SCENE
-     ───────────────────────────────────────────────────────── */
-    if (typeof THREE === 'undefined') return;
+      // Static HTML is pre-rendered for SEO and LLM optimization. No dynamic DOM generation needed at runtime.
 
-    const canvas   = document.getElementById('neural-canvas');
-    const scene    = new THREE.Scene();
-    scene.fog      = new THREE.FogExp2(0x030812, 0.0016);
+      /* ─────────────────────────────────────────────────────────
+         1.  THREE.JS — NEURAL NETWORK SCENE
+       ───────────────────────────────────────────────────────── */
+      if (typeof THREE === 'undefined') return;
 
-    const camera   = new THREE.PerspectiveCamera(68, innerWidth / innerHeight, 1, 2200);
-    camera.position.set(0, 0, 320);
+      const canvas = document.getElementById('neural-canvas');
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x030812, 0.0016);
 
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: !IS_MOB });
-    renderer.setSize(innerWidth, innerHeight);
-    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-    renderer.setClearColor(0x030812, 1);
+      const camera = new THREE.PerspectiveCamera(68, innerWidth / innerHeight, 1, 2200);
+      camera.position.set(0, 0, 320);
 
-    const pixelRatio = renderer.getPixelRatio();
+      const renderer = new THREE.WebGLRenderer({ canvas, antialias: !IS_MOB });
+      renderer.setSize(innerWidth, innerHeight);
+      renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+      renderer.setClearColor(0x030812, 1);
 
-    /* ── Palette ─────────────────────────────────────────── */
-    const C_TEAL   = new THREE.Color(0x00E5C7);
-    const C_AMBER  = new THREE.Color(0xF59E0B);
-    const C_PURPLE = new THREE.Color(0xA855F7);
+      const pixelRatio = renderer.getPixelRatio();
 
-    /* ── Procedural Brain and Synaptic Corridor Generator ── */
-    const brainCount = IS_MOB ? 180 : 450;
-    const bgCount    = IS_MOB ? 200 : 500;
-    let N            = brainCount + bgCount;
-    const neurons    = [];
+      /* ── Palette ─────────────────────────────────────────── */
+      const C_TEAL = new THREE.Color(0x00E5C7);
+      const C_AMBER = new THREE.Color(0xF59E0B);
+      const C_PURPLE = new THREE.Color(0xA855F7);
 
-    const brainCenterZ = 50;
-    const brainCenterY = 15;
+      /* ── Procedural Brain and Synaptic Corridor Generator ── */
+      const brainCount = IS_MOB ? 180 : 450;
+      const bgCount = IS_MOB ? 200 : 500;
+      let N = brainCount + bgCount;
+      const neurons = [];
 
-    function getBrainPoint() {
-      var theta = Math.random() * Math.PI;
-      var phi = Math.random() * Math.PI * 2;
-      
-      // Ellipsoid radii
-      var rx = 52;
-      var ry = 42;
-      var rz = 38;
-      
-      // Brain surface wrinkles (folds)
-      var folds = 1 + 0.1 * Math.sin(theta * 9.5) * Math.sin(phi * 9.5);
-      
-      var x = rx * Math.sin(theta) * Math.cos(phi) * folds;
-      var y = ry * Math.cos(theta) * folds + brainCenterY;
-      var z = rz * Math.sin(theta) * Math.sin(phi) * folds + brainCenterZ;
-      
-      // Horizontal division (sagittal fissure)
-      var fissureDepth = 0.2;
-      var fissureWidth = 7;
-      var distFromCenter = Math.abs(x);
-      if (distFromCenter < fissureWidth) {
-        var factor = 1 - fissureDepth * (1 - distFromCenter / fissureWidth);
-        x *= factor;
-        y = (y - brainCenterY) * factor + brainCenterY;
-        var zRel = z - brainCenterZ;
-        zRel *= factor;
-        z = zRel + brainCenterZ;
-      }
-      
-      // 20% internal nodes for volume depth
-      if (Math.random() > 0.8) {
-        var r = Math.random();
-        x *= r;
-        y = (y - brainCenterY) * r + brainCenterY;
-        z = (z - brainCenterZ) * r + brainCenterZ;
-      }
-      
-      // Camera clearance corridor (tunnel through the center of the brain)
-      var rad = Math.sqrt(x * x + (y - brainCenterY) * (y - brainCenterY));
-      var minTunnelRadius = 15;
-      if (rad < minTunnelRadius) {
-        var factor = minTunnelRadius / (rad + 0.1);
-        x *= factor;
-        y = (y - brainCenterY) * factor + brainCenterY;
-      }
-      
-      return { x: x, y: y, z: z };
-    }
+      const brainCenterZ = 50;
+      const brainCenterY = 15;
 
-    // Generate Brain Neurons
-    for (var i = 0; i < brainCount; i++) {
-      var pt = getBrainPoint();
-      var col = C_PURPLE;
-      if (pt.z > brainCenterZ + 8) {
-        col = C_TEAL;
-      } else if (pt.z < brainCenterZ - 8) {
-        col = C_AMBER;
-      } else {
-        var r = Math.random();
-        if (r < 0.25) col = C_TEAL;
-        else if (r < 0.5) col = C_AMBER;
-      }
-      
-      neurons.push({
-        x: pt.x,
-        y: pt.y,
-        z: pt.z,
-        size: 1.2 + Math.random() * 2.8,
-        phase: Math.random() * 6.2832,
-        color: col,
-        isBrain: true
-      });
-    }
+      function getBrainPoint() {
+        var theta = Math.random() * Math.PI;
+        var phi = Math.random() * Math.PI * 2;
 
-    // Generate Dynamic 3D Anchor Neurons for project nodes
-    const anchorNeurons = [];
-    PORTFOLIO_DATA.projects.forEach(function(proj, idx) {
-      var col = proj.dotColor === 'amber' ? C_AMBER : C_TEAL;
-      anchorNeurons.push({
-        x: proj.side === 'left' ? -48 : 48,
-        y: (idx % 2 === 0) ? 6 : -6,
-        z: proj.anchorZ,
-        size: 4.2, // noticeably larger than normal neurons for glowing effect
-        phase: idx * 0.4,
-        color: col,
-        isBrain: false,
-        isAnchor: true
-      });
-    });
+        // Ellipsoid radii
+        var rx = 52;
+        var ry = 42;
+        var rz = 38;
 
-    anchorNeurons.forEach(function(anc) {
-      neurons.push(anc);
-    });
+        // Brain surface wrinkles (folds)
+        var folds = 1 + 0.1 * Math.sin(theta * 9.5) * Math.sin(phi * 9.5);
 
-    // Generate Background Corridor Neurons
-    const bgLayers = [
-      { zMin:  -20,  zMax:  -250, spread: 220, palette: [C_TEAL, C_AMBER] },
-      { zMin: -250,  zMax:  -550, spread: 280, palette: [C_TEAL, C_AMBER] },
-      { zMin: -550,  zMax:  -850, spread: 320, palette: [C_AMBER, C_TEAL] },
-      { zMin: -850,  zMax: -1200, spread: 340, palette: [C_PURPLE, C_TEAL] },
-      { zMin:-1200,  zMax: -1600, spread: 300, palette: [C_TEAL, C_AMBER, C_PURPLE] },
-    ];
+        var x = rx * Math.sin(theta) * Math.cos(phi) * folds;
+        var y = ry * Math.cos(theta) * folds + brainCenterY;
+        var z = rz * Math.sin(theta) * Math.sin(phi) * folds + brainCenterZ;
 
-    bgLayers.forEach(function (layer, idx) {
-      var layerRatio = [0.10, 0.20, 0.25, 0.30, 0.15][idx];
-      var layerCount = Math.floor(bgCount * layerRatio);
-      
-      for (var i = 0; i < layerCount; i++) {
-        var x = (Math.random() - 0.5) * layer.spread;
-        var y = (Math.random() - 0.5) * layer.spread;
-        var z = layer.zMin + Math.random() * (layer.zMax - layer.zMin);
-        
-        // Tunnel clearance: push away from central Z-axis
-        var minTunnelRadius = 18;
-        var rad = Math.sqrt(x * x + y * y);
+        // Horizontal division (sagittal fissure)
+        var fissureDepth = 0.2;
+        var fissureWidth = 7;
+        var distFromCenter = Math.abs(x);
+        if (distFromCenter < fissureWidth) {
+          var factor = 1 - fissureDepth * (1 - distFromCenter / fissureWidth);
+          x *= factor;
+          y = (y - brainCenterY) * factor + brainCenterY;
+          var zRel = z - brainCenterZ;
+          zRel *= factor;
+          z = zRel + brainCenterZ;
+        }
+
+        // 20% internal nodes for volume depth
+        if (Math.random() > 0.8) {
+          var r = Math.random();
+          x *= r;
+          y = (y - brainCenterY) * r + brainCenterY;
+          z = (z - brainCenterZ) * r + brainCenterZ;
+        }
+
+        // Camera clearance corridor (tunnel through the center of the brain)
+        var rad = Math.sqrt(x * x + (y - brainCenterY) * (y - brainCenterY));
+        var minTunnelRadius = 15;
         if (rad < minTunnelRadius) {
           var factor = minTunnelRadius / (rad + 0.1);
           x *= factor;
-          y *= factor;
+          y = (y - brainCenterY) * factor + brainCenterY;
         }
-        
-        var col = layer.palette[Math.floor(Math.random() * layer.palette.length)];
+
+        return { x: x, y: y, z: z };
+      }
+
+      // Generate Brain Neurons
+      for (var i = 0; i < brainCount; i++) {
+        var pt = getBrainPoint();
+        var col = C_PURPLE;
+        if (pt.z > brainCenterZ + 8) {
+          col = C_TEAL;
+        } else if (pt.z < brainCenterZ - 8) {
+          col = C_AMBER;
+        } else {
+          var r = Math.random();
+          if (r < 0.25) col = C_TEAL;
+          else if (r < 0.5) col = C_AMBER;
+        }
+
         neurons.push({
-          x: x,
-          y: y,
-          z: z,
-          size: 1.0 + Math.random() * 2.8,
+          x: pt.x,
+          y: pt.y,
+          z: pt.z,
+          size: 1.2 + Math.random() * 2.8,
           phase: Math.random() * 6.2832,
           color: col,
-          isBrain: false
+          isBrain: true
         });
       }
-    });
 
-    N = neurons.length;
-
-    /* ── Build neuron BufferGeometry ──────────────────────── */
-    var nPos    = new Float32Array(N * 3);
-    var nCol    = new Float32Array(N * 3);
-    var nSize   = new Float32Array(N);
-    var nPhase  = new Float32Array(N);
-
-    for (var i = 0; i < N; i++) {
-      nPos[i*3]   = neurons[i].x;
-      nPos[i*3+1] = neurons[i].y;
-      nPos[i*3+2] = neurons[i].z;
-      nCol[i*3]   = neurons[i].color.r;
-      nCol[i*3+1] = neurons[i].color.g;
-      nCol[i*3+2] = neurons[i].color.b;
-      nSize[i]    = neurons[i].size;
-      nPhase[i]   = neurons[i].phase;
-    }
-
-    var nGeo = new THREE.BufferGeometry();
-    nGeo.setAttribute('position', new THREE.BufferAttribute(nPos, 3));
-    nGeo.setAttribute('color',    new THREE.BufferAttribute(nCol, 3));
-    nGeo.setAttribute('size',     new THREE.BufferAttribute(nSize, 1));
-    nGeo.setAttribute('aPhase',   new THREE.BufferAttribute(nPhase, 1));
-
-    /* ── Neuron shader ───────────────────────────────────── */
-    var neuronMat = new THREE.ShaderMaterial({
-      uniforms: {
-        uTime:  { value: 0 },
-        uScale: { value: pixelRatio }
-      },
-      vertexShader: [
-        'attribute float size;',
-        'attribute float aPhase;',
-        'varying vec3 vColor;',
-        'varying float vPulse;',
-        'uniform float uTime;',
-        'uniform float uScale;',
-        'void main() {',
-        '  vColor = color;',
-        '  float pulse = sin(uTime * 1.6 + aPhase) * 0.25 + 0.75;',
-        '  vPulse = pulse;',
-        '  vec4 mv = modelViewMatrix * vec4(position, 1.0);',
-        '  gl_PointSize = min(size * pulse * uScale * (420.0 / -mv.z), 128.0);',
-        '  gl_Position = projectionMatrix * mv;',
-        '}'
-      ].join('\n'),
-      fragmentShader: [
-        'varying vec3 vColor;',
-        'varying float vPulse;',
-        'void main() {',
-        '  float d = distance(gl_PointCoord, vec2(0.5));',
-        '  if (d > 0.5) discard;',
-        '  float core = smoothstep(0.5, 0.0, d);',
-        '  float glow = smoothstep(0.5, 0.12, d);',
-        '  vec3 col = vColor * (core * 1.8 + glow * 0.4) * vPulse;',
-        '  gl_FragColor = vec4(col, glow);',
-        '}'
-      ].join('\n'),
-      transparent: true,
-      depthWrite: false,
-      blending: THREE.AdditiveBlending,
-      vertexColors: true
-    });
-
-    scene.add(new THREE.Points(nGeo, neuronMat));
-
-    /* ── Glow halo layer ─────────────────────────────────── */
-    var gSizes = new Float32Array(N);
-    for (var i = 0; i < N; i++) gSizes[i] = nSize[i] * 4.0;
-
-    var gGeo = new THREE.BufferGeometry();
-    gGeo.setAttribute('position', new THREE.BufferAttribute(nPos, 3));
-    gGeo.setAttribute('color',    new THREE.BufferAttribute(nCol, 3));
-    gGeo.setAttribute('size',     new THREE.BufferAttribute(gSizes, 1));
-    gGeo.setAttribute('aPhase',   new THREE.BufferAttribute(nPhase, 1));
-
-    var glowMat = new THREE.ShaderMaterial({
-      uniforms: {
-        uTime:  { value: 0 },
-        uScale: { value: pixelRatio }
-      },
-      vertexShader: [
-        'attribute float size;',
-        'attribute float aPhase;',
-        'varying vec3 vColor;',
-        'varying float vPulse;',
-        'uniform float uTime;',
-        'uniform float uScale;',
-        'void main() {',
-        '  vColor = color;',
-        '  float pulse = sin(uTime * 1.6 + aPhase) * 0.15 + 0.85;',
-        '  vPulse = pulse;',
-        '  vec4 mv = modelViewMatrix * vec4(position, 1.0);',
-        '  gl_PointSize = min(size * pulse * uScale * (420.0 / -mv.z), 220.0);',
-        '  gl_Position = projectionMatrix * mv;',
-        '}'
-      ].join('\n'),
-      fragmentShader: [
-        'varying vec3 vColor;',
-        'varying float vPulse;',
-        'void main() {',
-        '  float d = distance(gl_PointCoord, vec2(0.5));',
-        '  if (d > 0.5) discard;',
-        '  float glow = smoothstep(0.5, 0.0, d);',
-        '  float alpha = glow * glow * 0.12 * vPulse;',
-        '  gl_FragColor = vec4(vColor * 0.6, alpha);',
-        '}'
-      ].join('\n'),
-      transparent: true,
-      depthWrite: false,
-      blending: THREE.AdditiveBlending,
-      vertexColors: true
-    });
-
-    scene.add(new THREE.Points(gGeo, glowMat));
-
-    /* ── Synapse connections ──────────────────────────────── */
-    var conns = [];
-    var brainLinks = 0;
-    var bgLinks = 0;
-    var MAX_BRAIN_LINKS = IS_MOB ? 180 : 450;
-    var MAX_BG_LINKS    = IS_MOB ? 200 : 550;
-    
-    // Brain-to-brain connections (denser network, smaller radius)
-    for (var i = 0; i < brainCount && brainLinks < MAX_BRAIN_LINKS; i++) {
-      for (var j = i + 1; j < brainCount && brainLinks < MAX_BRAIN_LINKS; j++) {
-        var dx = neurons[i].x - neurons[j].x;
-        var dy = neurons[i].y - neurons[j].y;
-        var dz = neurons[i].z - neurons[j].z;
-        var d2 = dx*dx + dy*dy + dz*dz;
-        var limit = 38;
-        if (d2 < limit * limit) {
-          conns.push({ a: i, b: j, dist: Math.sqrt(d2), isBrain: true });
-          brainLinks++;
-        }
-      }
-    }
-    
-    // Background-to-background, anchor and mixed connections
-    for (var i = brainCount; i < N && bgLinks < MAX_BG_LINKS; i++) {
-      for (var j = i + 1; j < N && bgLinks < MAX_BG_LINKS; j++) {
-        var dx = neurons[i].x - neurons[j].x;
-        var dy = neurons[i].y - neurons[j].y;
-        var dz = neurons[i].z - neurons[j].z;
-        var d2 = dx*dx + dy*dy + dz*dz;
-        var limit = 75;
-        if (d2 < limit * limit) {
-          conns.push({ a: i, b: j, dist: Math.sqrt(d2), isBrain: false });
-          bgLinks++;
-        }
-      }
-    }
-
-    var lPos = new Float32Array(conns.length * 6);
-    var lCol = new Float32Array(conns.length * 6);
-
-    for (var c = 0; c < conns.length; c++) {
-      var a = neurons[conns[c].a], b = neurons[conns[c].b];
-      var maxDist = conns[c].isBrain ? 38 : 75;
-      var op = (1 - conns[c].dist / maxDist) * 0.12;
-      var mx = new THREE.Color().copy(a.color).lerp(b.color, 0.5);
-
-      lPos[c*6]   = a.x; lPos[c*6+1] = a.y; lPos[c*6+2] = a.z;
-      lPos[c*6+3] = b.x; lPos[c*6+4] = b.y; lPos[c*6+5] = b.z;
-
-      lCol[c*6]   = mx.r*op*6; lCol[c*6+1] = mx.g*op*6; lCol[c*6+2] = mx.b*op*6;
-      lCol[c*6+3] = mx.r*op*6; lCol[c*6+4] = mx.g*op*6; lCol[c*6+5] = mx.b*op*6;
-    }
-
-    var lGeo = new THREE.BufferGeometry();
-    lGeo.setAttribute('position', new THREE.BufferAttribute(lPos, 3));
-    lGeo.setAttribute('color',    new THREE.BufferAttribute(lCol, 3));
-
-    scene.add(new THREE.LineSegments(lGeo, new THREE.LineBasicMaterial({
-      vertexColors: true, transparent: true, opacity: 1,
-      blending: THREE.AdditiveBlending, depthWrite: false
-    })));
-
-    /* ── Signal particles (travelling light pulses) ──────── */
-    var MAX_SIG  = IS_MOB ? 12 : 32;
-    var sigData  = [];
-    var sigPos   = new Float32Array(MAX_SIG * 3);
-    var sigCol   = new Float32Array(MAX_SIG * 3);
-    var sigSize  = new Float32Array(MAX_SIG);
-
-    var sigGeo = new THREE.BufferGeometry();
-    sigGeo.setAttribute('position', new THREE.BufferAttribute(sigPos, 3));
-    sigGeo.setAttribute('color',    new THREE.BufferAttribute(sigCol, 3));
-    sigGeo.setAttribute('size',     new THREE.BufferAttribute(sigSize, 1));
-
-    var sigMat = new THREE.ShaderMaterial({
-      uniforms: { uScale: { value: pixelRatio } },
-      vertexShader: [
-        'attribute float size;',
-        'varying vec3 vColor;',
-        'uniform float uScale;',
-        'void main() {',
-        '  vColor = color;',
-        '  vec4 mv = modelViewMatrix * vec4(position, 1.0);',
-        '  gl_PointSize = min(size * uScale * (350.0 / -mv.z), 64.0);',
-        '  gl_Position = projectionMatrix * mv;',
-        '}'
-      ].join('\n'),
-      fragmentShader: [
-        'varying vec3 vColor;',
-        'void main() {',
-        '  float d = distance(gl_PointCoord, vec2(0.5));',
-        '  if (d > 0.5) discard;',
-        '  float a = smoothstep(0.5, 0.0, d);',
-        '  gl_FragColor = vec4(vColor * 2.5, a);',
-        '}'
-      ].join('\n'),
-      transparent: true, depthWrite: false,
-      blending: THREE.AdditiveBlending, vertexColors: true
-    });
-
-    scene.add(new THREE.Points(sigGeo, sigMat));
-
-    var sigTimer = 0;
-    function spawnSignal() {
-      if (sigData.length >= MAX_SIG || conns.length === 0) return;
-      var cn = conns[Math.floor(Math.random() * conns.length)];
-      var a  = neurons[cn.a];
-      sigData.push({
-        a: cn.a,
-        b: cn.b,
-        t: 0,
-        speed: 0.006 + Math.random() * 0.014,
-        col: a.color
+      // Generate Dynamic 3D Anchor Neurons for project nodes
+      const anchorNeurons = [];
+      PORTFOLIO_DATA.projects.forEach(function (proj, idx) {
+        var col = proj.dotColor === 'amber' ? C_AMBER : C_TEAL;
+        anchorNeurons.push({
+          x: proj.side === 'left' ? -48 : 48,
+          y: (idx % 2 === 0) ? 6 : -6,
+          z: proj.anchorZ,
+          size: 5, // noticeably larger than normal neurons for glowing effect
+          phase: idx * 0.4,
+          color: col,
+          isBrain: false,
+          isAnchor: true
+        });
       });
-    }
 
-    function tickSignals(dt) {
-      sigTimer += dt;
-      if (sigTimer > 0.035) { sigTimer = 0; spawnSignal(); }
+      anchorNeurons.forEach(function (anc) {
+        neurons.push(anc);
+      });
 
-      for (var i = sigData.length - 1; i >= 0; i--) {
-        var s = sigData[i];
-        s.t += s.speed;
-        if (s.t >= 1) { sigData.splice(i, 1); continue; }
-        
-        var idxA = s.a;
-        var idxB = s.b;
-        var ax = nPos[idxA * 3];
-        var ay = nPos[idxA * 3 + 1];
-        var az = nPos[idxA * 3 + 2];
-        var bx = nPos[idxB * 3];
-        var by = nPos[idxB * 3 + 1];
-        var bz = nPos[idxB * 3 + 2];
-        
-        var bright = Math.sin(s.t * Math.PI);
-        sigPos[i*3]   = ax + (bx - ax) * s.t;
-        sigPos[i*3+1] = ay + (by - ay) * s.t;
-        sigPos[i*3+2] = az + (bz - az) * s.t;
-        sigCol[i*3]   = s.col.r * bright;
-        sigCol[i*3+1] = s.col.g * bright;
-        sigCol[i*3+2] = s.col.b * bright;
-        sigSize[i]    = 2.8 * bright + 0.4;
+      // Generate Background Corridor Neurons
+      const bgLayers = [
+        { zMin: -20, zMax: -250, spread: 220, palette: [C_TEAL, C_AMBER] },
+        { zMin: -250, zMax: -550, spread: 280, palette: [C_TEAL, C_AMBER] },
+        { zMin: -550, zMax: -850, spread: 320, palette: [C_AMBER, C_TEAL] },
+        { zMin: -850, zMax: -1200, spread: 340, palette: [C_PURPLE, C_TEAL] },
+        { zMin: -1200, zMax: -1600, spread: 300, palette: [C_TEAL, C_AMBER, C_PURPLE] },
+      ];
+
+      bgLayers.forEach(function (layer, idx) {
+        var layerRatio = [0.10, 0.20, 0.25, 0.30, 0.15][idx];
+        var layerCount = Math.floor(bgCount * layerRatio);
+
+        for (var i = 0; i < layerCount; i++) {
+          var x = (Math.random() - 0.5) * layer.spread;
+          var y = (Math.random() - 0.5) * layer.spread;
+          var z = layer.zMin + Math.random() * (layer.zMax - layer.zMin);
+
+          // Tunnel clearance: push away from central Z-axis
+          var minTunnelRadius = 18;
+          var rad = Math.sqrt(x * x + y * y);
+          if (rad < minTunnelRadius) {
+            var factor = minTunnelRadius / (rad + 0.1);
+            x *= factor;
+            y *= factor;
+          }
+
+          var col = layer.palette[Math.floor(Math.random() * layer.palette.length)];
+          neurons.push({
+            x: x,
+            y: y,
+            z: z,
+            size: 1.0 + Math.random() * 2.8,
+            phase: Math.random() * 6.2832,
+            color: col,
+            isBrain: false
+          });
+        }
+      });
+
+      N = neurons.length;
+
+      /* ── Build neuron BufferGeometry ──────────────────────── */
+      var nPos = new Float32Array(N * 3);
+      var nCol = new Float32Array(N * 3);
+      var nSize = new Float32Array(N);
+      var nPhase = new Float32Array(N);
+
+      for (var i = 0; i < N; i++) {
+        nPos[i * 3] = neurons[i].x;
+        nPos[i * 3 + 1] = neurons[i].y;
+        nPos[i * 3 + 2] = neurons[i].z;
+        nCol[i * 3] = neurons[i].color.r;
+        nCol[i * 3 + 1] = neurons[i].color.g;
+        nCol[i * 3 + 2] = neurons[i].color.b;
+        nSize[i] = neurons[i].size;
+        nPhase[i] = neurons[i].phase;
       }
-      for (var i = sigData.length; i < MAX_SIG; i++) sigSize[i] = 0;
 
-      sigGeo.setDrawRange(0, Math.max(sigData.length, 1));
-      sigGeo.attributes.position.needsUpdate = true;
-      sigGeo.attributes.color.needsUpdate    = true;
-      sigGeo.attributes.size.needsUpdate     = true;
-    }
+      var nGeo = new THREE.BufferGeometry();
+      nGeo.setAttribute('position', new THREE.BufferAttribute(nPos, 3));
+      nGeo.setAttribute('color', new THREE.BufferAttribute(nCol, 3));
+      nGeo.setAttribute('size', new THREE.BufferAttribute(nSize, 1));
+      nGeo.setAttribute('aPhase', new THREE.BufferAttribute(nPhase, 1));
 
-    /* ── Ambient dust ────────────────────────────────────── */
-    var DUST = IS_MOB ? 120 : 350;
-    var dPos = new Float32Array(DUST * 3);
-    var dVel = new Float32Array(DUST * 3);
-    var dSz  = new Float32Array(DUST);
-    var dCol = new Float32Array(DUST * 3);
+      /* ── Neuron shader ───────────────────────────────────── */
+      var neuronMat = new THREE.ShaderMaterial({
+        uniforms: {
+          uTime: { value: 0 },
+          uScale: { value: pixelRatio },
+          uWarp: { value: 0 }
+        },
+        vertexShader: [
+          'attribute float size;',
+          'attribute float aPhase;',
+          'varying vec3 vColor;',
+          'varying float vPulse;',
+          'uniform float uTime;',
+          'uniform float uScale;',
+          'uniform float uWarp;',
+          'void main() {',
+          '  vColor = color;',
+          '  float pulse = sin(uTime * 1.6 + aPhase) * 0.25 + 0.75;',
+          '  vPulse = pulse;',
+          '  vec4 mv = modelViewMatrix * vec4(position, 1.0);',
+          // warp brightens + enlarges near nodes as the camera punches forward
+          '  float warp = 1.0 + uWarp * 0.9;',
+          '  gl_PointSize = min(size * pulse * warp * uScale * (420.0 / -mv.z), 140.0);',
+          '  gl_Position = projectionMatrix * mv;',
+          '}'
+        ].join('\n'),
+        fragmentShader: [
+          'varying vec3 vColor;',
+          'varying float vPulse;',
+          'void main() {',
+          '  float d = distance(gl_PointCoord, vec2(0.5));',
+          '  if (d > 0.5) discard;',
+          '  float core = smoothstep(0.5, 0.0, d);',
+          '  float glow = smoothstep(0.5, 0.12, d);',
+          // hot emissive core so nodes read as light sources, not flat dots
+          '  float hot = smoothstep(0.16, 0.0, d);',
+          '  vec3 col = vColor * (core * 1.8 + glow * 0.4) * vPulse + vec3(hot) * 0.55 * vPulse;',
+          '  gl_FragColor = vec4(col, glow);',
+          '}'
+        ].join('\n'),
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        vertexColors: true
+      });
 
-    for (var i = 0; i < DUST; i++) {
-      dPos[i*3]   = (Math.random() - 0.5) * 700;
-      dPos[i*3+1] = (Math.random() - 0.5) * 700;
-      dPos[i*3+2] = 100 + Math.random() * -1700;
-      dVel[i*3]   = (Math.random() - 0.5) * 0.08;
-      dVel[i*3+1] = (Math.random() - 0.5) * 0.08;
-      dVel[i*3+2] = (Math.random() - 0.5) * 0.04;
-      dSz[i]      = 0.25 + Math.random() * 0.55;
-      dCol[i*3]   = 0.4 + Math.random() * 0.3;
-      dCol[i*3+1] = 0.5 + Math.random() * 0.3;
-      dCol[i*3+2] = 0.6 + Math.random() * 0.3;
-    }
+      scene.add(new THREE.Points(nGeo, neuronMat));
 
-    var dGeo = new THREE.BufferGeometry();
-    dGeo.setAttribute('position', new THREE.BufferAttribute(dPos, 3));
-    dGeo.setAttribute('color',    new THREE.BufferAttribute(dCol, 3));
-    dGeo.setAttribute('size',     new THREE.BufferAttribute(dSz, 1));
+      /* ── Glow halo layer ─────────────────────────────────── */
+      var gSizes = new Float32Array(N);
+      for (var i = 0; i < N; i++) gSizes[i] = nSize[i] * 4.0;
 
-    var dMat = new THREE.ShaderMaterial({
-      uniforms: { uScale: { value: pixelRatio } },
-      vertexShader: [
-        'attribute float size;',
-        'varying vec3 vColor;',
-        'uniform float uScale;',
-        'void main() {',
-        '  vColor = color;',
-        '  vec4 mv = modelViewMatrix * vec4(position, 1.0);',
-        '  gl_PointSize = size * uScale * (180.0 / -mv.z);',
-        '  gl_Position = projectionMatrix * mv;',
-        '}'
-      ].join('\n'),
-      fragmentShader: [
-        'varying vec3 vColor;',
-        'void main() {',
-        '  float d = distance(gl_PointCoord, vec2(0.5));',
-        '  if (d > 0.5) discard;',
-        '  float a = smoothstep(0.5, 0.2, d) * 0.25;',
-        '  gl_FragColor = vec4(vColor, a);',
-        '}'
-      ].join('\n'),
-      transparent: true, depthWrite: false,
-      blending: THREE.AdditiveBlending, vertexColors: true
-    });
-    scene.add(new THREE.Points(dGeo, dMat));
+      var gGeo = new THREE.BufferGeometry();
+      gGeo.setAttribute('position', new THREE.BufferAttribute(nPos, 3));
+      gGeo.setAttribute('color', new THREE.BufferAttribute(nCol, 3));
+      gGeo.setAttribute('size', new THREE.BufferAttribute(gSizes, 1));
+      gGeo.setAttribute('aPhase', new THREE.BufferAttribute(nPhase, 1));
 
-    function tickDust() {
+      var glowMat = new THREE.ShaderMaterial({
+        uniforms: {
+          uTime: { value: 0 },
+          uScale: { value: pixelRatio },
+          uWarp: { value: 0 }
+        },
+        vertexShader: [
+          'attribute float size;',
+          'attribute float aPhase;',
+          'varying vec3 vColor;',
+          'varying float vPulse;',
+          'uniform float uTime;',
+          'uniform float uScale;',
+          'uniform float uWarp;',
+          'void main() {',
+          '  vColor = color;',
+          '  float pulse = sin(uTime * 1.6 + aPhase) * 0.15 + 0.85;',
+          '  vPulse = pulse;',
+          '  vec4 mv = modelViewMatrix * vec4(position, 1.0);',
+          '  float warp = 1.0 + uWarp * 1.4;',
+          '  gl_PointSize = min(size * pulse * warp * uScale * (420.0 / -mv.z), 260.0);',
+          '  gl_Position = projectionMatrix * mv;',
+          '}'
+        ].join('\n'),
+        fragmentShader: [
+          'varying vec3 vColor;',
+          'varying float vPulse;',
+          'uniform float uWarp;',
+          'void main() {',
+          '  float d = distance(gl_PointCoord, vec2(0.5));',
+          '  if (d > 0.5) discard;',
+          '  float glow = smoothstep(0.5, 0.0, d);',
+          // soft outer halo ring for a richer bloom skirt
+          '  float ring = smoothstep(0.5, 0.34, d) * smoothstep(0.18, 0.34, d);',
+          '  float intensity = 0.12 + uWarp * 0.14;',
+          '  float alpha = (glow * glow * intensity + ring * 0.05) * vPulse;',
+          '  gl_FragColor = vec4(vColor * (0.6 + uWarp * 0.5), alpha);',
+          '}'
+        ].join('\n'),
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        vertexColors: true
+      });
+
+      scene.add(new THREE.Points(gGeo, glowMat));
+
+      /* ── Synapse connections ──────────────────────────────── */
+      var conns = [];
+      var brainLinks = 0;
+      var bgLinks = 0;
+      var MAX_BRAIN_LINKS = IS_MOB ? 180 : 450;
+      var MAX_BG_LINKS = IS_MOB ? 200 : 550;
+
+      // Brain-to-brain connections (denser network, smaller radius)
+      for (var i = 0; i < brainCount && brainLinks < MAX_BRAIN_LINKS; i++) {
+        for (var j = i + 1; j < brainCount && brainLinks < MAX_BRAIN_LINKS; j++) {
+          var dx = neurons[i].x - neurons[j].x;
+          var dy = neurons[i].y - neurons[j].y;
+          var dz = neurons[i].z - neurons[j].z;
+          var d2 = dx * dx + dy * dy + dz * dz;
+          var limit = 38;
+          if (d2 < limit * limit) {
+            conns.push({ a: i, b: j, dist: Math.sqrt(d2), isBrain: true });
+            brainLinks++;
+          }
+        }
+      }
+
+      // Background-to-background, anchor and mixed connections
+      for (var i = brainCount; i < N && bgLinks < MAX_BG_LINKS; i++) {
+        for (var j = i + 1; j < N && bgLinks < MAX_BG_LINKS; j++) {
+          var dx = neurons[i].x - neurons[j].x;
+          var dy = neurons[i].y - neurons[j].y;
+          var dz = neurons[i].z - neurons[j].z;
+          var d2 = dx * dx + dy * dy + dz * dz;
+          var limit = 75;
+          if (d2 < limit * limit) {
+            conns.push({ a: i, b: j, dist: Math.sqrt(d2), isBrain: false });
+            bgLinks++;
+          }
+        }
+      }
+
+      var lPos = new Float32Array(conns.length * 6);
+      var lCol = new Float32Array(conns.length * 6);
+
+      for (var c = 0; c < conns.length; c++) {
+        var a = neurons[conns[c].a], b = neurons[conns[c].b];
+        var maxDist = conns[c].isBrain ? 38 : 75;
+        var op = (1 - conns[c].dist / maxDist) * 0.12;
+        var mx = new THREE.Color().copy(a.color).lerp(b.color, 0.5);
+
+        lPos[c * 6] = a.x; lPos[c * 6 + 1] = a.y; lPos[c * 6 + 2] = a.z;
+        lPos[c * 6 + 3] = b.x; lPos[c * 6 + 4] = b.y; lPos[c * 6 + 5] = b.z;
+
+        lCol[c * 6] = mx.r * op * 6; lCol[c * 6 + 1] = mx.g * op * 6; lCol[c * 6 + 2] = mx.b * op * 6;
+        lCol[c * 6 + 3] = mx.r * op * 6; lCol[c * 6 + 4] = mx.g * op * 6; lCol[c * 6 + 5] = mx.b * op * 6;
+      }
+
+      var lGeo = new THREE.BufferGeometry();
+      lGeo.setAttribute('position', new THREE.BufferAttribute(lPos, 3));
+      lGeo.setAttribute('color', new THREE.BufferAttribute(lCol, 3));
+
+      scene.add(new THREE.LineSegments(lGeo, new THREE.LineBasicMaterial({
+        vertexColors: true, transparent: true, opacity: 1,
+        blending: THREE.AdditiveBlending, depthWrite: false
+      })));
+
+      /* ── Signal particles (travelling light pulses) ──────── */
+      var MAX_SIG = IS_MOB ? 12 : 32;
+      var sigData = [];
+      var sigPos = new Float32Array(MAX_SIG * 3);
+      var sigCol = new Float32Array(MAX_SIG * 3);
+      var sigSize = new Float32Array(MAX_SIG);
+
+      var sigGeo = new THREE.BufferGeometry();
+      sigGeo.setAttribute('position', new THREE.BufferAttribute(sigPos, 3));
+      sigGeo.setAttribute('color', new THREE.BufferAttribute(sigCol, 3));
+      sigGeo.setAttribute('size', new THREE.BufferAttribute(sigSize, 1));
+
+      var sigMat = new THREE.ShaderMaterial({
+        uniforms: { uScale: { value: pixelRatio } },
+        vertexShader: [
+          'attribute float size;',
+          'varying vec3 vColor;',
+          'uniform float uScale;',
+          'void main() {',
+          '  vColor = color;',
+          '  vec4 mv = modelViewMatrix * vec4(position, 1.0);',
+          '  gl_PointSize = min(size * uScale * (350.0 / -mv.z), 64.0);',
+          '  gl_Position = projectionMatrix * mv;',
+          '}'
+        ].join('\n'),
+        fragmentShader: [
+          'varying vec3 vColor;',
+          'void main() {',
+          '  float d = distance(gl_PointCoord, vec2(0.5));',
+          '  if (d > 0.5) discard;',
+          '  float a = smoothstep(0.5, 0.0, d);',
+          '  gl_FragColor = vec4(vColor * 2.5, a);',
+          '}'
+        ].join('\n'),
+        transparent: true, depthWrite: false,
+        blending: THREE.AdditiveBlending, vertexColors: true
+      });
+
+      scene.add(new THREE.Points(sigGeo, sigMat));
+
+      var sigTimer = 0;
+      function spawnSignal() {
+        if (sigData.length >= MAX_SIG || conns.length === 0) return;
+        var cn = conns[Math.floor(Math.random() * conns.length)];
+        var a = neurons[cn.a];
+        sigData.push({
+          a: cn.a,
+          b: cn.b,
+          t: 0,
+          speed: 0.006 + Math.random() * 0.014,
+          col: a.color
+        });
+      }
+
+      function tickSignals(dt) {
+        sigTimer += dt;
+        if (sigTimer > 0.035) { sigTimer = 0; spawnSignal(); }
+
+        for (var i = sigData.length - 1; i >= 0; i--) {
+          var s = sigData[i];
+          s.t += s.speed;
+          if (s.t >= 1) { sigData.splice(i, 1); continue; }
+
+          var idxA = s.a;
+          var idxB = s.b;
+          var ax = nPos[idxA * 3];
+          var ay = nPos[idxA * 3 + 1];
+          var az = nPos[idxA * 3 + 2];
+          var bx = nPos[idxB * 3];
+          var by = nPos[idxB * 3 + 1];
+          var bz = nPos[idxB * 3 + 2];
+
+          var bright = Math.sin(s.t * Math.PI);
+          sigPos[i * 3] = ax + (bx - ax) * s.t;
+          sigPos[i * 3 + 1] = ay + (by - ay) * s.t;
+          sigPos[i * 3 + 2] = az + (bz - az) * s.t;
+          sigCol[i * 3] = s.col.r * bright;
+          sigCol[i * 3 + 1] = s.col.g * bright;
+          sigCol[i * 3 + 2] = s.col.b * bright;
+          sigSize[i] = 2.8 * bright + 0.4;
+        }
+        for (var i = sigData.length; i < MAX_SIG; i++) sigSize[i] = 0;
+
+        sigGeo.setDrawRange(0, Math.max(sigData.length, 1));
+        sigGeo.attributes.position.needsUpdate = true;
+        sigGeo.attributes.color.needsUpdate = true;
+        sigGeo.attributes.size.needsUpdate = true;
+      }
+
+      /* ── Ambient dust ────────────────────────────────────── */
+      var DUST = IS_MOB ? 120 : 350;
+      var dPos = new Float32Array(DUST * 3);
+      var dVel = new Float32Array(DUST * 3);
+      var dSz = new Float32Array(DUST);
+      var dCol = new Float32Array(DUST * 3);
+
       for (var i = 0; i < DUST; i++) {
-        dPos[i*3]   += dVel[i*3];
-        dPos[i*3+1] += dVel[i*3+1];
-        dPos[i*3+2] += dVel[i*3+2];
+        dPos[i * 3] = (Math.random() - 0.5) * 700;
+        dPos[i * 3 + 1] = (Math.random() - 0.5) * 700;
+        dPos[i * 3 + 2] = 100 + Math.random() * -1700;
+        dVel[i * 3] = (Math.random() - 0.5) * 0.08;
+        dVel[i * 3 + 1] = (Math.random() - 0.5) * 0.08;
+        dVel[i * 3 + 2] = (Math.random() - 0.5) * 0.04;
+        dSz[i] = 0.25 + Math.random() * 0.55;
+        dCol[i * 3] = 0.4 + Math.random() * 0.3;
+        dCol[i * 3 + 1] = 0.5 + Math.random() * 0.3;
+        dCol[i * 3 + 2] = 0.6 + Math.random() * 0.3;
       }
-      dGeo.attributes.position.needsUpdate = true;
-    }
 
-    /* ─────────────────────────────────────────────────────────
-       2.  CAMERA PROXY & RENDER LOOP
-    ───────────────────────────────────────────────────────── */
-    var camProxy = { 
-      x: 0, 
-      y: 0, 
-      z: 320, 
-      lookAtX: 0, 
-      lookAtY: 0,
-      lookAtZ: -30
-    };
-    var mX = 0, mY = 0;
+      var dGeo = new THREE.BufferGeometry();
+      dGeo.setAttribute('position', new THREE.BufferAttribute(dPos, 3));
+      dGeo.setAttribute('color', new THREE.BufferAttribute(dCol, 3));
+      dGeo.setAttribute('size', new THREE.BufferAttribute(dSz, 1));
 
-    if (!IS_TOUCH) {
-      window.addEventListener('mousemove', function (e) {
-        mX = (e.clientX / innerWidth  - 0.5) * 2;
-        mY = (e.clientY / innerHeight - 0.5) * 2;
+      var dMat = new THREE.ShaderMaterial({
+        uniforms: { uScale: { value: pixelRatio } },
+        vertexShader: [
+          'attribute float size;',
+          'varying vec3 vColor;',
+          'uniform float uScale;',
+          'void main() {',
+          '  vColor = color;',
+          '  vec4 mv = modelViewMatrix * vec4(position, 1.0);',
+          '  gl_PointSize = size * uScale * (180.0 / -mv.z);',
+          '  gl_Position = projectionMatrix * mv;',
+          '}'
+        ].join('\n'),
+        fragmentShader: [
+          'varying vec3 vColor;',
+          'void main() {',
+          '  float d = distance(gl_PointCoord, vec2(0.5));',
+          '  if (d > 0.5) discard;',
+          '  float a = smoothstep(0.5, 0.2, d) * 0.25;',
+          '  gl_FragColor = vec4(vColor, a);',
+          '}'
+        ].join('\n'),
+        transparent: true, depthWrite: false,
+        blending: THREE.AdditiveBlending, vertexColors: true
       });
-    }
+      scene.add(new THREE.Points(dGeo, dMat));
 
-    var time = 0, lastT = performance.now();
-
-    function render() {
-      requestAnimationFrame(render);
-      var now = performance.now();
-      var dt  = (now - lastT) / 1000;
-      lastT   = now;
-      time   += dt;
-
-      var targetCamX = camProxy.x;
-      var targetCamY = camProxy.y;
-      if (!IS_TOUCH) {
-        targetCamX += mX * 35;
-        targetCamY += -mY * 25;
-      }
-      camera.position.x += (targetCamX - camera.position.x) * 0.045;
-      camera.position.y += (targetCamY - camera.position.y) * 0.045;
-      camera.position.z = camProxy.z;
-
-      var targetLookX = camProxy.lookAtX;
-      var targetLookY = camProxy.lookAtY;
-      if (!IS_TOUCH) {
-        targetLookX += mX * 8;
-        targetLookY += -mY * 6;
-      }
-      var lookTarget = new THREE.Vector3(targetLookX, targetLookY, camProxy.lookAtZ);
-      camera.lookAt(lookTarget);
-      
-      camera.rotation.z = Math.sin(time * 0.12) * 0.006;
-
-      // Brain rotation — the 3D scene is the core content, so keep it
-      // alive even under reduced-motion (smooth, non-jarring motion).
-      var rotationSpeed = 0.0022;
-      if (rotationSpeed > 0) {
-        var cosR = Math.cos(rotationSpeed);
-        var sinR = Math.sin(rotationSpeed);
-        for (var i = 0; i < brainCount; i++) {
-          var idx = i * 3;
-          var px = nPos[idx];
-          var pz = nPos[idx+2] - brainCenterZ;
-          nPos[idx]   = px * cosR - pz * sinR;
-          nPos[idx+2] = px * sinR + pz * cosR + brainCenterZ;
+      function tickDust() {
+        for (var i = 0; i < DUST; i++) {
+          dPos[i * 3] += dVel[i * 3];
+          dPos[i * 3 + 1] += dVel[i * 3 + 1];
+          dPos[i * 3 + 2] += dVel[i * 3 + 2];
         }
-        nGeo.attributes.position.needsUpdate = true;
-        gGeo.attributes.position.needsUpdate = true;
-
-        // Update synapse lines that connect brain nodes
-        for (var c = 0; c < conns.length; c++) {
-          var aIdx = conns[c].a;
-          var bIdx = conns[c].b;
-          lPos[c*6]     = nPos[aIdx*3];
-          lPos[c*6+1]   = nPos[aIdx*3+1];
-          lPos[c*6+2]   = nPos[aIdx*3+2];
-          lPos[c*6+3]     = nPos[bIdx*3];
-          lPos[c*6+4]   = nPos[bIdx*3+1];
-          lPos[c*6+5]   = nPos[bIdx*3+2];
-        }
-        lGeo.attributes.position.needsUpdate = true;
+        dGeo.attributes.position.needsUpdate = true;
       }
 
-      neuronMat.uniforms.uTime.value = time;
-      glowMat.uniforms.uTime.value   = time;
+      /* ─────────────────────────────────────────────────────────
+         2.  CAMERA PROXY & RENDER LOOP
+      ───────────────────────────────────────────────────────── */
+      var camProxy = {
+        x: 0,
+        y: 0,
+        z: 320,
+        lookAtX: 0,
+        lookAtY: 0,
+        lookAtZ: -30
+      };
+      var mX = 0, mY = 0;
 
-      // Signal pulses + drifting dust keep flowing — part of the living scene.
-      tickSignals(dt);
-      tickDust();
+      // ── Cinematic camera state ──────────────────────────────
+      var BASE_FOV = camera.fov;     // 68
+      var bankAmt = 0;              // smoothed roll (banking into turns)
+      var warpAmt = 0;             // smoothed travel speed → FOV punch + bloom
+      var prevCamX = camera.position.x;
+      var prevProxyZ = camProxy.z;
+      var CINEMATIC = !REDUCED;       // heavy motion only when motion allowed
+      var bankScale = IS_MOB ? 0.45 : 1.0;
 
-      renderer.render(scene, camera);
-    }
+      if (!IS_TOUCH) {
+        window.addEventListener('mousemove', function (e) {
+          mX = (e.clientX / innerWidth - 0.5) * 2;
+          mY = (e.clientY / innerHeight - 0.5) * 2;
+        });
+      }
 
-    /* Always run the render loop so the camera still responds to scroll
-       and pointer input. REDUCED only suppresses the heavy auto-motion
-       (brain spin, signals, dust, idle sway) inside render(). */
-    render();
+      var time = 0, lastT = performance.now();
 
-    window.addEventListener('resize', function () {
-      camera.aspect = innerWidth / innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(innerWidth, innerHeight);
-      if (REDUCED) renderer.render(scene, camera);
-    });
+      function render() {
+        requestAnimationFrame(render);
+        var now = performance.now();
+        var dt = (now - lastT) / 1000;
+        lastT = now;
+        time += dt;
 
-    /* ─────────────────────────────────────────────────────────
-       3.  GSAP SCROLL TIMELINE
-     ───────────────────────────────────────────────────────── */
-    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-    gsap.registerPlugin(ScrollTrigger);
+        var targetCamX = camProxy.x;
+        var targetCamY = camProxy.y;
+        if (!IS_TOUCH) {
+          targetCamX += mX * 35;
+          targetCamY += -mY * 25;
+        }
+        // Idle "breathing" drift — a slow figure-eight so the scene never feels static.
+        if (CINEMATIC) {
+          targetCamX += Math.sin(time * 0.23) * 3.2;
+          targetCamY += Math.sin(time * 0.31) * 2.1 * Math.cos(time * 0.17);
+        }
+        camera.position.x += (targetCamX - camera.position.x) * 0.045;
+        camera.position.y += (targetCamY - camera.position.y) * 0.045;
+        camera.position.z = camProxy.z;
 
-    /* Master timeline scrubbed by scroll */
-    var tl = gsap.timeline({
-      scrollTrigger: {
+        var targetLookX = camProxy.lookAtX;
+        var targetLookY = camProxy.lookAtY;
+        if (!IS_TOUCH) {
+          targetLookX += mX * 8;
+          targetLookY += -mY * 6;
+        }
+        var lookTarget = new THREE.Vector3(targetLookX, targetLookY, camProxy.lookAtZ);
+        camera.lookAt(lookTarget);
+
+        // ── Banking: lean into horizontal turns based on lateral velocity ──
+        var camVelX = camera.position.x - prevCamX;
+        prevCamX = camera.position.x;
+        var bankTarget = CINEMATIC ? (-camVelX * 0.018 * bankScale) : 0;
+        // clamp so fast pans don't over-roll
+        bankTarget = Math.max(-0.09, Math.min(0.09, bankTarget));
+        bankAmt += (bankTarget - bankAmt) * 0.06;
+        var idleRoll = CINEMATIC ? Math.sin(time * 0.12) * 0.006 : 0;
+        camera.rotation.z = bankAmt + idleRoll;
+
+        // ── Warp: forward travel speed drives FOV punch + bloom intensity ──
+        var travel = Math.abs(camProxy.z - prevProxyZ);
+        prevProxyZ = camProxy.z;
+        var warpTarget = CINEMATIC ? Math.min(travel / dt / 900, 1) : 0;
+        if (isNaN(warpTarget)) warpTarget = 0;
+        warpAmt += (warpTarget - warpAmt) * 0.08;
+        if (CINEMATIC) {
+          var wantFov = BASE_FOV + warpAmt * 6.5;   // 68 → ~74.5 at full warp
+          if (Math.abs(wantFov - camera.fov) > 0.01) {
+            camera.fov = wantFov;
+            camera.updateProjectionMatrix();
+          }
+        }
+
+        // ── Atmospheric perspective: deeper layers fade thicker ──
+        if (CINEMATIC) {
+          // depth01: 0 at the brain, ~1 deep in the corridor (z: 320 → -1500)
+          var depth01 = Math.min(Math.max((320 - camProxy.z) / 1820, 0), 1);
+          scene.fog.density = 0.0016 + depth01 * 0.0010;
+        }
+
+        // Brain rotation — the 3D scene is the core content, so keep it
+        // alive even under reduced-motion (smooth, non-jarring motion).
+        var rotationSpeed = 0.0022;
+        if (rotationSpeed > 0) {
+          var cosR = Math.cos(rotationSpeed);
+          var sinR = Math.sin(rotationSpeed);
+          for (var i = 0; i < brainCount; i++) {
+            var idx = i * 3;
+            var px = nPos[idx];
+            var pz = nPos[idx + 2] - brainCenterZ;
+            nPos[idx] = px * cosR - pz * sinR;
+            nPos[idx + 2] = px * sinR + pz * cosR + brainCenterZ;
+          }
+          nGeo.attributes.position.needsUpdate = true;
+          gGeo.attributes.position.needsUpdate = true;
+
+          // Update synapse lines that connect brain nodes
+          for (var c = 0; c < conns.length; c++) {
+            var aIdx = conns[c].a;
+            var bIdx = conns[c].b;
+            lPos[c * 6] = nPos[aIdx * 3];
+            lPos[c * 6 + 1] = nPos[aIdx * 3 + 1];
+            lPos[c * 6 + 2] = nPos[aIdx * 3 + 2];
+            lPos[c * 6 + 3] = nPos[bIdx * 3];
+            lPos[c * 6 + 4] = nPos[bIdx * 3 + 1];
+            lPos[c * 6 + 5] = nPos[bIdx * 3 + 2];
+          }
+          lGeo.attributes.position.needsUpdate = true;
+        }
+
+        neuronMat.uniforms.uTime.value = time;
+        glowMat.uniforms.uTime.value = time;
+        neuronMat.uniforms.uWarp.value = warpAmt;
+        glowMat.uniforms.uWarp.value = warpAmt;
+
+        // Signal pulses + drifting dust keep flowing — part of the living scene.
+        tickSignals(dt);
+        tickDust();
+
+        renderer.render(scene, camera);
+      }
+
+      /* Always run the render loop so the camera still responds to scroll
+         and pointer input. REDUCED only suppresses the heavy auto-motion
+         (brain spin, signals, dust, idle sway) inside render(). */
+      render();
+
+      window.addEventListener('resize', function () {
+        camera.aspect = innerWidth / innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(innerWidth, innerHeight);
+        if (REDUCED) renderer.render(scene, camera);
+      });
+
+      /* ─────────────────────────────────────────────────────────
+         3.  GSAP SCROLL TIMELINE
+       ───────────────────────────────────────────────────────── */
+      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+      gsap.registerPlugin(ScrollTrigger);
+
+      /* Master timeline scrubbed by scroll */
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#scroll-spacer',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 1.8
+        }
+      });
+
+      /* ── Camera Z Progression (0 → 100) ──────────────────── */
+      tl.to(camProxy, { z: -1500, lookAtZ: -1850, duration: 100, ease: 'none' }, 0);
+
+      /* ── Hero fade (10 → 18) ─────────────────────────────── */
+      tl.to('#hero', { autoAlpha: 0, scale: 1.12, duration: 8, ease: 'power2.in' }, 10);
+
+      /* ── Depth bar appear ────────────────────────────────── */
+      tl.to('#depth-bar', { autoAlpha: 1, duration: 4 }, 13);
+
+      /* ── Layer labels ────────────────────────────────────── */
+      tl.fromTo('#label-entering', { autoAlpha: 0 }, { autoAlpha: 1, duration: 3 }, 13);
+      tl.to('#label-entering', { autoAlpha: 0, duration: 3 }, 18);
+
+      tl.fromTo('#label-deeper', { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 }, 38);
+      tl.to('#label-deeper', { autoAlpha: 0, duration: 2 }, 42);
+
+      tl.fromTo('#label-connections', { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 }, 55);
+      tl.to('#label-connections', { autoAlpha: 0, duration: 2 }, 59);
+
+      tl.fromTo('#label-knowledge', { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 }, 73);
+      tl.to('#label-knowledge', { autoAlpha: 0, duration: 2 }, 77);
+
+      /* ── Project cards ───────────────────────────────────── */
+      PORTFOLIO_DATA.projects.forEach(function (proj, idx) {
+        var wrapperId = '#' + proj.id + '-wrapper';
+        var atStart = proj.depthStart;
+        var atEnd = proj.depthEnd;
+        var duration = atEnd - atStart;
+
+        var sideSign = proj.side === 'left' ? 1 : -1;
+
+        // 1. Card entrance animation in 3D on the wrapper
+        tl.fromTo(wrapperId, {
+          autoAlpha: 0,
+          x: -70 * sideSign,
+          y: 80,
+          z: -250,
+          rotationY: -35 * sideSign,
+          rotationX: 15,
+          transformPerspective: 1000
+        }, {
+          autoAlpha: 1,
+          x: 0,
+          y: 0,
+          z: 0,
+          rotationY: 0,
+          rotationX: 0,
+          duration: duration * 0.35,
+          ease: 'power2.out'
+        }, atStart);
+
+        // 2. Card exit animation in 3D on the wrapper
+        tl.to(wrapperId, {
+          autoAlpha: 0,
+          x: 70 * sideSign,
+          y: -80,
+          z: 180,
+          rotationY: 35 * sideSign,
+          rotationX: -15,
+          duration: duration * 0.35,
+          ease: 'power2.in'
+        }, atEnd - duration * 0.35);
+
+        // 3. Camera pan and lookAt tilt focus toward active card
+        var targetX = proj.side === 'left' ? 32 : -32;
+        var targetLookX = proj.side === 'left' ? -42 : 42;
+
+        var nodeY = (idx % 2 === 0) ? 6 : -6;
+        var targetY = nodeY > 0 ? -10 : 10;
+        var targetLookY = nodeY;
+
+        // Approach phase (camera pans + focuses lookAt on node)
+        tl.to(camProxy, {
+          x: targetX,
+          y: targetY,
+          lookAtX: targetLookX,
+          lookAtY: targetLookY,
+          lookAtZ: proj.anchorZ,
+          duration: duration * 0.45,
+          ease: 'power2.out'
+        }, atStart);
+
+        // Reset phase (camera returns to center tunnel)
+        var resetAt = atEnd - duration * 0.35;
+        tl.to(camProxy, {
+          x: 0,
+          y: 0,
+          lookAtX: 0,
+          lookAtY: 0,
+          lookAtZ: -30 - 18.2 * atEnd,
+          duration: duration * 0.35,
+          ease: 'power2.in'
+        }, resetAt);
+      });
+
+      /* ── Certifications  (83 → 92) ───────────────────────── */
+      tl.fromTo('#cert-section',
+        { autoAlpha: 0, y: 50, scale: 0.96 },
+        { autoAlpha: 1, y: 0, scale: 1, duration: 3.5, ease: 'power2.out' },
+        83
+      );
+      tl.to('#cert-section',
+        { autoAlpha: 0, y: -40, scale: 0.97, duration: 3, ease: 'power2.in' },
+        91
+      );
+
+      /* ── Contact Core  (93 → end) ────────────────────────── */
+      tl.fromTo('#contact-core',
+        { autoAlpha: 0, y: 40, scale: 0.95 },
+        { autoAlpha: 1, y: 0, scale: 1, duration: 4, ease: 'power2.out' },
+        93
+      );
+      tl.fromTo('#v2-footer',
+        { autoAlpha: 0 },
+        { autoAlpha: 1, duration: 3 },
+        96
+      );
+
+      /* ─────────────────────────────────────────────────────────
+         4.  DEPTH INDICATOR
+      ───────────────────────────────────────────────────────── */
+      var depthFill = document.getElementById('depth-fill');
+      var depthValue = document.getElementById('depth-value');
+
+      ScrollTrigger.create({
         trigger: '#scroll-spacer',
         start: 'top top',
         end: 'bottom bottom',
-        scrub: 1.8
+        onUpdate: function (self) {
+          var p = self.progress;
+          if (depthFill) depthFill.style.height = (p * 100) + '%';
+          if (depthValue) depthValue.textContent = Math.round(p * 1500) + ' m';
+        }
+      });
+
+      /* ─────────────────────────────────────────────────────────
+         5.  HERO INTRO ANIMATION
+      ───────────────────────────────────────────────────────── */
+      if (!REDUCED) {
+        gsap.from('.hero-photo', { scale: 0.6, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.2 });
+        gsap.from('.hero-name', { y: 40, opacity: 0, duration: 0.9, ease: 'power3.out', delay: 0.5 });
+        gsap.from('.hero-subtitle', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.7 });
+        gsap.from('.hero-buttons', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.9 });
+        gsap.from('.scroll-cue', { opacity: 0, duration: 1, delay: 1.4 });
       }
-    });
 
-    /* ── Camera Z Progression (0 → 100) ──────────────────── */
-    tl.to(camProxy, { z: -1500, lookAtZ: -1850, duration: 100, ease: 'none' }, 0);
+      /* ─────────────────────────────────────────────────────────
+         6.  INTERACTIVE CARD 3D TILT ON MOUSEMOVE
+      ───────────────────────────────────────────────────────── */
+      if (!IS_TOUCH) {
+        var cardsContainer = document.getElementById('project-cards-container');
+        if (cardsContainer) {
+          cardsContainer.addEventListener('mousemove', function (e) {
+            var card = e.target.closest('.neural-card');
+            if (!card) return;
 
-    /* ── Hero fade (10 → 18) ─────────────────────────────── */
-    tl.to('#hero', { autoAlpha: 0, scale: 1.12, duration: 8, ease: 'power2.in' }, 10);
+            var rect = card.getBoundingClientRect();
+            var x = e.clientX - rect.left;
+            var y = e.clientY - rect.top;
+            var w = rect.width;
+            var h = rect.height;
 
-    /* ── Depth bar appear ────────────────────────────────── */
-    tl.to('#depth-bar', { autoAlpha: 1, duration: 4 }, 13);
+            var dx = (x / w) - 0.5;
+            var dy = (y / h) - 0.5;
 
-    /* ── Layer labels ────────────────────────────────────── */
-    tl.fromTo('#label-entering',    { autoAlpha: 0 }, { autoAlpha: 1, duration: 3 }, 13);
-    tl.to('#label-entering',                          { autoAlpha: 0, duration: 3 }, 18);
+            // Apply rotation based on distance from center
+            var tiltX = -dy * 16;
+            var tiltY = dx * 16;
 
-    tl.fromTo('#label-deeper',      { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 }, 38);
-    tl.to('#label-deeper',                            { autoAlpha: 0, duration: 2 }, 42);
+            card.style.transition = 'none';
+            card.style.transform = 'perspective(1000px) translate3d(0, 0, 25px) rotateX(' + tiltX + 'deg) rotateY(' + tiltY + 'deg)';
+          });
 
-    tl.fromTo('#label-connections', { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 }, 55);
-    tl.to('#label-connections',                       { autoAlpha: 0, duration: 2 }, 59);
-
-    tl.fromTo('#label-knowledge',  { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 }, 73);
-    tl.to('#label-knowledge',                        { autoAlpha: 0, duration: 2 }, 77);
-
-    /* ── Project cards ───────────────────────────────────── */
-    PORTFOLIO_DATA.projects.forEach(function (proj, idx) {
-      var wrapperId = '#' + proj.id + '-wrapper';
-      var atStart = proj.depthStart;
-      var atEnd = proj.depthEnd;
-      var duration = atEnd - atStart;
-      
-      var sideSign = proj.side === 'left' ? 1 : -1;
-      
-      // 1. Card entrance animation in 3D on the wrapper
-      tl.fromTo(wrapperId, {
-        autoAlpha: 0,
-        x: -70 * sideSign,
-        y: 80,
-        z: -250,
-        rotationY: -35 * sideSign,
-        rotationX: 15,
-        transformPerspective: 1000
-      }, {
-        autoAlpha: 1,
-        x: 0,
-        y: 0,
-        z: 0,
-        rotationY: 0,
-        rotationX: 0,
-        duration: duration * 0.35,
-        ease: 'power2.out'
-      }, atStart);
-      
-      // 2. Card exit animation in 3D on the wrapper
-      tl.to(wrapperId, {
-        autoAlpha: 0,
-        x: 70 * sideSign,
-        y: -80,
-        z: 180,
-        rotationY: 35 * sideSign,
-        rotationX: -15,
-        duration: duration * 0.35,
-        ease: 'power2.in'
-      }, atEnd - duration * 0.35);
-
-      // 3. Camera pan and lookAt tilt focus toward active card
-      var targetX = proj.side === 'left' ? 32 : -32;
-      var targetLookX = proj.side === 'left' ? -42 : 42;
-      
-      var nodeY = (idx % 2 === 0) ? 6 : -6;
-      var targetY = nodeY > 0 ? -10 : 10;
-      var targetLookY = nodeY;
-      
-      // Approach phase (camera pans + focuses lookAt on node)
-      tl.to(camProxy, {
-        x: targetX,
-        y: targetY,
-        lookAtX: targetLookX,
-        lookAtY: targetLookY,
-        lookAtZ: proj.anchorZ,
-        duration: duration * 0.45,
-        ease: 'power2.out'
-      }, atStart);
-      
-      // Reset phase (camera returns to center tunnel)
-      var resetAt = atEnd - duration * 0.35;
-      tl.to(camProxy, {
-        x: 0,
-        y: 0,
-        lookAtX: 0,
-        lookAtY: 0,
-        lookAtZ: -30 - 18.2 * atEnd,
-        duration: duration * 0.35,
-        ease: 'power2.in'
-      }, resetAt);
-    });
-
-    /* ── Certifications  (83 → 92) ───────────────────────── */
-    tl.fromTo('#cert-section',
-      { autoAlpha: 0, y: 50, scale: 0.96 },
-      { autoAlpha: 1, y: 0, scale: 1, duration: 3.5, ease: 'power2.out' },
-      83
-    );
-    tl.to('#cert-section',
-      { autoAlpha: 0, y: -40, scale: 0.97, duration: 3, ease: 'power2.in' },
-      91
-    );
-
-    /* ── Contact Core  (93 → end) ────────────────────────── */
-    tl.fromTo('#contact-core',
-      { autoAlpha: 0, y: 40, scale: 0.95 },
-      { autoAlpha: 1, y: 0, scale: 1, duration: 4, ease: 'power2.out' },
-      93
-    );
-    tl.fromTo('#v2-footer',
-      { autoAlpha: 0 },
-      { autoAlpha: 1, duration: 3 },
-      96
-    );
-
-    /* ─────────────────────────────────────────────────────────
-       4.  DEPTH INDICATOR
-    ───────────────────────────────────────────────────────── */
-    var depthFill  = document.getElementById('depth-fill');
-    var depthValue = document.getElementById('depth-value');
-
-    ScrollTrigger.create({
-      trigger: '#scroll-spacer',
-      start: 'top top',
-      end: 'bottom bottom',
-      onUpdate: function (self) {
-        var p = self.progress;
-        if (depthFill)  depthFill.style.height = (p * 100) + '%';
-        if (depthValue) depthValue.textContent = Math.round(p * 1500) + ' m';
+          cardsContainer.addEventListener('mouseout', function (e) {
+            var card = e.target.closest('.neural-card');
+            if (!card) return;
+            // check if cursor actually exited the card boundaries
+            if (!e.relatedTarget || !card.contains(e.relatedTarget)) {
+              card.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)';
+              card.style.transform = 'perspective(1000px) translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg)';
+            }
+          });
+        }
       }
-    });
 
-    /* ─────────────────────────────────────────────────────────
-       5.  HERO INTRO ANIMATION
-    ───────────────────────────────────────────────────────── */
-    if (!REDUCED) {
-      gsap.from('.hero-photo', { scale: 0.6, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.2 });
-      gsap.from('.hero-name', { y: 40, opacity: 0, duration: 0.9, ease: 'power3.out', delay: 0.5 });
-      gsap.from('.hero-subtitle', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.7 });
-      gsap.from('.hero-buttons', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.9 });
-      gsap.from('.scroll-cue', { opacity: 0, duration: 1, delay: 1.4 });
-    }
-
-    /* ─────────────────────────────────────────────────────────
-       6.  INTERACTIVE CARD 3D TILT ON MOUSEMOVE
-    ───────────────────────────────────────────────────────── */
-    if (!IS_TOUCH) {
-      var cardsContainer = document.getElementById('project-cards-container');
-      if (cardsContainer) {
-        cardsContainer.addEventListener('mousemove', function(e) {
-          var card = e.target.closest('.neural-card');
-          if (!card) return;
-          
-          var rect = card.getBoundingClientRect();
-          var x = e.clientX - rect.left;
-          var y = e.clientY - rect.top;
-          var w = rect.width;
-          var h = rect.height;
-          
-          var dx = (x / w) - 0.5;
-          var dy = (y / h) - 0.5;
-          
-          // Apply rotation based on distance from center
-          var tiltX = -dy * 16;
-          var tiltY = dx * 16;
-          
-          card.style.transition = 'none';
-          card.style.transform = 'perspective(1000px) translate3d(0, 0, 25px) rotateX(' + tiltX + 'deg) rotateY(' + tiltY + 'deg)';
-        });
-        
-        cardsContainer.addEventListener('mouseout', function(e) {
-          var card = e.target.closest('.neural-card');
-          if (!card) return;
-          // check if cursor actually exited the card boundaries
-          if (!e.relatedTarget || !card.contains(e.relatedTarget)) {
-            card.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)';
-            card.style.transform = 'perspective(1000px) translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg)';
-          }
-        });
-      }
-    }
-
-  })();
+    })();
   </script>
 </body>
+
 </html>

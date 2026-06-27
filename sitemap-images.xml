@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://moego0.github.io/</loc>
+    <image:image>
+      <image:loc>https://moego0.github.io/assets/profile.jpg</image:loc>
+      <image:title>Mohamed Ahmed Abdelraouf Profile Photo</image:title>
+      <image:caption>Mohamed Ahmed Abdelraouf - AI and Embedded Systems Engineer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://moego0.github.io/assets/local-tab-agent-vsx.png</image:loc>
+      <image:title>Local Tab Agent Extension on Open VSX</image:title>
+      <image:caption>VS Code extension dashboard for the Local Tab Agent project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://moego0.github.io/assets/printer-build.jpg</image:loc>
+      <image:title>Self-Built 3D Printer Frame</image:title>
+      <image:caption>Custom built FDM 3D printer built from scratch by Mohamed</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://moego0.github.io/assets/sidekick.jpg</image:loc>
+      <image:title>Schematic Sidekick Application Interface</image:title>
+      <image:caption>AI-based electronics design assistant schematic output</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://moego0.github.io/assets/panic-detector-metrics.png</image:loc>
+      <image:title>Panic Attack Detection Wearable Dashboard</image:title>
+      <image:caption>Biometric sensor data plots showing heart rate, EDA, and panic attack triggers</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://moego0.github.io/assets/kws.png</image:loc>
+      <image:title>Keyword Spotting Neural Network Spec</image:title>
+      <image:caption>Wake word keyword spotter audio data spectrogram analysis</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://moego0.github.io/assets/bionmichyand.png</image:loc>
+      <image:title>Robotic Bionic EMG Hand</image:title>
+      <image:caption>EMG muscle signal-controlled prosthetic hand prototype</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://moego0.github.io/assets/interview-booster.png</image:loc>
+      <image:title>Interview Booster AI Copilot</image:title>
+      <image:caption>Real-time speech translation and question detector dashboard</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://moego0.github.io/assets/SIassistant.png</image:loc>
+      <image:title>AI Desktop Assistant Dashboard</image:title>
+      <image:caption>Bilingual voice assistant and smart home hub control panel</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://moego0.github.io/assets/micropad.png</image:loc>
+      <image:title>Mechanical Micropad Keyboard</image:title>
+      <image:caption>Shortcuts mechanical keyboard designed with STM32F4 and KiCad</image:caption>
+    </image:image>
+  </url>
+</urlset>

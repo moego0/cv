@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Open-source packages, contributions, and GitHub projects of Mohamed Ahmed Abdelraouf.">
+  <title>Mohamed AI Lab — Open Source Projects</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  
+  <style>
+    :root {
+      --bg: #030812;
+      --bg-card: rgba(8, 16, 32, 0.75);
+      --teal: #00E5C7;
+      --teal-dim: rgba(0, 229, 199, 0.1);
+      --purple: #A855F7;
+      --purple-dim: rgba(168, 85, 247, 0.1);
+      --text: #E8EDF4;
+      --muted: #5A6A8A;
+      --border: rgba(255, 255, 255, 0.08);
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Space Grotesk', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .hud-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 229, 199, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 199, 0.01) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .back-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--teal);
+      text-decoration: none;
+      border: 1px solid var(--teal);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      background: var(--teal-dim);
+      transition: all 0.25s;
+    }
+    .back-btn:hover {
+      box-shadow: 0 0 15px var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .title-area h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--text) 0%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-family: var(--font-mono);
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    .panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-family: var(--font-mono);
+      color: var(--teal);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .oss-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .oss-card {
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.2);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+    .oss-card h3 {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+    .oss-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .oss-link {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--purple);
+      text-decoration: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mohamed AI Lab — Open Source" />
+  <meta property="og:description" content="Explore open-source developer extensions, edge packages, and code templates by Mohamed Ahmed Abdelraouf." />
+  <meta property="og:url" content="https://moego0.github.io/open-source" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Open Source Contributions",
+    "description": "Developer modules, libraries, and VS Code extensions built by Mohamed Ahmed Abdelraouf.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mohamed AI Laboratory"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="hud-grid"></div>
+
+  <div class="container">
+    <header>
+      <div class="title-area">
+        <h1>Open Source Lab</h1>
+        <div class="subtitle">// Packages and Public Repositories</div>
+      </div>
+      <a href="../" class="back-btn">&lt; Return to Lab</a>
+    </header>
+
+    <main>
+      <div class="panel">
+        <div class="section-title">Public Contributions</div>
+
+        <div class="oss-grid">
+          <article class="oss-card">
+            <h3>Local Tab Agent Extension</h3>
+            <p>VS Code extension that integrates local Ollama configurations with client browser AI scripts to run code planning workflows offline.</p>
+            <a href="https://open-vsx.org/extension/moego0/local-tab-agent" class="oss-link">Open VSX Hub ↗</a>
+          </article>
+
+          <article class="oss-card">
+            <h3>TinyML Voice Spotter Training</h3>
+            <p>Complete Python pipeline containing Librosa spectrogram extractors, audio noise augmentations, and CNN model quantization templates.</p>
+            <a href="https://github.com/moego0" class="oss-link">GitHub Repository ↗</a>
+          </article>
+
+          <article class="oss-card">
+            <h3>Panic Attack Wearable ML</h3>
+            <p>Biometric sensor calibration metrics, PPG and EDA envelope extractors, and Random Forest classifier training setups.</p>
+            <a href="https://github.com/moego0/panic-attack-detector" class="oss-link">GitHub Repository ↗</a>
+          </article>
+
+          <article class="oss-card">
+            <h3>Prosthetic Controller C Code</h3>
+            <p>Embedded C logic mapping EMG voltage thresholds to proportional servo speed controls on Atmega microcontrollers.</p>
+            <a href="https://github.com/moego0" class="oss-link">GitHub Repository ↗</a>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span>System: MOHAMED AI LAB v2040</span>
+      <span>© 2026 Mohamed Ahmed Abdelraouf</span>
+    </footer>
+  </div>
+</body>
+</html>

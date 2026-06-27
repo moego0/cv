@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical guide outlining the design and development of Local Tab Agent - a VS Code local AI coding assistant. Written by Mohamed Ahmed Abdelraouf.">
+  <title>Building a Local AI Coding Agent — Mohamed AI Laboratory</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+  
+  <style>
+    :root {
+      --bg: #030812;
+      --bg-card: rgba(8, 16, 32, 0.75);
+      --teal: #00E5C7;
+      --teal-dim: rgba(0, 229, 199, 0.1);
+      --purple: #A855F7;
+      --purple-dim: rgba(168, 85, 247, 0.1);
+      --text: #E8EDF4;
+      --muted: #5A6A8A;
+      --border: rgba(255, 255, 255, 0.08);
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Space Grotesk', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .hud-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 229, 199, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 199, 0.01) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .back-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--teal);
+      text-decoration: none;
+      border: 1px solid var(--teal);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      background: var(--teal-dim);
+      transition: all 0.25s;
+    }
+    .back-btn:hover {
+      box-shadow: 0 0 15px var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .title-area h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--text) 0%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-family: var(--font-mono);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .article-meta {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--purple);
+      margin-bottom: 2rem;
+    }
+
+    .panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--teal);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.02rem;
+      color: #CAD5E2;
+      line-height: 1.7;
+    }
+
+    ul, ol {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+      color: #CAD5E2;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--purple);
+    }
+
+    pre {
+      background: rgba(3, 8, 18, 0.9);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    pre code {
+      background: transparent;
+      padding: 0;
+      color: var(--text);
+      font-size: 0.85rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Building a Local AI Coding Agent" />
+  <meta property="og:description" content="Technical guide detailing how I built Local Tab Agent, an offline repository-aware VS Code assistant." />
+  <meta property="og:url" content="https://moego0.github.io/articles/building-a-local-ai-coding-agent" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Building a Local AI Coding Agent",
+    "description": "Integration tutorial describing VS Code APIs, WebSocket routers, and client-side distributed GPU computation.",
+    "author": {
+      "@type": "Person",
+      "name": "Mohamed Ahmed Abdelraouf"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mohamed AI Laboratory"
+    },
+    "inLanguage": "en",
+    "programmingLanguage": "TypeScript, JavaScript"
+  }
+  </script>
+</head>
+<body>
+  <div class="hud-grid"></div>
+
+  <div class="container">
+    <header>
+      <div class="title-area">
+        <h1>Building a Local AI Coding Agent</h1>
+        <div class="subtitle">// Code Automation and Distributed Compute</div>
+      </div>
+      <a href="../../" class="back-btn">&lt; Return to Lab</a>
+    </header>
+
+    <main class="panel">
+      <div class="article-meta">Published by Mohamed Ahmed Abdelraouf • June 2026 • 9 min read</div>
+
+      <p>Modern developers rely heavily on cloud-based AI coding copilots. However, these systems raise data privacy concerns and introduce recurring usage fees. This guide details how I built <strong>Local Tab Agent</strong>—a repository-aware VS Code extension that executes agentic code planning completely offline, utilizing WebSocket routers and client-side distributed compute swarms.</p>
+
+      <h2>1. The VS Code Extension Structure</h2>
+      <p>The frontend is written in TypeScript using the official VS Code Extension API. When a user requests code edits, the extension gathers context: the active file, cursor coordinates, and surrounding file lists. Instead of processing this heavy text locally inside the extension thread (which would freeze the editor), we spawn a background WebSocket server client.</p>
+
+      <h2>2. The WebSocket Bridge</h2>
+      <p>Local Tab Agent uses a lightweight Node.js WebSocket server to bridge the editor with local LLMs running inside Ollama, or to client-side scripts running inside browser tabs. Here is the core connection framework:</p>
+
+      <pre><code>import * as vscode from 'vscode';
+import { WebSocketServer } from 'ws';
+
+export function activate(context: vscode.ExtensionContext) {
+    const wss = new WebSocketServer({ port: 3003 });
+    
+    wss.on('connection', (ws) => {
+        console.log('Connected to Local Tab Agent Bridge');
+        
+        ws.on('message', async (data) => {
+            const message = JSON.parse(data.toString());
+            if (message.type === 'REQUEST_SUGGESTION') {
+                const response = await queryLocalModel(message.prompt);
+                ws.send(JSON.stringify({ type: 'SUGGESTION_RESPONSE', content: response }));
+            }
+        });
+    });
+}
+</code></pre>
+
+      <h2>3. Distributing Compute (Swarm Groups)</h2>
+      <p>Running 8B to 70B parameter models locally on standard laptops frequently results in low token-per-second outputs. To address this, I implemented a custom decentralized clustering feature called <strong>Swarm Groups</strong>.</p>
+      <p>The compute load is partitioned: prompts are segmented, and weights are distributed to client machines within a local subnetwork. A coordinator node routes token generation frames using parallel WebSocket streams, combining outputs before feeding them back into the editor window.</p>
+
+      <h2>4. Prompt Engineering and Repository Awareness</h2>
+      <p>To keep local models accurate, the agent builds a structural directory map. It uses a custom relevance search algorithm to only include dependencies and definitions related to the cursor state, minimizing prompt context bloat. The instructions force the local model to respond in structured XML diff formats:</p>
+
+      <pre><code>&lt;diff_block_start&gt;
+- old line of code
++ new line of code
+&lt;diff_block_end&gt;
+</code></pre>
+      <p>The TypeScript extension parses these diffs, applying modifications directly to the editor buffer dynamically.</p>
+
+      <h2>5. Takeaways</h2>
+      <p>By routing instructions to local resources and using structured diff formats, Local Tab Agent achieves rapid code generation frames and guarantees that code files remain completely private and offline.</p>
+    </main>
+
+    <footer>
+      <span>System: MOHAMED AI LAB v2040</span>
+      <span>© 2026 Mohamed Ahmed Abdelraouf</span>
+    </footer>
+  </div>
+</body>
+</html>
